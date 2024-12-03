@@ -1,0 +1,2727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Ground(less) Truth: A Causal Framework for Proxy Labels in Human-Algorithm Decision-Making</title>
+				<funder ref="#_gvkWsXy">
+					<orgName type="full">Google Faculty Research Award</orgName>
+				</funder>
+				<funder ref="#_ap8xtjQ">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">UL Research Institutes through the Center for Advancing Safety of Machine Intelligence</orgName>
+					<orgName type="abbreviated">CASMI</orgName>
+				</funder>
+				<funder ref="#_7Hfaa2A">
+					<orgName type="full">NSF FAI</orgName>
+				</funder>
+				<funder ref="#_YXekDFv">
+					<orgName type="full">Carnegie Mellon University Block Center for Technology and Society</orgName>
+				</funder>
+				<funder ref="#_K7sCAFt">
+					<orgName type="full">National Science Foundation Graduate Research Fellowship Program</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Luke</forename><surname>Guerdan</surname></persName>
+							<email>lguerdan@cs.cmu.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Amanda</forename><surname>Coston</surname></persName>
+							<email>acoston@cs.cmu.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiwei</forename><forename type="middle">Steven</forename><surname>Wu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Kenneth</forename><surname>Holstein</surname></persName>
+							<email>kjholste@cs.cmu.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Steven</forename><surname>Zhiwei</surname></persName>
+							<email>zstevenwu@cmu.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kenneth</forename><forename type="middle">Holstein</forename><surname>Wu</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Carnegie Mellon University Pittsburgh</orgName>
+								<address>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Carnegie Mellon University Pittsburgh</orgName>
+								<address>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Carnegie Mellon University Pittsburgh</orgName>
+								<address>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Carnegie Mellon University Pittsburgh</orgName>
+								<address>
+									<postCode>12-15 2023</postCode>
+									<settlement>June Chicago</settlement>
+									<region>PA IL</region>
+									<country>USA USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Ground(less) Truth: A Causal Framework for Proxy Labels in Human-Algorithm Decision-Making</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="DOI">10.1145/3593013.3594036</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2024-12-03T20:41+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>algorithmic decision support</term>
+					<term>measurement</term>
+					<term>validity</term>
+					<term>causal diagrams</term>
+					<term>label bias</term>
+					<term>human-AI decision-making</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>A growing literature on human-AI decision-making investigates strategies for combining human judgment with statistical models to improve decision-making. Research in this area often evaluates proposed improvements to models, interfaces, or workflows by demonstrating improved predictive performance on "ground truth" labels. However, this practice overlooks a key difference between human judgments and model predictions. Whereas humans commonly reason about broader phenomena of interest in a decisionincluding latent constructs that are not directly observable, such as disease status, the "toxicity" of online comments, or future "job performance" -predictive models target proxy labels that are readily available in existing datasets. Predictive models' reliance on simplistic proxies for these nuanced phenomena makes them vulnerable to various sources of statistical bias. In this paper, we identify five sources of target variable bias that can impact the validity of proxy labels in human-AI decision-making tasks. We develop a causal framework to disentangle the relationship between each bias and clarify which are of concern in specific human-AI decision-making tasks. We demonstrate how our framework can be used to articulate implicit assumptions made in prior modeling work, and we recommend evaluation strategies for verifying whether these assumptions hold in practice. We then leverage our framework to re-examine the designs of prior human subjects experiments that investigate human-AI decision-making, finding that only a small fraction of studies examine factors related to target variable bias. We conclude by discussing opportunities to better address target variable bias in future research.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CCS CONCEPTS</head><p>• Human-centered computing → Human computer interaction (HCI); User studies; • Computing methodologies → Machine learning.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">INTRODUCTION</head><p>A growing body of research aims to combine predictive machine learning (ML) models with human judgment to improve decisionmaking processes. In the machine learning community, researchers have proposed improvements to ML models to better address gaps in human judgment (e.g., <ref type="bibr" target="#b50">[51,</ref><ref type="bibr" target="#b64">65,</ref><ref type="bibr" target="#b92">93,</ref><ref type="bibr" target="#b99">100]</ref>). In the human-computer interaction community, behavioral interventions have been developed to help humans better incorporate model outputs into their decision-making (e.g., <ref type="bibr">[4, 9-11, 15, 60, 64]</ref>). However, current evaluations of both model-level and human behavioral interventions typically assess the quality of human decisions, algorithmic predictions, and hybrid combinations of the two by comparing their accuracy on "ground-truth" labels that are readily available in existing data. This practice assumes that the labels targeted by predictive models serve as a reliable measure of the underlying goals and objectives of human decision-makers.</p><p>Yet in real-world deployments of algorithmic decision support (ADS) tools, labels are often imperfect proxies for the target outcomes of interest to human experts. While making decisions, content moderators frequently assess the "toxicity" of online comments <ref type="bibr" target="#b44">[45]</ref> while physicians often consider the "cardiovascular disease risk" of patients <ref type="bibr" target="#b1">[2]</ref>. "Toxicity" and "cardiovascular disease risk" are examples of latent constructs which are unobserved in data. Because observed labels (e.g., toxicity annotations and diagnostic test results) serve as indirect measurements of these phenomena <ref type="bibr" target="#b53">[54]</ref>, they can be subject to measurement error. Additionally, humans often select among multiple possible actions (e.g., medical treatments, social welfare interventions) in hopes of improving a downstream outcome of interest. Because an outcome is only observed for the selected action, labeled data does not contain the counterfactual outcome that would occur had a different option been chosen instead. This introduces a set of additional challenges, including selective labels <ref type="bibr" target="#b62">[63]</ref>, intervention effects <ref type="bibr" target="#b21">[22]</ref>, and selection bias <ref type="bibr" target="#b84">[85]</ref>, which interact with measurement error in nuanced ways depending on the nature of the specific decision-support task.</p><p>We refer to this collection of challenges -which can be characterized as sources of statistical bias impacting labels -as target variable bias (TVB). <ref type="foot" target="#foot_1">1</ref> Following common terminology in statistics, we use the term "bias" to describe systematic differences between the target outcome of interest to human experts and its imperfect operationalization in available data. Thus, while TVB describes a broad conceptual difference between outcomes of interest and their observed proxies, this difference can be formally studied under existing statistical frameworks.</p><p>Target variable bias has been widely documented in real-world deployments of algorithmic systems <ref type="bibr" target="#b4">[5,</ref><ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b36">37,</ref><ref type="bibr" target="#b55">56,</ref><ref type="bibr" target="#b56">57,</ref><ref type="bibr" target="#b69">70,</ref><ref type="bibr" target="#b70">71,</ref><ref type="bibr" target="#b73">74]</ref>. Predictive models impacted by target variable bias have contributed to unwarranted firing of teachers <ref type="bibr" target="#b15">[16]</ref>, perpetuated disparities in access to medical resources <ref type="bibr" target="#b73">[74]</ref>, and raised concerns among social workers investigating allegations of child abuse and neglect <ref type="bibr" target="#b17">[18,</ref><ref type="bibr" target="#b55">56]</ref>. Surprisingly, existing modeling efforts and human subjects experiments in the human-AI decision-making literature have largely overlooked this challenge. Left unaddressed, this disconnect could undermine the ultimate goal of human-AI decision-making research: to develop algorithmic systems that meaningfully improve decision-making in real-world contexts.</p><p>Therefore, in this work, we bridge the divide between challenges encountered in real-world deployments of predictive models and current human-AI decision-making research practices by (i) raising awareness of target variable bias, (ii) identifying gaps in previously published modeling approaches and human subjects experiments, and (iii) providing guidelines for improved research practices going forward. In particular, we develop a causal framework which identifies the sources and implications of target variable bias in human-AI decision-making by examining the data generating process which gives rise to predictive model training datasets. Our framework enables us to distill ADS tasks studied in prior literature into their underlying structural components, and identify which sources of TVB (e.g., measurement error, intervention effects, selective labels) are of concern in a specific task. Using our framework, we identify opportunities to better address target variable bias through two lines of human-AI decision-making research:</p><p>• Model development. We develop a measurement and prediction decomposition that articulates target variable modeling assumptions. We use our decomposition to create a taxonomy of model-level improvements proposed in previous literature. We also propose a set of recommended measurement model evaluation strategies. • Experimental human subjects studies. We use our framework to re-examine the design of prior human subjects experiments studying human-AI decision-making. Our analysis identifies systematic gaps in our current understanding of human-AI decision-making due to target variable bias.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1">Human-AI decision-making</head><p>Recent machine learning research proposes techniques designed to complement the limitations of human judgement. Drawing from a long line of work showing that actuarial risk assessments can outperform expert judgement in many prediction tasks <ref type="bibr" target="#b23">[24,</ref><ref type="bibr" target="#b43">44]</ref>, methods have been proposed that learn to complement humans by adaptively routing decision instances <ref type="bibr" target="#b39">[40,</ref><ref type="bibr" target="#b64">65]</ref>, leveraging heterogeneity in human and machine decision performance <ref type="bibr" target="#b16">[17,</ref><ref type="bibr" target="#b32">33,</ref><ref type="bibr" target="#b92">93,</ref><ref type="bibr" target="#b99">100]</ref>, leveraging consistency in expert decisions <ref type="bibr" target="#b25">[26]</ref>, and adapting to <ref type="bibr" target="#b50">[51]</ref> and training <ref type="bibr" target="#b68">[69]</ref> human mental representations of model outputs. Yet these techniques operate on a set of simplifying assumptions about the world, which may or may not hold in a given deployment context. We provide a framework for articulating modeling assumptions, and show that many common assumptions made by prior work involving proxy labels are unlikely to hold in practice. Recent research has also studied opportunities for human-AI complementary in algorithm-assisted human decision-making <ref type="bibr" target="#b9">[10,</ref><ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b38">39,</ref><ref type="bibr" target="#b41">42,</ref><ref type="bibr" target="#b60">61,</ref><ref type="bibr" target="#b61">62]</ref>. This work investigates the potential for tools such as training protocols <ref type="bibr" target="#b12">[13,</ref><ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b60">61]</ref>, explanations <ref type="bibr" target="#b10">[11,</ref><ref type="bibr" target="#b63">64]</ref>, and other behavioral interventions <ref type="bibr" target="#b9">[10,</ref><ref type="bibr" target="#b38">39]</ref>, to improve how humans make use of model outputs. While many online experimental studies have focused on interventions to improve predictive performance, little work to date has experimentally studied other key factors that are present in real-world deployment contexts, such as asymmetric access to information <ref type="bibr" target="#b49">[50,</ref><ref type="bibr" target="#b51">52]</ref>, measurement error <ref type="bibr" target="#b40">[41]</ref>, and omitted payoffs <ref type="bibr" target="#b42">[43]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2">Modeling challenges in algorithmic decision support</head><p>Prior work has surfaced a litany of challenges impacting predictive models designed for algorithmic decision support (ADS), including unobservables <ref type="bibr" target="#b56">[57]</ref>, selective labels <ref type="bibr" target="#b62">[63]</ref>, selection bias <ref type="bibr" target="#b24">[25,</ref><ref type="bibr" target="#b88">89]</ref>, and intervention effects <ref type="bibr" target="#b21">[22]</ref>. Additional work has examined the quality of proxy labels in decision support tasks. For example, Obermeyer et al. <ref type="bibr" target="#b73">[74]</ref> surfaced "label choice bias", in which racial disparities in access to health resources were introduced by poor label selection decisions. "Omitted payoffs bias" describes factors of interest to humans that are incompletely reflected by predictive models targeting available labels <ref type="bibr" target="#b15">[16,</ref><ref type="bibr" target="#b25">26,</ref><ref type="bibr" target="#b56">57]</ref>. While this bias describes challenges specific to prediction (e.g., model unobservables, measurement error <ref type="bibr" target="#b56">[57]</ref>), this term also applies when humans care about a broader set of decision-making factors beyond predictive risk <ref type="bibr" target="#b15">[16,</ref><ref type="bibr" target="#b41">42]</ref>. In this work, we use the lens of measurement and validity to examine systematic differences between target outcomes of interest to humans and proxy labels observed in data <ref type="bibr" target="#b53">[54]</ref>. In adopting this lens, we draw upon a rich set of existing knowledge and methodologies from adjacent disciplines (e.g., psychology, political science, sociology) designed to evaluate how latent phenomena of interest to humans are quantified in data <ref type="bibr" target="#b85">[86]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3">Measurement and validity in algorithmic systems</head><p>Recent work has raised broader concerns regarding whether algorithmic systems successfully achieve their purported function <ref type="bibr" target="#b4">[5,</ref><ref type="bibr" target="#b22">23,</ref><ref type="bibr" target="#b53">54]</ref>. Synthesizing concepts from measurement theory in the quantitative social sciences, Jacobs and Wallach <ref type="bibr" target="#b53">[54]</ref> argue that "algorithmic fairness" is a latent construct that is imperfectly operationalized by statistical fairness measures. Bao et al. <ref type="bibr" target="#b4">[5]</ref> examine statistical biases present in criminal justice datasets (e.g., ProPublica's COMPAS Dataset <ref type="bibr" target="#b2">[3]</ref>) used in fairness benchmarks of algorithmic Risk Assessment Instruments (RAIs). This analysis identifies several biases in the outcome variable 𝑌 targeted by models, which we further characterize in this work. Coston et al. <ref type="bibr" target="#b22">[23]</ref> highlight validity concerns impacting RAIs, including many discussed in § 2.2. Recent work has also surfaced validity issues in content moderation <ref type="bibr" target="#b40">[41]</ref> and recommender systems <ref type="bibr" target="#b67">[68,</ref><ref type="bibr" target="#b91">92]</ref>. Despite this growing awareness, we currently lack a holistic understanding of validity threats to prediction targets in human-AI decision-making. Addressing this gap is critical for preventing algorithmic harms in real-world deployment contexts. Therefore, in this work, we use causal diagrams to examine the relationship between measurement error and additional modeling challenges (i.e., § 2.2) that can impact the validity of prediction targets in realworld decision support settings. To our knowledge, our work offers the first holistic examination of how measurement error, unobservables, selection bias, intervention effects, and confounding interact to impact target variable validity in real-world ADS deployments.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">FRAMEWORK</head><p>We now describe our framework scope ( § 3.1) and development process ( § 3.2) before introducing our causal diagram ( § 3.3). We then use our framework to map algorithmic decision support tasks to relevant sources of target variable bias ( § 3.4).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Scope</head><p>Our framework applies to settings in which a supervised learning model is introduced to augment human decision-making by predicting (i) a future event (e.g., medical <ref type="bibr" target="#b73">[74]</ref>, criminal justice <ref type="bibr" target="#b30">[31]</ref>, child welfare <ref type="bibr" target="#b18">[19]</ref>, or real estate <ref type="bibr" target="#b51">[52,</ref><ref type="bibr" target="#b82">83]</ref> related outcomes); (ii) a subjective human annotation (e.g., perceived content toxicity <ref type="bibr" target="#b40">[41]</ref>); or (iii) factual information (e.g., food nutrition <ref type="bibr" target="#b9">[10]</ref>). In these settings, model predictions are combined with human decision-making, either by showing model predictions to a human (i.e., algorithm-in-the-loop <ref type="bibr" target="#b41">[42]</ref>), who makes the final decision, or via a hybrid flow of agency (e.g., deferral-based learning <ref type="bibr" target="#b64">[65]</ref>, learning with bandit feedback <ref type="bibr" target="#b39">[40]</ref>). Given our focus on prediction-based decision tasks, we do not directly examine decision-support settings involving unsupervised learning (e.g., clustering), tasks relying upon generative models (e.g., text or image generation), or sequential settings with time dependency (e.g., reinforcement learning) in this work.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Framework development</head><p>Understanding which statistical biases are of concern in a given ADS task requires examining the historical data generating process that gave rise to the model training dataset. Causal diagrams, which are graphs that show causal relationships between nodes via connected edges <ref type="bibr" target="#b77">[78]</ref>, are tools specifically designed for this purpose. If the direction of a causal pathway is known, this is shown via a directed arrow from the parent to child node. An undirected edge is used to connect nodes when the causal direction is unknown or varies across settings described by the diagram <ref type="bibr" target="#b77">[78]</ref>. Our framework introduces a causal diagram to examine challenges impacting the labels available in data. Therefore, we specifically consider variables (i.e., nodes) and relationships (i.e., edges) that directly relate to the target variable; we abstract away other important factors, such as the training <ref type="bibr" target="#b12">[13,</ref><ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b60">61]</ref>, decision-making process <ref type="bibr" target="#b42">[43]</ref>, and workflow <ref type="bibr" target="#b41">[42]</ref> of the human decision-makers using the predictive model. While prior work has examined these factors in detail <ref type="bibr" target="#b12">[13,</ref><ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b41">42,</ref><ref type="bibr" target="#b42">43,</ref><ref type="bibr" target="#b60">61]</ref>, our framework foregrounds factors most salient for understanding target variable bias. In § 5.3, we outline how our approach can be extended to systematically examine a broader set of components beyond target variables in human-AI decision-making research.</p><p>Our causal diagram was developed and refined through an iterative series of discussions among the authors and external researchers spanning a range of disciplines. Based on a review of real-world case studies (see Table <ref type="table">3</ref> in Appendix A), we synthesized candidate causal diagrams that could adequately characterize the target variable of interest across settings, and then stress-tested these diagrams by attempting to identify counterexamples. Through our discussions with external researchers, we also cross-referenced our framework with existing terminology and methods developed in adjacent disciplines, such as medical diagnostic testing, educational assessment, behavioral health, and statistics.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3">Causal diagram</head><p>3.3.1 Diagram structure. Figure <ref type="figure" target="#fig_0">1</ref> shows our proposed causal diagram, which represents a space of directed acyclic graphs (DAGs) describing the relationship between predictors, decisions, target variables, and their proxies in ADS tasks.</p><p>Predictors. 𝑋 describes covariates used to generate model predictions. Covariates are often drawn from administrative data sources (e.g., medical records, lending history) available to an organization for model development. In ADS settings, humans can also make use of unobserved contextual information 𝑍 while making decisions. For example, a physician might consider real-time medical test results (e.g., electrocardiograms <ref type="bibr" target="#b70">[71]</ref>) unavailable to a model, while a social worker might weigh contextual factors described via phone calls while deciding whether to recommend investigation of child maltreatment allegations <ref type="bibr" target="#b55">[56]</ref>. In some cases, human decision-makers can also be unaware of a subset of covariates (e.g., due to organizational policy or prohibitively large datasets) <ref type="bibr" target="#b51">[52]</ref>. Figure <ref type="figure" target="#fig_0">1</ref> refers to 𝑋 and 𝑍 as model observables and model unobservables, respectively, based on whether the predictors are available to a model.</p><p>Decisions. The blue shaded box in Figure <ref type="figure" target="#fig_0">1</ref> shows the joint human-algorithm decision 𝐷. We decompose this node into separate variables for human decisions 𝐷 𝐻 and algorithm predictions 𝐷 𝐴 . Prior to deployment of an algorithm, decisions result solely from human judgement (𝐷 𝐻 ). In some cases, post-deployment decisions result from humans incorporating predictions into their decisionmaking (i.e., algorithm-in-the-loop <ref type="bibr" target="#b41">[42]</ref>). In other cases, the joint decisions result from a learned combination of 𝐷 𝐻 and 𝐷 𝐴 <ref type="bibr" target="#b16">[17,</ref><ref type="bibr" target="#b32">33,</ref><ref type="bibr" target="#b39">40,</ref><ref type="bibr" target="#b50">51,</ref><ref type="bibr" target="#b64">65,</ref><ref type="bibr" target="#b92">93,</ref><ref type="bibr" target="#b99">100]</ref>.</p><p>Target variables. The node 𝑌 * describes the unobserved target variable of interest to human decision-makers. For example, a model might be introduced to weigh the risk of unobserved constructs such as "medical need" , "recidivism", "creditworthiness", or "job performance. " 𝑌 describes the observed proxy that is targeted by a model in place of 𝑌 * . For example, a model might predict "cost of medical care" <ref type="bibr" target="#b73">[74]</ref>, "re-arrest" <ref type="bibr" target="#b34">[35]</ref>, "loan default", or "supervisor performance reviews" in place of the targets listed previously. The grey box in Figure <ref type="figure" target="#fig_0">1</ref> represents a measurement model mapping the unobserved construct to the observed proxy targeted by a predictive model (see § 3.4.1).</p><p>Edges. We now describe the space of possible relationships connecting nodes in ADS tasks. Covariates and model unobservables both contribute to human decisions (𝐷 𝐻 ), while algorithmic predictions (𝐷 𝐴 ) are only influenced by covariates (𝑋 ). For example, a physician might make use of medical records (𝑋 ) and real-time test results (𝑍 ), while an algorithm only has access to medical records (𝑋 ). We show these relationships via directed arrows 𝑋 → 𝐷 and 𝑍 → 𝐷 𝐻 . Decisions (𝐷) can also influence the target and proxy outcomes (𝑌 * , 𝑌 ). For example, enrollment in a medical treatment program can increase medical costs (𝑌 ) while also improving patient health (𝑌 * ). We show this relationship via the directed arrow 𝐷 → 𝑌 , 𝑌 * .</p><p>The direction of causality between covariates (𝑋 ), unobservables (𝑍 ), and prediction targets (𝑌 and 𝑌 * ) can vary across ADS domains. In Figure <ref type="figure" target="#fig_0">1</ref>, we convey this ambiguity via undirected edges. Causal diagrams for prediction tasks often show covariates (𝑋 ) and unobservables (𝑍 ) contributing to downstream outcomes (𝑌 , 𝑌 * ) via a domain-specific causal pathway <ref type="bibr" target="#b6">[7]</ref>. In our diagram, this flow of information would be communicated via directed edges from 𝑋 to (𝑌, 𝑌 * ), and from 𝑍 to (𝑌, 𝑌 * ). However, in some cases, the causal pathway can be reversed <ref type="bibr" target="#b46">[47]</ref>. For example, this is possible if a patient's unobserved disease status (𝑌 * ) contributes to their medical history (𝑋 ) or real-time test results (𝑍 ). Therefore, bidirectional edges shown in Figure <ref type="figure" target="#fig_0">1</ref> map to directed edges with directionality that varies depending on the domain. <ref type="foot" target="#foot_3">2</ref></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4">Mapping algorithmic decision support tasks to sources of target variable bias</head><p>We now leverage our causal framework to identify sources of target variable bias that can impact predictive models in algorithmic decision support tasks. We begin by introducing two distinct regimes of ADS tasks described by our generalized diagram shown in Figure <ref type="figure" target="#fig_0">1</ref>; those with: (1) decision-dependent target variables, and (2) decision-independent target variables. ADS tasks with decisiondependent target variables are subject to more sources of TVB than those with decision-independent target variables.</p><p>While it is possible to define many other specific regimes of our generalized diagram (e.g., different directions of causality between (𝑌, 𝑌 * ) and 𝑋 or 𝑍 , or different flows of agency between 𝐷 𝐴 and 𝐷 𝐻 ), we introduce the distinction between decision-dependent and independent target variables here because it is useful for identifying task-specific sources of TVB. ADS tasks with decision-dependent target variables occur when the decision informed by an algorithm also impacts the downstream outcomes 𝑌 and 𝑌 * . Real-world ADS deployments often involve prediction tasks with decision-dependent target variables. For example, re-arrest is only observed among defendants released on bail <ref type="bibr" target="#b56">[57]</ref>, while child welfare screening decisions can influence</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Outcome measurement error</head><formula xml:id="formula_0">A Confounding E Uniform &amp; Class-dependent</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Intervention effects B</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Selection bias C Decision-dependent target variable</head><p>Feature-dependent</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Indicated via:</head><p>Selective labels D Figure <ref type="figure">2</ref>: Sub-graphs of the diagram in Figure <ref type="figure" target="#fig_0">1</ref> introducing statistical biases that impact the target variable 𝑌 * . Outcome measurement error (A) can occur in settings with both decision-dependent and independent target variables. In decisiondependent settings, intervention effects (B), selection bias (C), selective labels (D), and confounding (E) are also of concern.</p><p>the risk of adverse care outcomes <ref type="bibr" target="#b21">[22]</ref>. More generally, decisions informed by algorithms often constitute risk mitigating interventions (e.g., medical treatments, educational programs) or opportunities (e.g., loans, new candidate hires) that change the likelihood of the target outcome (e.g., disease prognosis, educational attainment). Settings with decision-dependent target-variables include the orange arrow from 𝐷 to 𝑌 and 𝑌 * shown in Figure <ref type="figure" target="#fig_0">1</ref>. <ref type="foot" target="#foot_4">3</ref>In contrast, the target variable is not influenced by the proposed decision in ADS tasks with decision-independent target variables. ADS are frequently deployed in the real world with the goal of informing decisions that can change the predicted outcomes. However, lab-based experimental studies of human-AI decisionmaking often conduct evaluations via ADS tasks with decisionindependent target variables. For instance, studies have examined models that predict factual content (e.g., food nutrition <ref type="bibr" target="#b9">[10]</ref>) and perceptual information (e.g., counts of objects <ref type="bibr" target="#b75">[76]</ref>, geometric shapes <ref type="bibr" target="#b100">[101]</ref>). These tasks are decision-independent because the prediction target (i.e., food nutrition, geometric shape) is not influenced by the prediction made by a human and/or model. <ref type="foot" target="#foot_5">4</ref> ADS tasks in the decision-independent regime do not contain the arrow from 𝐷 to 𝑌 and 𝑌 * in Figure <ref type="figure" target="#fig_0">1</ref>.</p><p>We now introduce five sources of target variable bias relevant in ADS tasks. Outcome measurement error is of concern in both decision-dependent and decision-independent regimes, while intervention effects, selective labels, selection bias, and confounding bias are only relevant in decision-dependent regimes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4.1">Outcome measurement error.</head><p>Human experts often make decisions involving unobserved, latent constructs such as "recidivism risk" and "job performance. " These latent constructs are not directly observable in the world, but can be operationalized via a measurement model <ref type="bibr" target="#b45">[46,</ref><ref type="bibr" target="#b53">54]</ref>. Adopting a label observed in data as a proxy for an unobserved latent construct serves as a de facto measurement model. For instance, in criminal justice settings, defendant re-arrest is commonly adopted as a proxy for recidivism risk <ref type="bibr" target="#b4">[5,</ref><ref type="bibr" target="#b36">37]</ref>, while in commercial hiring settings, manager reviews are frequently adopted as a proxy for future job performance. Outcome measurement error (Figure <ref type="figure">2</ref>.A) occurs when there is a systematic difference between the target variable of interest to experts and policymakers (𝑌 * ) and its operationalization by a proxy (𝑌 ). This challenge has been extensively documented in judicial <ref type="bibr" target="#b11">[12,</ref><ref type="bibr" target="#b34">35]</ref>, child welfare <ref type="bibr" target="#b17">[18,</ref><ref type="bibr" target="#b55">56]</ref>, and hiring <ref type="bibr" target="#b15">[16]</ref> ADS domains.</p><p>Because proxy labels impacted by measurement error offer an incomplete reflection of the actual goals of human decision-makers, they serve as an incomplete measure of human-AI decision quality. Therefore, before adopting a proxy as a measure of human-AI decision quality, it is critical to assess whether it serves as a satisfactory approximation of the target variable of interest to humans. Measurement theory in the quantitative social sciences provides tools to conduct this assessment by weighing the construct validity and reliability of observed labels <ref type="bibr" target="#b45">[46,</ref><ref type="bibr" target="#b53">54]</ref> (see § 4.3.1). In practice, measurement error in proxies is often studied via measurement error models. These models make assumptions on the relationship between the target outcome (𝑌 * ) and its proxy (𝑌 ) (see Appendix A.1). Outcome measurement error is of concern in decision-dependent and independent regimes because observed labels can be subject to construct validity and reliability concerns in both settings.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4.2">Intervention effects.</head><p>In many ADS tasks, decisions serve as risk mitigating interventions intended to improve the chances of a favorable policy-relevant outcome <ref type="bibr" target="#b5">[6,</ref><ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b58">59]</ref>. As a result, past human decisions 𝐷 𝐻 influence the probability of the target outcome 𝑌 * and its proxy 𝑌 (Figure <ref type="figure">2</ref>.B). However, many existing predictive techniques mistakenly assume that decisions 𝐷 and outcomes 𝑌 , 𝑌 * are statistically independent <ref type="bibr" target="#b5">[6,</ref><ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b58">59]</ref>. This practice can be traced back to formulation of ADS as a prediction-policy problem <ref type="bibr" target="#b57">[58]</ref>, in which models are trained to maximize predictive performance with respect to observed outcomes without considering causal effects from 𝐷 to 𝑌 and 𝑌 * . Yet, we argue that accounting for the causal connection between decisions and outcomes is of central interest in many ADS tasks. For instance, consider two distinct policy problems that arise in tasks with decision-dependent target variables:</p><p>• Selective Intervention (SI): In this policy setting, organizations provide resources to individuals who are at high baseline risk under no intervention. For example, developers of the Allegheny Family Screening Tool (AFST) introduced the tool with the goal of assessing "latent risk" of maltreatment prior to county child welfare interventions <ref type="bibr" target="#b93">[94]</ref>. Similarly, predictive models have been introduced in educational settings to identify students at-risk of failing given no tutoring resources <ref type="bibr" target="#b89">[90]</ref>. Naively structuring an ADS task as a prediction policy problem in SI and SO settings can lead to misleading assessments of model performance. For example, Coston et al. <ref type="bibr" target="#b21">[22]</ref> demonstrate that predicting observed labels in SI settings systematically underestimates the risk for high-risk individuals who would respond most favorably to the intervention. This source of bias is only relevant in the decision-dependent regime because intervention effects are introduced by the connection 𝐷 → 𝑌, 𝑌 * .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4.3">Selective labels.</head><p>Another challenge introduced by the connection 𝐷 → 𝑌 , 𝑌 * in the decision-dependent regime is selective labels (Figure <ref type="figure">2</ref>.D). This bias has been widely discussed in connection to pre-trial risk assessments, where recidivism-related proxy outcomes (e.g., re-arrest, failure to appear) are only observed among defendants released on bail <ref type="bibr" target="#b4">[5,</ref><ref type="bibr" target="#b36">37,</ref><ref type="bibr" target="#b56">57,</ref><ref type="bibr" target="#b62">63]</ref>. Selective labels also occur in child welfare settings, in which some outcomes (e.g., placement in foster care) are only observed among cases screened-in for investigation <ref type="bibr" target="#b24">[25]</ref>. Selective labels maps directly to selective intervention and selective opportunity policy problems because we never observe how an individual would have benefited from a missed opportunity (SO), or how an intervention would have impacted an individual who historically received no additional resources. Selective labels pose the greatest challenge when selection bias was also present in the data generating process.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4.4">Selection bias.</head><p>This bias, which occurs when covariates (𝑋 ) or model unobservables (𝑍 ) influenced past decisions (𝐷) (Figure <ref type="figure">2</ref>.C), complicates selective labels and intervention effects. Because a previous decision-making policy may have been more likely to intervene (SI) or grant opportunities (SO) to some sub-populations, these groups may be systematically over-or under-represented in historical outcome data. As a result, ADS models trained on historical data will not perform equally well on all sub-populations during deployment <ref type="bibr" target="#b7">[8]</ref>. This effect has been well-documented in recidivism prediction settings, in which models predicting re-arrest outcomes have worse performance among sub-populations historically denied bail <ref type="bibr" target="#b54">[55]</ref>. While selection bias can cause challenges in any setting in which data is collected non-randomly <ref type="bibr" target="#b48">[49]</ref>, this challenge is compounded in decision-dependent outcome tasks because the connection 𝑋 → 𝐷 𝐻 → 𝑌 * , 𝑌 causes selection effects to cascade to selective observation of outcomes 𝑌 and 𝑌 * . The connection between selection bias and other downstream issues (e.g., intervention effects, selective labels) underscores the importance of considering the full data generating process while diagnosing sources of bias impacting proxy labels.</p><p>3.4.5 Confounding bias. In causal inference settings, this bias occurs when unmeasured variables influence both the treatment and response variable <ref type="bibr" target="#b77">[78]</ref>. Confounding impacts ADS tasks when unobservables influenced past decisions and downstream outcomes (Figure <ref type="figure">2</ref>.E) <ref type="bibr" target="#b77">[78]</ref>. When confounding impacts ADS models, it is not possible to fully mitigate treatment effects and selective labels via traditional causal inference techniques <ref type="bibr" target="#b78">[79]</ref>. Yet, confounding is not introduced by model unobservables 𝑍 in decision-independent tasks because there is no arrow from 𝐷 to 𝑌 and 𝑌 * . In these tasks, unobservables may serve as an opportunity for complementarity between humans and models arising from asymmetric access to information <ref type="bibr" target="#b49">[50,</ref><ref type="bibr" target="#b51">52]</ref>. Therefore, by mapping an ADS task to its underlying causal diagram and identifying the appropriate task regime, it is possible to identify whether model unobservables pose a treat or opportunity for a given ADS deployment.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">MODEL DEVELOPMENT</head><p>We now provide a framework for specifying target variable assumptions during predictive model development. We argue that predictive modeling for ADS involves two distinct steps: measurement and prediction. During the measurement step, tool developers construct a measurement model that operationalizes the target variable of interest 𝑌 * using readily available datasets. During the second step, tool designers train a prediction model that targets the proxy outcome returned by the measurement model. We now discuss each of these modeling steps in detail.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1">Measurement model</head><p>During the measurement step, the unobserved outcome of interest (𝑌 * ) is approximated using historical data from the causal diagram in Figure <ref type="figure" target="#fig_0">1</ref>. This step involves establishing a measurement hypothesis ( Ŷ * ) using observed information: covariates 𝑋 , past decisions 𝐷, and one or more outcome proxies 𝑌 . In some settings, a subset of unobservables are available during model development, but unavailable in during deployment. Such runtime confounders 𝑍 𝑟 ⊆ 𝑍 can occur when protected attributes (e.g., race, gender) are available during development, but not during deployment for legal purposes <ref type="bibr" target="#b20">[21,</ref><ref type="bibr" target="#b28">29]</ref>. Given information 𝑋 , 𝑍 𝑟 , 𝐷, 𝑌 recorded in existing data, we can construct a measurement model approximating the target variable 𝑌 * :</p><formula xml:id="formula_1">Ŷ * = 𝐹 𝑚 [𝑋, 𝑍 𝑟 , 𝐷, 𝑌 ]<label>(1)</label></formula><p>Unlike statistical models commonly used in machine learning contexts, a measurement model cannot be learned from past data because the target outcome 𝑌 * is unobserved. Instead, 𝐹 𝑚 relies on measurement assumptions concerning the relationship between the unobserved outcome of interest and recorded information available for modeling. Therefore, it is not possible to assess the quality of Ŷ * by comparing against held-out data, as is common in prediction settings. Instead, evaluating measurement models requires a multifaceted approach, including assessments of construct validity, </p><formula xml:id="formula_2">Ŷ * = 𝐹 𝑚 [𝑌 ],</formula><p>where 𝑌 = {𝑌 1 , ..., 𝑌 𝐾 } are independent factors 3-step LCA with covariates (see <ref type="bibr" target="#b94">[95]</ref>)</p><formula xml:id="formula_3">𝑌 𝑖 ⊥ ⊥ 𝑌 𝑗 | 𝑌 *</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Measurement error</head><p>Hui-Walter Framework Hui and Walter <ref type="bibr" target="#b52">[53]</ref> Ŷ * = 𝐹 𝑚 <ref type="bibr">[𝑌 ]</ref>, where All predictive models in ADS introduce a measurement model. However, this model is often implicitly defined and makes tacit assumptions on the relationship between available data sources ( 𝑋 , 𝑍 𝑟 , 𝐷, 𝑌 ) and the target variable (𝑌 * ). Table <ref type="table" target="#tab_2">1</ref> provides a detailed list of the measurement models assumed by existing ADS approaches. This table reifies often-implicit measurement assumptions adopted by prior work. In the bottom three rows, we apply our taxonomy to workhorse methods used in machine learning <ref type="bibr" target="#b66">[67,</ref><ref type="bibr" target="#b71">72]</ref>, quantitative social sciences <ref type="bibr" target="#b65">[66]</ref>, and bio-statistics <ref type="bibr" target="#b52">[53]</ref> literature. The Bias Mitigated column of Table <ref type="table" target="#tab_2">1</ref> refers to the source of TVB addressed by the modeling technique. For instance, we mark "None" for Wilder et al. <ref type="bibr" target="#b99">[100]</ref> and Madras et al. <ref type="bibr" target="#b64">[65]</ref> because these approaches are not designed to mitigate any TVB sources listed in § 3.4.</p><formula xml:id="formula_4">𝑌 = {𝑌 1 , ...,</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2">Prediction model</head><p>After establishing a measurement model to estimate 𝑌 * given (𝑋 , 𝑍 𝑟 , 𝐷, 𝑌 ), tool designers then train a prediction model for use in decision-support settings. This prediction model takes observed covariates (𝑋 ) and predicts the measurement hypothesis ( Ŷ * ) established during the preceding measurement step. Because 𝑍 𝑟 and 𝑌 are unavailable during deployment, these are not included in the prediction model. Most often, prediction models do not assume human decisions 𝐷 are available at runtime (i.e., algorithm-in-the-loop <ref type="bibr" target="#b41">[42]</ref>). However, in some more nuanced decision-making workflows, models may also assume that human decisions are available at run-time as an additional input (i.e., <ref type="bibr" target="#b39">[40,</ref><ref type="bibr" target="#b64">65,</ref><ref type="bibr" target="#b92">93,</ref><ref type="bibr" target="#b99">100]</ref>). Given 𝑋 and optionally 𝐷 available at runtime, the prediction model estimates the measurement hypothesis Ŷ * :</p><formula xml:id="formula_5">Ŷ = F𝑝 [𝑋, 𝐷]<label>(2)</label></formula><p>Whereas a measurement model is constructed via measurement assumptions, the prediction model F𝑝 is a learned mapping from 𝑋 (and in some cases 𝐷) to the measurement hypothesis Ŷ * . Therefore, it is appropriate to evaluate generalization of F𝑝 to held-out data via the standard slate of evaluation metrics (e.g., accuracy, AU-ROC, or statistical fairness measures). Critically, this evaluation is conducted with respect to the measurement hypothesis established during the measurement step ( Ŷ * ) rather than the target outcome (𝑌 * ) directly.</p><p>Thus, showing strong performance of F𝑝 is not sufficient to claim a model generates valid predictions for the target outcome 𝑌 * .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3">Measurement model evaluation</head><p>Measurement model evaluation requires a holistic, multifaceted approach leveraging converging sources of evidence. Informed by methods used in statistics, quantitative social sciences, and learning sciences, we provide a recommended set of approaches for validating measurement models in ADS tasks.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>4.</head><p>3.1 Construct reliability and validity. Measurement theory offers a comprehensive set of criteria for assessing the quality of a measurement model. Construct reliability describes the degree to which a latent phenomena is consistently reflected by a measurement model (e.q. 1) over time. Threats to construct reliability have been well documented in settings in which target variables are assigned via subjective human annotations. In these settings, assignment of target outcomes can vary substantially based on rater identity <ref type="bibr" target="#b27">[28,</ref><ref type="bibr" target="#b27">28]</ref>, context <ref type="bibr" target="#b76">[77]</ref>, and specification of the annotation protocol <ref type="bibr" target="#b81">[82]</ref>. Construct validity describes the extent to which a measurement model adequately captures an unobserved phenomenon of interest. Thus, while construct reliability is roughly analogous to the notion of statistical variance in 𝐹 𝑚 , construct validity is analogous to statistical bias in 𝐹 𝑚 <ref type="bibr" target="#b53">[54]</ref>. We refer the reader to <ref type="bibr" target="#b22">[23]</ref> for a detailed discussion of sub-components of construct reliability and validity that pertain to risk assessment development and evaluation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.2">Outcome cross-validation.</head><p>In many ADS domains, multiple proxies are available that are believed to be related to the target outcome of interest. In the criminal justice domain, courts often track multiple recidivism-related outcomes (e.g., 2-year general and violent recidivism, failure to appear). In the child welfare domain, government agencies may track substantiation of abuse allegations, acceptance for welfare services, agency re-referral, placement in foster care, and hospitalization <ref type="bibr" target="#b93">[94]</ref>. When multiple reference outcomes are available, outcome cross-validation can be used to train a model to predict one proxy, then evaluate this model on a slate of additional reference variables that domain experts expect may be reasonable proxies for the outcome of interest. If targeting a proxy also results in strong performance across other reference variables, this provides evidence suggesting that a proxy may serve as a suitable measurement model. Outcome cross-validation has been independently used by analyses of proxy outcomes in learning analytics <ref type="bibr" target="#b83">[84]</ref>, criminal justice <ref type="bibr" target="#b56">[57]</ref>, child welfare <ref type="bibr" target="#b25">[26]</ref>, and healthcare <ref type="bibr" target="#b73">[74]</ref>. Special cases of outcome cross-validation map to sub-components of construct validity. For example, a model demonstrates predictive validity if its predictions correlate with a reference outcome known to be related to the construct of interest <ref type="bibr" target="#b45">[46]</ref>. A model demonstrates discriminant validity if its predictions are not correlated with a conceptually distinct outcome.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.3">Sensitivity analyses.</head><p>Sensitivity analyses enable assessing the degree of measurement model misspecification permissible before evaluation of a prediction model is invalidated. This technique has traditionally been applied in causal inference settings to estimate the magnitude of unobserved confounding necessary to invalidate a treatment effect estimate <ref type="bibr" target="#b29">[30,</ref><ref type="bibr" target="#b86">87]</ref>. More recently, sensitivity analyses have been developed for predictive model evaluation. For instance, Fogliato et al. <ref type="bibr" target="#b34">[35]</ref> proposed a sensitivity analyses framework that examines the degree of outcome measurement error permissible before fairness-related analyses are invalidated. Future work in ADS would benefit from sensitivity analysis frameworks that examine multiple sources of target variable bias in parallel.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.4">Synthetic evaluation.</head><p>A limitation of leveraging real-world datasets for measurement model validation is that one never knows the actual relationship between 𝑌 and 𝑌 * in naturalistic data. Modellevel evaluations in ADS typically circumvent this issue via synthetic evaluations which test whether proposed approaches are robust to experimentally manipulated bias <ref type="bibr" target="#b21">[22,</ref><ref type="bibr" target="#b25">26,</ref><ref type="bibr" target="#b66">67,</ref><ref type="bibr" target="#b96">97</ref>]. Yet, synthetic evaluations require assuming a specific measurement error model. If the data generating process adopted by a synthetic evaluation does not reflect real-world conditions, this can lead to overconfidence in model performance in more realisitic settings. This concern is salient because synthetic evaluations are often designed with bespoke data generating processes intended to highlight the specific challenge being addressed by the technique.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>4.3.5</head><p>The Oracle Test. Chouldechova et al. <ref type="bibr" target="#b18">[19]</ref> propose a conceptual tool called the "Oracle Test", which can surface unforeseen sources of target variable bias. This thought experiment supposes that we have access to an oracle model that can predict a proxy with perfect accuracy. The key question posed by this test is: "What concerns remain given access to such an oracle?" Because we have a "perfect" prediction model (e.q. 2), remaining concerns are often related to measurement and validity (e.q. 1). For example, Chouldechova et al. <ref type="bibr" target="#b18">[19]</ref> surface concerns related to measurement error when they apply the Oracle Test to examine RAIs designed for ADS models deployed in the child welfare domain. Green and Chen <ref type="bibr" target="#b42">[43]</ref> also leverage the Oracle Test by arguing that improvements to predictive accuracy do not equate to improved public policy outcomes when competing factors in addition to risk (i.e., defendant liberty) are overlooked.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">ASSESSING GAPS AND OPPORTUNITIES FOR EXPERIMENTAL RESEARCH</head><p>In this section, we leverage our framework to assess the extent to which existing lab-based studies consider sources of target variable bias ( § 5.1). Our analysis finds systematic gaps in our current understanding of human-AI decision-making in light of TVB.</p><p>We then show how our framework can be used by researchers to assess threats to the ecological validity and generalizability of lab-based studies ( § 5.2). We conclude by discussing opportunities to use our methodology to explore a broader space of open challenges in human-AI decision-making research ( § 5.3). In Appendix A.2, we provide a resource that helps researchers apply our causal framework to examine the design and ecological validity of several experimental human-AI decision-making studies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1">Mapping existing experimental study designs to our causal diagram</head><p>To assess the extent to which existing studies examine factors related to target variable bias in their study design, we revisit a comprehensive literature review conducted by Lai et al. <ref type="bibr" target="#b59">[60]</ref> through the lens of our causal diagram (Figure <ref type="figure" target="#fig_0">1</ref>). Lai et al. <ref type="bibr" target="#b59">[60]</ref> review over 𝑄 → 𝐷 𝐻 Fogliato et al. <ref type="bibr" target="#b35">[36]</ref> Table <ref type="table">2</ref>: Experimental studies examining the under-studied sub-region provided in Figure <ref type="figure" target="#fig_0">1</ref>.</p><p>one hundred experimental studies of algorithm-assisted decisionmaking published in premiere venues between 2018 and 2021. Our follow-up analysis extends this review to studies published in 2022 at the same set of venues, in addition to recent pre-prints. We further limit selection criteria applied by Lai et al. <ref type="bibr" target="#b59">[60]</ref> to studies examining prediction-based decision-making settings (i.e., scope outlined in § 3.1). Thus, we exclude studies included in the initial review with a focus on NLP-related tasks.</p><p>Our analysis finds that 66 out of 72 (≈ 92%) studies satisfying our criteria conduct experimental evaluations focusing on a narrow sub-graph of our causal diagram. These studies investigate a modification to the joint decision-making process (i.e., the blue 𝐷 𝐻 and 𝐷 𝐴 region) using observed attributes 𝑋 and an outcome proxy 𝑌 (Figure <ref type="figure">3</ref>). Such studies assume that (1) the target variable and proxy are equivalent (i.e., no measurement error ), (2) all predictors are observed by both the algorithm and the human (i.e., no model unobservables), and (3) decisions and outcomes are unrelated (i.e., no intervention effects).</p><p>Six of the remaining studies we review examine different subregions of the causal diagram described in Figure <ref type="figure" target="#fig_0">1</ref>. Table <ref type="table">2</ref> groups these studies by the sub-region of focus, including unobservables <ref type="bibr" target="#b49">[50,</ref><ref type="bibr" target="#b51">52]</ref>, measurement error <ref type="bibr" target="#b40">[41]</ref>, selection bias <ref type="bibr" target="#b79">[80]</ref>, and omitted payoffs <ref type="bibr" target="#b35">[36,</ref><ref type="bibr" target="#b42">43]</ref>. While these studies offer early insight into how target variable bias can impact algorithm-assisted human decisionmaking, our empirical understanding of these challenges remains limited compared to the joint human-AI decision region investigated by ≈ 92% of studies. Critically, no work in our review experimentally manipulated factors related to intervention effects or examined multiple intersecting sources of bias in parallel. Given the prevalence of compounding challenges in real-world settings, this gap opens a broad space of open questions and future opportunities for human-AI decision-making research.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2">Assessing the ecological validity of lab-based studies</head><p>The gap we identify between real-world challenges and lab-based studies (i.e., Figure <ref type="figure">3</ref>) carries implications for the ecological validity of experimental studies. Threats to ecological validity may be most acute when findings from a controlled study conducted under simplified conditions are generalized to real-world ADS deployments in which multiple sources of target variable bias are present. In these settings, measurement error and intervention effects could impact whether findings gathered via controlled experiments also apply in more complex real-world conditions. Fortunately, our causal diagram provides a tool for assessing whether findings from a lab-based study are likely to generalize to a given real-world ADS tool deployment. The first step in this process involves mapping the ADS task to its corresponding regime identified in § 3.4 . Next, based on domain expertise, one can identify whether different sources of bias are likely to be relevant in the given real-world deployment. For instance, a model deployed to allocate tutoring resources (i.e., a decision-dependent task) may need to account for mismeasured learning outcomes and intervention effects from prior tutoring program enrollment. In contrast, a model deployed for a perceptual assessment task (e.g., predicting current forest cover from satellite imagery <ref type="bibr" target="#b97">[98]</ref>; a task with decision-independent outcomes) may not need to address these concerns. After identifying the appropriate ADS regime and relevant sources of bias, one can assess whether an experimental study is likely to generalize to this setting by examining whether the study used a similar prediction task (e.g., also tested decision-dependent or decision-independent outcomes).</p><p>To demonstrate how causal diagrams can be used to assess ecological validity of lab-based studies, consider a previous lab-based assessment conducted by Park et al. <ref type="bibr" target="#b75">[76]</ref>. This study -which is sampled from the 66 studies covered by the blue sub-region of the causal diagram provided in Figure <ref type="figure">3</ref> -examines whether introducing a delay between when humans view observed features 𝑋 and algorithmic recommendations 𝐷 𝐴 improves their performance on a perceptual jellybean counting task. Because the true quantity of jellybeans does not depend on the decision under consideration, this study involves a task from the decision-independent outcome regime. Further, the influence of human-only observed attributes 𝑍 and measurement error is limited in this task. Therefore, findings from this work may most readily generalize to real-world decision-making settings with limited interference from outcome measurement error, model unobservables, and intervention effects.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3">Scaffolding a science of human-AI decision-making</head><p>Our work leverages causal diagrams to characterize sources of bias impacting target variables. However, beyond this focus, causal diagrams also offer a powerful scaffolding for studying other aspects of human-AI decision-making, such as the joint human-AI decisionmaking process (i.e., the 𝐷 node in our framework). For example, Green and Chen <ref type="bibr" target="#b42">[43]</ref> specify a causal diagram that models how judges weigh risk against other competing factors (e.g., culpability, value of defendant freedom) during pre-trial release decisions. The authors then experimentally verify a hypothesized edge in this causal diagram via a controlled online study. Through a series of such studies, it may be possible to develop a more generalized theory of AI-assisted human decision-making across decision support tasks. This process of specifying, testing, and refining causal models is central to existing empirical disciplines, including psychology and sociology <ref type="bibr" target="#b77">[78]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6">DISCUSSION</head><p>Our work surfaces a disconnect between the challenges that arise in real-world deployments of algorithmic systems versus current research practices (i.e., experimental study designs, modeling assumptions, measures of human-AI decision quality) adopted in the human-AI decision-making literature. Left unaddressed, current gaps in this literature can amount to substantive downstream harms. For instance, while prior studies of real-world ADS tool deployments have surfaced patterns of apparent human underreliance arising from imperfect prediction targets <ref type="bibr" target="#b17">[18,</ref><ref type="bibr" target="#b55">56,</ref><ref type="bibr" target="#b90">91]</ref>, no experimental human subjects studies to date have examined how to disentangle warranted skepticism in a misaligned model versus unwarranted under-reliance due to algorithm aversion. Absent such knowledge, organizations may continue to pressure domain experts to rely upon flawed predictive models <ref type="bibr" target="#b55">[56]</ref>, which have been shown to misallocate of medical resources <ref type="bibr" target="#b73">[74]</ref> and perpetuate historical patterns of bias <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b36">37]</ref> (see Table <ref type="table">3</ref> in Appendix A for additional examples of real-world harms introduced by TVB).</p><p>Our work provides a critical first step for addressing this disconnect by clarifying the relationship between measurement error, intervention effects, unobserved confounding, selective labels, and selection bias via intuitive causal diagrams. Going forward, we hope that this framework will support more comprehensive assessment of modeling techniques ( § 4) and empirical human subjects studies ( § 5) designed to facilitate human-AI decision-making. However, further work is needed to gain a comprehensive understanding of the sources and implications of target variable bias in human-AI decision-making research.</p><p>In particular, future research should develop holistic measures of decision-quality that reflect factors beyond statistical performance computed via a single outcome proxy. These measures should reflect both process-oriented considerations (i.e., how multiple decisionrelevant factors are weighted <ref type="bibr" target="#b41">[42]</ref>, and adherence to procedural, interpersonal, and informational justice) in addition to outcomeoriented considerations (i.e., whether a decision led to a beneficial outcome). Where possible, outcome-related measures should draw upon multiple decision-relevant proxies to better account for limitations of adopting any single proxy in isolation. While this practice is standard in disciplines such as learning sciences, diagnostic medical testing, and psychology, to date, human-AI decision-making research has primarily adopted outcome-oriented measures that hinge upon on a single potentially flawed proxy.</p><p>Our work also motivates exciting new lines of human-AI decision-making research. For instance, our review of prior modeling approaches finds that, while many techniques have been designed to address a subset of model reliability challenges (Table <ref type="table" target="#tab_2">1</ref>), few examine how various sources of target variable bias compound in real-world deployment scenarios. Additionally, our review of experimental human subjects research provides a set of tools for (i) identifying open empirical questions (i.e., Figure <ref type="figure">3</ref>), (ii) designing studies with robust ecological validity, and (iii) synthesizing findings from multiple experimental studies into a complete scientific understanding of human-AI decision-making. We hope that our work will raise awareness of target variable bias in the human-AI decision-making research community and spur efforts to better align research practices with the complex challenges encountered in real-world ADS deployments.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Work Domain Bias Reported</head><p>Kleinberg et al. <ref type="bibr" target="#b56">[57]</ref> Judicial Unobservables, selection bias, and outcome measurement error impacting pre-trial risk assessments Bao et al. <ref type="bibr" target="#b4">[5]</ref> Selection bias and measurement error impacting by recidivism RAIs Butcher et al. <ref type="bibr" target="#b11">[12]</ref> Measurement error in re-arrest proxy outcomes introduced by differential arrest rates among Black and white defendants Kawakami et al. <ref type="bibr" target="#b55">[56]</ref> Cheng et al. <ref type="bibr" target="#b17">[18]</ref> Child Welfare Documents social worker concerns that measurement error and unobservables impact the quality of ADS predictions Obermeyer et al. <ref type="bibr" target="#b73">[74]</ref> Medical Measurement error arising from adopting "cost of care" as a health proxy Mullainathan and Obermeyer <ref type="bibr" target="#b69">[70]</ref> Measurement error introduced when using medical records as a proxy for stroke outcomes Mullainathan and Obermeyer <ref type="bibr" target="#b70">[71]</ref> Unobservables, selection bias, and measurement error in clinical decision support Chalfin et al. <ref type="bibr" target="#b15">[16]</ref> Hiring Omitted payoffs, measurement error, and selection bias arising in teacher value-add proxy used for educator hiring Table <ref type="table">3</ref>: Documented examples of target variable bias impacting predictive models across numerous ADS domains.</p><p>• Class-dependent error assumes that positive and negative target outcomes are misclassified at different rates. As with uniform error, measurement error in this setting is uncorrelated with co-variates (𝑌 ⊥ ⊥ 𝑌 * |𝑋 ) and model unobservables (𝑌 ⊥ ⊥ 𝑌 * |𝑍 ). This model is referred to as asymmetric or class conditional label noise in machine learning literature <ref type="bibr" target="#b87">[88]</ref>, and nondifferential mismeasurement in statistics and epidemiology <ref type="bibr" target="#b74">[75]</ref>. In contrast to uniform error settings, training a model to predict a proxy (𝑌 ) impacted by class dependent error will lead to biased estimates for the target outcome (𝑌 * ) when optimizing accuracy <ref type="bibr" target="#b66">[67]</ref>. • Feature-dependent error occurs differentially across subpopulations based on co-variates (𝑌 ⊥ ⊥ / 𝑌 * |𝑋 ) or model unobservables (𝑌 ⊥ ⊥ / 𝑌 * |𝑍 ). This model is called differential mismeasurement in statistics and feature-dependent label noise in machine learning literature <ref type="bibr" target="#b37">[38]</ref>. This setting is also called group-dependent error when the covariate in question is a protected attribute (e.g., gender, race) <ref type="bibr" target="#b96">[97]</ref>. Group-dependent error inherits modeling challenges arising in the class dependent case, and has been tied to disparities in criminal justice <ref type="bibr" target="#b73">[74]</ref> and medical <ref type="bibr" target="#b0">[1]</ref> outcomes in real-world deployments of ADS tools.</p><p>Human-AI decision-making research also stands to benefit from existing methodologies designed to characterize measurement error in other disciplines. Latent Class Analysis (LCA) is an approach used in psychology and political science to identify latent subpopulations in data that are believed to carry an unobserved characteristic (e.g., personality, political ideology, or disease status) <ref type="bibr" target="#b98">[99]</ref>. LCA estimates a set of conditional probabilities mapping multiple discrete factors (i.e., proxies) to a binary latent variable (e.g., target outcome). While LCA is tailored to discrete latent variables, other structural equation models (i.e., factor analysis <ref type="bibr" target="#b47">[48]</ref>) are designed for continuous latent variables. Within biostatistics, the Hui-Walter framework is used to estimate the sensitivity and specificity of diagnostic tests in the absence of a gold standard <ref type="bibr" target="#b52">[53]</ref>. Given multiple proxies, Hui-Walter can therefore be adapted to estimate the sensitivity and specificity of each proxy. Like all measurement models, LCA and Hui-Walter make assumptions on the relationship between the target outcome and its proxy. Table <ref type="table" target="#tab_2">1</ref> states these assumptions in the context of our measurement model taxonomy.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A.2 Extended review of prior experimental studies through the lens of our causal framework</head><p>In this section, we provide a resource to help researchers examine factors related to target variable bias during the design and evaluation of experimental human-AI decision-making studies. We provide a detailed examination of several studies included in our review <ref type="bibr" target="#b9">[10,</ref><ref type="bibr" target="#b31">32,</ref><ref type="bibr" target="#b40">41,</ref><ref type="bibr" target="#b41">42,</ref><ref type="bibr" target="#b51">52,</ref><ref type="bibr" target="#b101">102]</ref>. For each study, we identify (1) the sub-region of focus, and (2) the ADS regime used in the experimental evaluation.</p><p>• The sub-region of focus describes the primary nodes and edges considered in the experimental design and evaluation of the work (e.g., regions shown in Figure <ref type="figure">3</ref>). This region can be determined by the description of the experimental design (i.e., conditions and RQs), task, and methods provided by the authors. For example, works often report the co-variates used to train a model (𝑋 ), proxy label (𝑌 ), and experimental manipulation of focus in the study. For many studies included in our review, the experimental manipulation involves a modification to the joint decision region of our diagram (𝐷) in the form of explanations <ref type="bibr" target="#b101">[102]</ref>, cognitive forcing functions <ref type="bibr" target="#b9">[10]</ref>, model accuracy <ref type="bibr" target="#b31">[32]</ref>, or other behavioral interventions. • The ADS regime describes the data generating process that gave rise to the dataset used to train the predictive model examined in the experimental evaluation. Our causal framework contains two specific ADS regimes: those with (1) decision-independent target variables and (2) decisiondependent target variables. In contrast to the sub-region of focus, the ADS regime is implicit in the description of prior studies. This is because the majority of prior studies do not human judgement versus a statistical model given different information about their relative performance. We show the sub-region of focus and ADS regime in Figure <ref type="figure">4</ref>.1.</p><p>• Sub-region of focus: 𝐷, 𝑋 , 𝑌 . This study focuses on the subregion with joint decisions 𝐷, co-variates 𝑋 and outcome proxies 𝑌 . We include co-variates (𝑋 ) because the authors list an explicit set of features that are provided to both the human and the model. We include the joint human-model decision region (𝐷) because the experimental treatment alters participant awareness of human and model performance differences. We include proxy labels (𝑌 ) because the authors describe an outcome variable of student "success", defined as an average of multiple performance measures (GPA, respect of fellow students, and prestige of employer upon graduation). We do not include 𝑌 * because the authors do not examine additional operationalizations of "success" or "student performance" that could be possible in this admissions setting. We do not include unobservables 𝑍 because the authors do not examine other factors (e.g., student demeanor, personal connections) that might be available to an admissions officer but not a model. We do not include the edge connecting decisions 𝐷 and outcomes 𝑌 , 𝑌 * because the authors do not examine the impact of predictions and admissions decisions on downstream student performance. • ADS Regime: decision-dependent target variable. In this setting, the decisions of admissions offers determine which students are admitted to the graduate program, and, consequentially, which students have academic performance outcomes available. Recall from § 3.4 that this is a selective opportunity setting because we only observe outcomes for students provided the enrollment opportunity. As a result, confounding and selection bias are relevant in this modeling task, in addition to outcome measurement error. In real-world deployments of predictive models for admissions decisions, unobservables and outcome measurement error may impact the ADS deployment due to private information available to a loan officer and alternate definitions of "academic success" or "academic performance" that may be relevant in this setting. As a result, findings from this study may be most likely to generalize to other decisiondependent target variable tasks (e.g., financial loan approvals, commercial job hiring decisions, or pre-trial release decisions).</p><p>A.2.2 Study 2: Holstein et al. <ref type="bibr" target="#b51">[52]</ref>. In this study,the authors examine model unobservables as a potential source of complementary in an AI-assisted house price prediction task. Participants were shown a set of "Facts and Features" about homes (e.g., year built, type of heating, number of bathrooms, zoning classification) and asked to predict the house's sale price. These facts corresponded to tabular features available in the training data. Three of the eight features were removed during model training to introduce synthetic unobservables, and experimental conditions varied how participants were prompted to consider these unobservables during their decision-making. We show the sub-region of focus and ADS regime in Figure <ref type="figure">4</ref>.2.</p><p>• Sub-region of focus: 𝑍 , 𝐷, 𝑋 , 𝑌 . This study focuses on the sub-region with joint decisions 𝐷, model observables 𝑋 , model unobservables 𝑍 , and outcome proxies 𝑌 . We include model observables (𝑋 ) because the authors list an explicit set of features that were provided to both the human and the model. We include the joint human-model decision region (𝐷) because the experimental treatment involved different participant prompts for considering unobservables during their decisions. We include the unobservables region (𝑍 ) because the authors explicitly omit predictive features from the model during training, but provide these to participants at decision time. We include the proxy label (𝑌 ) because the authors list a predictive outcome of house sale price. However, we do not include 𝑌 * because the authors do not examine other potential operationalizations of "house worth" possible in this task (e.g., the amount a participant would pay for a house versus its actual market sale price). We do not include the edge connecting decisions 𝐷 and outcomes 𝑌 , 𝑌 * because the authors do not examine the impact of price predictions on downstream sales. • ADS Regime: decision-independent target variable. In this setting, the sale price predictions of participants does not impact downstream house sale prices. Therefore, we list this task as decision-independent target variable. While it is conceivable that loan officer, real estate agent, or online platform price predictions could impact house sale prices (e.g., Zestimates) in similar settings, this is not the case in this particular evaluation because there is not a decision being informed by the model that directly impacts observed prices. In particular, the historical data available for model training lists a full set of houses and their corresponding prices, with no prior human decisions/price predictions that might have impacted the price. Because observed prices are not connected to the prediction task in this study, we list this as decision-independent. Therefore, while outcome measurement error could be a concern in this setting due to differing notions of "house quality", selection bias, confounding, selective labels, and treatment effects are not a concern in this evaluation. As a result, findings from this study may be most likely to generalize to other decisionindependent target variable tasks (e.g., nutrient content prediction, forest cover prediction) and may be less likely to generalize to real-world predictive model deployments with decision-dependent outcomes. • Sub-region of focus: 𝐷, 𝑋 , 𝑌 . This study focuses on the sub-region with joint decisions (𝐷), model observables (𝑋 ), and outcome proxies (𝑌 ). We include model observables (𝑋 ) because participants were shown a written biography about each person drawn from the BIOS dataset <ref type="bibr" target="#b26">[27]</ref>. We include decisions 𝐷 because the authors experimentally manipulate the explanation type and data distribution and examine impacts on human-AI decision quality. We include the proxy label (𝑌 ) because the authors list a prediction target involving the reported occupation of an individual in the dataset (e.g., psychologist, physician, surgeon, teacher, and professor). We do not include 𝑌 * because the reported occupation of individuals in the BIOS data can overlook reporting bias or multiple professions (e.g., physician and professor), which is not examined in the experimental manipulation. We do not include 𝑍 because the study participants and model were both given access to the same biography information. We do not include the edge connecting decisions 𝐷 and outcomes 𝑌 , 𝑌 * because participant guesses do not influence the occupation of individuals in the BIOS data. • ADS Regime: decision-independent target variable. Because participant responses do not influence the occupations of individuals in the dataset, this is a task with decisionindependent target variables. The authors do examine selection bias by modifying the distribution at run-time (e.g., out-of-distribution examples). Therefore, this evaluation may generalize to ADS deployments in which models are subject to selection bias, but may generalize less readily to decision-dependent outcome tasks or those with pronounced outcome measurement error.</p><p>A.2.4 Study 4: Zhang et al. <ref type="bibr" target="#b101">[102]</ref>. This study examines whether showing model confidence scores (probability estimates) and local explanations helps humans make more accurate decisions while using predictive models. This study also examines whether these decision-time interventions help humans better calibrate trust in the models predictions, defined as following recommendations more often when the model is more confident. To test this hypothesis, the authors trained a model to predict whether an individuals income would exceed $50𝐾 given tabular demographic and job information from the UCI Adult Data Set. We show the sub-region of focus and ADS regime in Figure <ref type="figure">4</ref>.4.</p><p>• Sub-region of focus: 𝐷, 𝑋 , 𝑌 . This study focuses on the sub-region with joint decisions 𝐷, observables 𝑋 , and outcome proxies 𝑌 . We include model observables (𝑋 ) because both the human and the model had access to the same set of 8 attributes about individuals while predicting their income. We include the proxy label (𝑌 ) because the authors list a target outcome involving whether an individual makes more or less than $50𝐾. We include joint human model decisions (𝐷) because the experimental treatment involves different decision-time interventions shown to participants (i.e., model confidence scores or explanations). We do not include 𝑌 * because the authors do not examine sources of measurement error that can impact the reported income available in data. The authors leverage the UCI Adult dataset based on 1994 Census Data, which could be subject to various sources of reporting bias. We do not include the edge connecting decisions 𝐷 and outcomes 𝑌 , 𝑌 * because participant guesses do not influence the income of individuals in the dataset. • ADS Regime: decision-independent target variable. Because participant responses do not influence the income of participants, this task includes decision-independent target variables. As a result, confounding, selection bias, intervention effects, and selective labels are not a concern in this task.</p><p>As a result, findings from this study may be most likely to generalize to other decision-independent target variable tasks (e.g., house price prediction, jellybean counting) and may be less likely to generalize to realworld predictive model deployments with decisiondependent outcomes.</p><p>A.2.5 Study 5: Gordon et al. <ref type="bibr" target="#b40">[41]</ref>. This work proposes a normative and technical framework called Jury Learning, which is intended to help practitioners "recognize and integrate annotator disagreement in the classifier pipeline <ref type="bibr" target="#b40">[41]</ref>. " Under the proposed framework, model developers specify groups of users whose opinions should be considered during moderation decisions (i.e., juries), along with a relative weighting of each group. At inference time, a model predicts the annotations of each individual annotator, and a final decision is reached by combining predictions via the specified jury rule. <ref type="foot" target="#foot_6">5</ref>As part of the framework evaluation, the authors recruited online moderators from Discord, Twitch, and Reddit, and evaluated the diversity of annotator pools constructed via Jury Learning against a baseline of "majority vote" aggregation in a comment toxicity classification task. Thus, this study differs from those discussed above because the involvement of human subjects occurs at model development time rather than at decision time. Nevertheless, this toxicity classification task falls within our framework scope ( § 3.1). We show the sub-region of focus and ADS regime in Figure <ref type="figure">4</ref>.5.</p><p>• Sub-region of focus: 𝑋 , 𝑌 , 𝑌 * . We include model observables (𝑋 ) because both the human and the model have access to the same set of information about comments. We include 𝑌 and 𝑌 * because the study investigates how practitioners construct differing jury rules for mapping observed ratings from participants (𝑌 ) to the latent construct of "toxicity" being predicted by the model (𝑌 * ). The 𝐷 region is not included in this study because the authors do not examine content moderation decisions or toxicity ratings at deployment time. We omit unobservables 𝑍 because the authors do not study how unobserved information could impact toxicity perceptions of annotators or the learned jury decisions. • ADS Regime: decision-independent. In this setting, the label targeted by toxicity classification models is determined by the subjective opinion of the annotator viewing the content. As a result, measurement error is relevant in this setting because the operationalization of "toxicity" targeted by the model depends on the identity of the user, the context in which the post is viewed, and the annotation protocol, among other factors. However, confounding, selection bias, selective labels, and treatment effects are not of concern in this setting because there is not a time dependency of decisions and outcomes. Therefore, findings from this study may be most likely to generalize to other decisionindependent target variable tasks (e.g., house price prediction, jellybean counting) and may be less likely to generalize to real-world predictive model deployments with decision-dependent outcomes.</p><p>A.2.6 Study 6: Green and Chen <ref type="bibr" target="#b41">[42]</ref>. This work examines whether risk assessments improve the accuracy, fairness, and reliability of human decisions in financial lending and recidivism prediction tasks. The authors train risk assessments to predict re-arrest and loan default outcomes given tabular administrative data. The experimental conditions test several variations of the procedure for presenting risk assessment information to participants (e.g., no score, local explanation, immediate outcome feedback) before participants make the final decision. We show the sub-region of focus and ADS regime in Figure <ref type="figure">4</ref>.6.</p><p>• Sub-region of focus: 𝐷, 𝑋 , 𝑌 . We include the 𝐷 region because experimental conditions manipulate the joint humanmodel decision-making process. We include the 𝑋 region because participants were provided with a narrative profile containing factual content that coincides with the model training features (e.g., defendant age, applicant credit score). We include the proxy label region 𝑌 because the authors list a target outcome consisting of failure to appear or re-arrest (recidivism) and loan default. We omit the target variable 𝑌 * because the authors do not examine sources of measurement error impacting recorded re-arrest and default outcomes (e.g., crimes that go unreported). We do not bold the arrow from 𝐷 to 𝑌 and 𝑌 * because the authors do not examine how the historical decisions of judges or loan officers might influence the outcomes available for the applicant pool. • ADS Regime: decision-dependent target variable. Both experimental tasks included in this study involve a setting in which a model is trained on data from decisions made under an earlier decision-making policy. As a result, loan repayment is only observed among approved applicants, while re-arrest and failure to appear is only observed among released defendants. As a result, the model included in this experimental task is subject to selection bias, selective labels, confounding, intervention effects, and measurement error. Therefore, findings from this study may be most likely to generalize to other decision-dependent target variable tasks.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 :</head><label>1</label><figDesc>Figure 1: Our causal diagram represents a space of causal graphs, spanning different possible relationships between predictors, decisions, target variables, and their proxies in algorithmic decision support tasks. Edges with directionality that can vary across ADS settings are indicated via undirected edges. Observed variables are shown with solid lines, while unobserved variables are shown in dotted lines. An arrow pointing to a shaded box is shorthand for separate arrows pointing from the source to nodes contained within the box.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>A. 2 . 3 Study 3 :</head><label>233</label><figDesc>Liu et al. [64]. This study examines whether interactive explanations and out-of-distribution examples can foster human-AI complementary. Out-of-distribution examples refers to a setting in which the human-AI team makes decisions involving instances from a distribution that differs in composition from the model training dataset. The authors experimentally manipulate (1) sources of distribution shift and (2) presentation of interactive explanations. The authors conduct evaluations via recidivism prediction tasks (see Study 6 below) and an occupation classification task in which participants predict an individual's occupation given a written biography drawn from the BIOS dataset. We show the sub-region of focus and ADS regime for the occupation prediction task in Figure4.3.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head></head><label></label><figDesc>𝐹 𝑚 [𝑌 𝑑 ],where 𝑌 𝑑 is a potential outcome</figDesc><table><row><cell>Work</cell><cell>Measurement (𝐹 𝑚 )</cell><cell>Prediction (𝐹 𝑝 )</cell><cell>Assumptions</cell><cell>Bias Mitigated</cell></row><row><cell>Gao et al. [40]</cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>Madras et al. [65] Wilder et al. [100] Tan et al. [93]</cell><cell>Ŷ  *  = 𝐹 𝑚 [𝑌 ]</cell><cell>Ŷ = F𝑝 [𝑋, 𝐷 𝐻 ] Human decisions 𝐷 𝐻 available at runtime</cell><cell>Proxy and target variables are equivalent 𝑌  *  = 𝑌</cell><cell>None</cell></row><row><cell>Hilgard et al. [51]</cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>De-Arteaga et al. [26]</cell><cell>Ŷ  *  = 𝐹 𝑚 [𝑋, 𝐷, 𝑌 ], where Ŷ  *  = 𝐷 expert consistency instances and 𝑌 otherwise</cell><cell></cell><cell>Expert consistency assumption</cell><cell>Measurement error, Selection bias</cell></row><row><cell>Lakkaraju et al. [63] Coston et al. [22] Coston et al. [20]</cell><cell cols="3">Ŷ  *  = 𝐹 𝑚 [𝑌 ] Ŷ  Causal identifiability Heterogeneous acceptance rates Ŷ = F𝑝 [𝑋 ] Human decisions 𝐷 𝐻 conditions unavailable at runtime Ŷ  Causal identifiability conditions</cell><cell>Selection bias Intervention effects Intervention effects, Confounding</cell></row><row><cell>Wang et al. [97]</cell><cell>Ŷ  *  = 𝐹 𝑚 [𝑌 ], where 𝑌 error is group-dependent</cell><cell></cell><cell>Confident learning assumptions (see [73])</cell><cell>Measurement error</cell></row><row><cell>Label noise Menon et al. [67]</cell><cell>Ŷ  *  = 𝐹 𝑚 [𝑌 ], where 𝑌 class-conditional or positive and unlabeled</cell><cell>ERM with surrogate loss (see [72])</cell><cell>Weak separability</cell><cell>Measurement error</cell></row><row><cell>Latent Class</cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>Analysis</cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>McCutcheon [66]</cell><cell></cell><cell></cell><cell></cell><cell></cell></row></table><note><p><p>* = * = 𝐹 𝑚 [𝑌 𝑑 , 𝑍 𝑟 ],</p>where 𝑌 𝑑 is a potential outcome</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 1 :</head><label>1</label><figDesc>Taxonomy of measurement and prediction approaches. Top: methods proposed in ADS literature. Bottom: methods applied in machine learning, social sciences, and bio-statistics.</figDesc><table><row><cell>𝑌 𝐾 } are diagnostic tests</cell><cell>N/A</cell><cell>Test Se/Sp identifiability assumptions</cell><cell>Measurement error</cell></row></table><note><p>synthetic experiments, sensitivity analyses, and other evaluation strategies described in § 4.3.</p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>FAccT'23, June 12-15, 2023, Chicago, IL, USA Luke Guerdan, Amanda Coston, Zhiwei Steven Wu, and Kenneth Holstein</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_1"><p>The term Target Variable Bias was introduced in<ref type="bibr" target="#b18">[19,</ref><ref type="bibr" target="#b34">35]</ref>. We use this as an umbrella term describing sources of statistical bias known to impact proxy labels in decision support tasks.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_2"><p>RELATED WORKWe begin by introducing the body of human-AI decision-making research our framework is designed to inform. We then summarize modeling challenges and broader validity concerns that draw current research practices (i.e., modeling assumptions, experimental study designs, and measures of decision quality) into question.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_3"><p>In order for the causal diagram to remain valid (i.e., a directed acyclic graph), one of the edges connecting nodes must remain disconnected in these settings (i.e., when target variables are decision-dependent and 𝑌 * → 𝑋 , 𝑌 → 𝑋 , 𝑌 * → 𝑍 , or 𝑌 → 𝑍 ). While this requirement is consistent with the scope of our framework, which considers nonsequential settings, feedback loops are an important factor to consider in sequential settings<ref type="bibr" target="#b33">[34]</ref>.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_4"><p>This regime maps directly to the "predictive optimization" setting recently studied by Wang et al.<ref type="bibr" target="#b95">[96]</ref> and the discussion of predictive model validity provided by Coston et al.<ref type="bibr" target="#b22">[23]</ref>.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="4" xml:id="foot_5"><p>ADS tasks in which labels are assigned via human annotations also fall within the decision-independent regime. In these tasks, the ratings of human annotators (𝑌 ) serve as a proxy for the broader construct of interest (𝑌 * ) of interest in the model deployment setting (e.g., comment "toxicity" or "hate speech"<ref type="bibr" target="#b40">[41]</ref> ).</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_6"><p>See<ref type="bibr" target="#b40">[41]</ref> for framework details not discussed in this summary, such as repeated sampling over several trials.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>We thank <rs type="person">Stevie Chancellor</rs>, <rs type="person">Steven Dang</rs>, <rs type="person">Maria De-Arteaga</rs>, <rs type="person">Shamya Karumbaiah</rs>, <rs type="person">Ken Koedinger</rs>, and annonymous reviewers for their helpful feedback. We acknowledge support from the <rs type="funder">UL Research Institutes through the Center for Advancing Safety of Machine Intelligence (CASMI)</rs> at <rs type="institution">Northwestern University</rs>, the <rs type="funder">Carnegie Mellon University Block Center for Technology and Society</rs> (Award No. <rs type="grantNumber">53680.1.5007718</rs>), and the <rs type="funder">National Science Foundation Graduate Research Fellowship Program</rs> (Award No. <rs type="grantNumber">DGE-1745016</rs>). ZSW is supported in part by the <rs type="funder">NSF FAI</rs> (Award No. <rs type="grantNumber">1939606</rs>), a <rs type="funder">Google Faculty Research Award</rs>, a J.P. Morgan Faculty Award, a <rs type="institution">Facebook Research Award</rs>, an Okawa <rs type="grantName">Foundation Research Grant</rs>, and a <rs type="grantName">Mozilla Research Grant</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_YXekDFv">
+					<idno type="grant-number">53680.1.5007718</idno>
+				</org>
+				<org type="funding" xml:id="_K7sCAFt">
+					<idno type="grant-number">DGE-1745016</idno>
+				</org>
+				<org type="funding" xml:id="_7Hfaa2A">
+					<idno type="grant-number">1939606</idno>
+				</org>
+				<org type="funding" xml:id="_gvkWsXy">
+					<orgName type="grant-name">Foundation Research Grant</orgName>
+				</org>
+				<org type="funding" xml:id="_ap8xtjQ">
+					<orgName type="grant-name">Mozilla Research Grant</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A APPENDIX A.1 Descriptions of widely-studied outcome measurement error models</head><p>• Uniform error assumes that the target outcome is randomly corrupted by additive noise (i.e., 𝑌 * = 𝑌 + 𝜖) <ref type="bibr" target="#b80">[81]</ref>. This setting is also sometimes called classical measurement error in statistics and economics. Because it is possible to learn an unbiased estimate for 𝑌 * given proxy labels 𝑌 in uniform error settings <ref type="bibr" target="#b66">[67]</ref>, this error model poses fewer threats to validity than others discussed below.  explicitly discuss factors related to outcome measurement error, unobservables, or treatment effects that may be relevant in the task design.</p><p>A.2.1 Study 1: Dietvorst et al. <ref type="bibr" target="#b31">[32]</ref>. In this study, Dietvorst et al. <ref type="bibr" target="#b31">[32]</ref> popularize the term algorithm aversion by finding that "participants more quickly lose confidence in algorithmic than human forecasters after seeing them make the same mistake. " This study instructed participants to play the part of an MBA admissions officer by predicting the percentile the student would rank among their peers given application information such as undergraduate degree, GMAT scores, interview quality, essay quality, work experience, average salary, and parents' education. The primary experimental manipulation studied whether participants would elect to use</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">The effect of differential victim crime reporting on predictive policing systems</title>
+		<author>
+			<persName><forename type="first">Nil-Jana</forename><surname>Akpinar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>De-Arteaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency</title>
+		<meeting>the 2021 ACM Conference on Fairness, Accountability, and Transparency</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="838" to="849" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Cardiovascular disease risk profiles</title>
+		<author>
+			<persName><forename type="first">Patricia</forename><forename type="middle">M</forename><surname>Keaven M Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><forename type="middle">Wf</forename><surname>Odell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">William</forename><forename type="middle">B</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kannel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American heart journal</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page" from="293" to="298" />
+			<date type="published" when="1991">1991. 1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Machine bias</title>
+		<author>
+			<persName><forename type="first">Julia</forename><surname>Angwin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeff</forename><surname>Larson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Surya</forename><surname>Mattu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lauren</forename><surname>Kirchner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Ethics of Data and Analytics</title>
+		<imprint>
+			<publisher>Auerbach Publications</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="254" to="264" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Does the whole exceed its parts? the effect of ai explanations on complementary team performance</title>
+		<author>
+			<persName><forename type="first">Gagan</forename><surname>Bansal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tongshuang</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joyce</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raymond</forename><surname>Fok</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Besmira</forename><surname>Nushi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ece</forename><surname>Kamar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Tulio Ribeiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Weld</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems</title>
+		<meeting>the 2021 CHI Conference on Human Factors in Computing Systems</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="1" to="16" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title level="m" type="main">It&apos;s COMPASlicated: The Messy Relationship between RAI Datasets and Algorithmic Fairness Benchmarks</title>
+		<author>
+			<persName><forename type="first">Michelle</forename><surname>Bao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Angela</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samantha</forename><surname>Zottola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brian</forename><surname>Brubach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sarah</forename><surname>Desmarais</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aaron</forename><surname>Horowitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kristian</forename><surname>Lum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Suresh</forename><surname>Venkatasubramanian</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2106.05498</idno>
+		<imprint>
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Interventions over predictions: Reframing the ethical debate for actuarial risk assessment</title>
+		<author>
+			<persName><forename type="first">Chelsea</forename><surname>Barabas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Madars</forename><surname>Virza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karthik</forename><surname>Dinakar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joichi</forename><surname>Ito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Zittrain</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Conference on fairness, accountability and transparency</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="62" to="76" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<author>
+			<persName><forename type="first">Solon</forename><surname>Barocas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Moritz</forename><surname>Hardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arvind</forename><surname>Narayanan</surname></persName>
+		</author>
+		<ptr target="http://www.fairmlbook.org" />
+		<title level="m">Fairness and Machine Learning: Limitations and Opportunities. fairmlbook.org</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">An introduction to sample selection bias in sociological data</title>
+		<author>
+			<persName><forename type="first">Berk</forename><surname>Richard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American sociological review</title>
+		<imprint>
+			<biblScope unit="page" from="386" to="398" />
+			<date type="published" when="1983">1983. 1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Proxy tasks and subjective measures can be misleading in evaluating explainable ai systems</title>
+		<author>
+			<persName><forename type="first">Zana</forename><surname>Buçinca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Phoebe</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Krzysztof</forename><forename type="middle">Z</forename><surname>Gajos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Elena</forename><forename type="middle">L</forename><surname>Glassman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 25th international conference on intelligent user interfaces</title>
+		<meeting>the 25th international conference on intelligent user interfaces</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="454" to="464" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">To trust or to think: cognitive forcing functions can reduce overreliance on AI in AI-assisted decision-making</title>
+		<author>
+			<persName><forename type="first">Zana</forename><surname>Buçinca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maja</forename><surname>Barbara Malaya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Krzysztof</forename><forename type="middle">Z</forename><surname>Gajos</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1" to="21" />
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note>CSCW</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">The role of explanations on trust and reliance in clinical decision support systems</title>
+		<author>
+			<persName><forename type="first">Adrian</forename><surname>Bussone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Simone</forename><surname>Stumpf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O'</forename><surname>Dympna</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sullivan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2015 international conference on healthcare informatics</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="160" to="169" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Racial Disparities in the Enforcement of Marijuana Violations in the US</title>
+		<author>
+			<persName><forename type="first">Bradley</forename><surname>Butcher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Miri</forename><surname>Zilka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Riccardo</forename><surname>Fogliato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carolyn</forename><surname>Ashurst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adrian</forename><surname>Weller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2022 AAAI/ACM Conference on AI, Ethics, and Society</title>
+		<meeting>the 2022 AAAI/ACM Conference on AI, Ethics, and Society</meeting>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="130" to="143" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Hello AI&quot;: uncovering the onboarding needs of medical practitioners for human-AI collaborative decision-making</title>
+		<author>
+			<persName><forename type="first">Carrie</forename><forename type="middle">J</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samantha</forename><surname>Winter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Steiner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lauren</forename><surname>Wilcox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Terry</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Humancomputer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1" to="24" />
+			<date type="published" when="2019">2019. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Onboarding Materials as Cross-functional Boundary Objects for Developing AI Assistants</title>
+		<author>
+			<persName><forename type="first">Carrie</forename><forename type="middle">J</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samantha</forename><surname>Winter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Steiner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lauren</forename><surname>Wilcox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Terry</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="1" to="7" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Feature-based explanations don&apos;t help people detect misclassifications of online toxicity</title>
+		<author>
+			<persName><forename type="first">Qiaozhu</forename><surname>Samuel Carton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><surname>Mei</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Resnick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the international AAAI conference on web and social media</title>
+		<meeting>the international AAAI conference on web and social media</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="95" to="106" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Productivity and selection of human capital with machine learning</title>
+		<author>
+			<persName><forename type="first">Aaron</forename><surname>Chalfin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oren</forename><surname>Danieli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Hillis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zubin</forename><surname>Jelveh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Luca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jens</forename><surname>Ludwig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sendhil</forename><surname>Mullainathan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="page" from="124" to="127" />
+			<date type="published" when="2016">2016. 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Sample Efficient Learning of Predictors that Complement Humans</title>
+		<author>
+			<persName><forename type="first">Mohammad-Amin</forename><surname>Charusaie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hussein</forename><surname>Mozannar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Sontag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samira</forename><surname>Samadi</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="2972" to="3005" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">How Child Welfare Workers Reduce Racial Disparities in Algorithmic Decisions</title>
+		<author>
+			<persName><forename type="first">Hao-Fei</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Logan</forename><surname>Stapleton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anna</forename><surname>Kawakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Venkat</forename><surname>Sivaraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanghuidi</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Diana</forename><surname>Qing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Perer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenneth</forename><surname>Holstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhiwei</forename><surname>Steven Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haiyi</forename><surname>Zhu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems (forthcoming)</title>
+		<meeting>the 2022 CHI Conference on Human Factors in Computing Systems (forthcoming)</meeting>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">A case study of algorithm-assisted decision making in child maltreatment hotline screening decisions</title>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Diana</forename><surname>Benavides-Prado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oleksandr</forename><surname>Fialko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rhema</forename><surname>Vaithianathan</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Conference on Fairness, Accountability and Transparency</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="134" to="148" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Counterfactual predictions under runtime confounding</title>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Coston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edward</forename><surname>Kennedy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="4150" to="4162" />
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Counterfactual predictions under runtime confounding</title>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Coston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edward</forename><surname>Kennedy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="4150" to="4162" />
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Counterfactual risk assessments, evaluation, and fairness</title>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Coston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alan</forename><surname>Mishler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edward</forename><forename type="middle">H</forename><surname>Kennedy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency</title>
+		<meeting>the 2020 Conference on Fairness, Accountability, and Transparency</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="582" to="593" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">SoK: A Validity Perspective on Evaluating the Justified Use of Data-driven Decision-making Algorithms</title>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Lee Coston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anna</forename><surname>Kawakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haiyi</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ken</forename><surname>Holstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hoda</forename><surname>Heidari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">First IEEE Conference on Secure and Trustworthy Machine Learning</title>
+		<imprint>
+			<date type="published" when="2023">2023. 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Clinical versus actuarial judgment</title>
+		<author>
+			<persName><forename type="first">Robyn</forename><forename type="middle">M</forename><surname>Dawes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Faust</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><forename type="middle">E</forename><surname>Meehl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">243</biblScope>
+			<biblScope unit="page" from="1668" to="1674" />
+			<date type="published" when="1989">1989. 1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m" type="main">Learning under selective labels in the presence of expert consistency</title>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>De-Arteaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Artur</forename><surname>Dubrawski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1807.00905</idno>
+		<imprint>
+			<date type="published" when="2018">2018. 2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title level="m" type="main">Leveraging expert consistency to improve algorithmic decision support</title>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>De-Arteaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Artur</forename><surname>Dubrawski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2101.09648</idno>
+		<imprint>
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Bias in bios: A case study of semantic representation bias in a high-stakes setting</title>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>De-Arteaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexey</forename><surname>Romanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hanna</forename><surname>Wallach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jennifer</forename><surname>Chayes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christian</forename><surname>Borgs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sahin</forename><surname>Geyik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Krishnaram</forename><surname>Kenthapadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Tauman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kalai</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">proceedings of the Conference on Fairness, Accountability, and Transparency</title>
+		<meeting>the Conference on Fairness, Accountability, and Transparency</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="120" to="128" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<author>
+			<persName><forename type="first">Emily</forename><surname>Denton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Díaz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ian</forename><surname>Kivlichan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rachel</forename><surname>Vinodkumar Prabhakaran</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Rosen</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2112.04554</idno>
+		<title level="m">Whose ground truth? accounting for individual and collective identities underlying dataset annotation</title>
+		<imprint>
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Multiaccurate proxies for downstream fairness</title>
+		<author>
+			<persName><forename type="first">Emily</forename><surname>Diana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wesley</forename><surname>Gill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Kearns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Krishnaram</forename><surname>Kenthapadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aaron</forename><surname>Roth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Saeed</forename><surname>Sharifi-Malvajerdi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2022 ACM Conference on Fairness, Accountability, and Transparency</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="1207" to="1239" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Sensitivity analysis for causal inference under unmeasured confounding and measurement error problems</title>
+		<author>
+			<persName><forename type="first">Iván</forename><surname>Díaz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mark</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Van Der Laan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The international journal of biostatistics</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="149" to="160" />
+			<date type="published" when="2013">2013. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">COMPAS risk scales: Demonstrating accuracy equity and predictive parity</title>
+		<author>
+			<persName><forename type="first">William</forename><surname>Dieterich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christina</forename><surname>Mendoza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tim</forename><surname>Brennan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Northpointe Inc</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">4</biblScope>
+			<date type="published" when="2016">2016. 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Algorithm aversion: people erroneously avoid algorithms after seeing them err</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Berkeley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joseph</forename><forename type="middle">P</forename><surname>Dietvorst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cade</forename><surname>Simmons</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Massey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Experimental Psychology: General</title>
+		<imprint>
+			<biblScope unit="volume">144</biblScope>
+			<biblScope unit="page">114</biblScope>
+			<date type="published" when="2015">2015. 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<author>
+			<persName><forename type="first">Kate</forename><surname>Donahue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Krishnaram</forename><surname>Kenthapadi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2202.08821</idno>
+		<title level="m">Human-Algorithm Collaboration: Achieving Complementarity and Avoiding Unfairness</title>
+		<imprint>
+			<date type="published" when="2022">2022. 2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Runaway feedback loops in predictive policing</title>
+		<author>
+			<persName><forename type="first">Danielle</forename><surname>Ensign</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sorelle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Scott</forename><surname>Friedler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carlos</forename><surname>Neville</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Suresh</forename><surname>Scheidegger</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Venkatasubramanian</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Conference on Fairness, Accountability and Transparency</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="160" to="171" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Fairness evaluation in presence of biased noisy labels</title>
+		<author>
+			<persName><forename type="first">Riccardo</forename><surname>Fogliato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max G'</forename><surname>Sell</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Artificial Intelligence and Statistics</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="2325" to="2336" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">The impact of algorithmic risk assessments on human predictions and its analysis via crowdsourcing studies</title>
+		<author>
+			<persName><forename type="first">Riccardo</forename><surname>Fogliato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zachary</forename><surname>Lipton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1" to="24" />
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note>CSCW</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">On the Validity of Arrest as a Proxy for Offense: Race and the Likelihood of Arrest for Violent Crimes</title>
+		<author>
+			<persName><forename type="first">Riccardo</forename><surname>Fogliato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alice</forename><surname>Xiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zachary</forename><surname>Lipton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Nagin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 AAAI/ACM Conference on AI, Ethics, and Society</title>
+		<meeting>the 2021 AAAI/ACM Conference on AI, Ethics, and Society</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="100" to="111" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Classification in the presence of label noise: a survey</title>
+		<author>
+			<persName><forename type="first">Benoît</forename><surname>Frénay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michel</forename><surname>Verleysen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE transactions on neural networks and learning systems</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="845" to="869" />
+			<date type="published" when="2013">2013. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Do People Engage Cognitively with AI? Impact of AI Assistance on Incidental Learning</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Krzysztof</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lena</forename><surname>Gajos</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mamykina</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">27th International Conference on Intelligent User Interfaces</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="794" to="806" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<monogr>
+		<author>
+			<persName><forename type="first">Ruijiang</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maytal</forename><surname>Saar-Tsechansky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>De-Arteaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ligong</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Min</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyung</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><surname>Lease</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2105.10614</idno>
+		<title level="m">Human-AI collaboration with bandit feedback</title>
+		<imprint>
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Jury learning: Integrating dissenting voices into machine learning models</title>
+		<author>
+			<persName><forename type="first">Michelle</forename><forename type="middle">S</forename><surname>Mitchell L Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joon</forename><surname>Lam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sung</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kayur</forename><surname>Patel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeff</forename><surname>Hancock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tatsunori</forename><surname>Hashimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><forename type="middle">S</forename><surname>Bernstein</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">CHI Conference on Human Factors in Computing Systems</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="1" to="19" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">The principles and limits of algorithm-in-theloop decision making</title>
+		<author>
+			<persName><forename type="first">Ben</forename><surname>Green</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yiling</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1" to="24" />
+			<date type="published" when="2019">2019. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Algorithmic risk assessments can alter human decision-making processes in high-stakes government contexts</title>
+		<author>
+			<persName><forename type="first">Ben</forename><surname>Green</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yiling</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1" to="33" />
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note>CSCW</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Clinical versus mechanical prediction: a meta-analysis</title>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">H</forename><surname>William M Grove</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Boyd</forename><forename type="middle">S</forename><surname>Zald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Beth</forename><forename type="middle">E</forename><surname>Lebow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chad</forename><surname>Snitz</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Nelson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychological assessment</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">19</biblScope>
+			<date type="published" when="2000">2000. 2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Ores: Lowering barriers with participatory machine learning in wikipedia</title>
+		<author>
+			<persName><forename type="first">Aaron</forename><surname>Halfaker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stuart</forename><surname>Geiger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="1" to="37" />
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+	<note>CSCW</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<title level="m" type="main">Measurement theory and practice</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>David</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hand</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2004">2004. 2004</date>
+			<publisher>Arnold</publisher>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<monogr>
+		<author>
+			<persName><forename type="first">Moritz</forename><surname>Hardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Michael</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kim</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2206.11673</idno>
+		<title level="m">Backward baselines: Is your model predicting the past? arXiv preprint</title>
+		<imprint>
+			<date type="published" when="2022">2022. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<monogr>
+		<title level="m" type="main">Modern factor analysis</title>
+		<author>
+			<persName><surname>Harry H Harman</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1976">1976</date>
+			<publisher>University of Chicago press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Sample selection bias as a specification error. Econometrica</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>James</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Heckman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the econometric society</title>
+		<imprint>
+			<biblScope unit="page" from="153" to="161" />
+			<date type="published" when="1979">1979. 1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<monogr>
+		<author>
+			<persName><forename type="first">Patrick</forename><surname>Hemmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max</forename><surname>Schemmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Niklas</forename><surname>Kühl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Vössing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gerhard</forename><surname>Satzger</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2205.01467</idno>
+		<title level="m">On the Effect of Information Asymmetry in Human-AI Teams</title>
+		<imprint>
+			<date type="published" when="2022">2022. 2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Learning representations by humans, for humans</title>
+		<author>
+			<persName><forename type="first">Sophie</forename><surname>Hilgard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nir</forename><surname>Rosenfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mahzarin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jack</forename><surname>Banaji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Parkes</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="4227" to="4238" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Toward supporting perceptual complementarity in human-AI collaboration via reflection on unobservables</title>
+		<author>
+			<persName><forename type="first">Kenneth</forename><surname>Holstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>De-Arteaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lakshmi</forename><surname>Tumati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanghuidi</forename><surname>Cheng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1" to="20" />
+			<date type="published" when="2023">2023. 2023</date>
+		</imprint>
+	</monogr>
+	<note>CSCW</note>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Estimating the error rates of diagnostic tests</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Sui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steven</forename><forename type="middle">D</forename><surname>Hui</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Walter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biometrics</title>
+		<imprint>
+			<biblScope unit="page" from="167" to="171" />
+			<date type="published" when="1980">1980. 1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Measurement and fairness</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Abigail</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hanna</forename><surname>Jacobs</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wallach</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 ACM conference on fairness, accountability, and transparency</title>
+		<meeting>the 2021 ACM conference on fairness, accountability, and transparency</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="375" to="385" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Residual unfairness in fair machine learning from prejudiced data</title>
+		<author>
+			<persName><forename type="first">Nathan</forename><surname>Kallus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Angela</forename><surname>Zhou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<publisher>PMLR</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="2439" to="2448" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Improving Human-AI Partnerships in Child Welfare: Understanding Worker Practices, Challenges, and Desires for Algorithmic Decision Support</title>
+		<author>
+			<persName><forename type="first">Anna</forename><surname>Kawakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Venkatesh</forename><surname>Sivaraman</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hao-Fei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Logan</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanghuidi</forename><surname>Stapleton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Diana</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Qing</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Perer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steven</forename><surname>Zhiwei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haiyi</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenneth</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Holstein</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">CHI Conference on Human Factors in Computing Systems</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="1" to="18" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Human decisions and machine predictions</title>
+		<author>
+			<persName><forename type="first">Jon</forename><surname>Kleinberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Himabindu</forename><surname>Lakkaraju</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jure</forename><surname>Leskovec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jens</forename><surname>Ludwig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sendhil</forename><surname>Mullainathan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The quarterly journal of economics</title>
+		<imprint>
+			<biblScope unit="volume">133</biblScope>
+			<biblScope unit="page" from="237" to="293" />
+			<date type="published" when="2018">2018. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Prediction policy problems</title>
+		<author>
+			<persName><forename type="first">Jon</forename><surname>Kleinberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jens</forename><surname>Ludwig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sendhil</forename><surname>Mullainathan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ziad</forename><surname>Obermeyer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="491" to="495" />
+			<date type="published" when="2015">2015. 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Allocating interventions based on predicted outcomes: A case study on homelessness services</title>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Kube</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sanmay</forename><surname>Das</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Patrick</forename><forename type="middle">J</forename><surname>Fowler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the AAAI Conference on Artificial Intelligence</title>
+		<meeting>the AAAI Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="622" to="629" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<monogr>
+		<author>
+			<persName><forename type="first">Vivian</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chacha</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Vera Liao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alison</forename><surname>Smith-Renner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chenhao</forename><surname>Tan</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2112.11471</idno>
+		<title level="m">Towards a Science of Human-AI Decision Making: A Survey of Empirical Studies</title>
+		<imprint>
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Towards Building Model-Driven Tutorials for Humans</title>
+		<author>
+			<persName><forename type="first">Vivian</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Han</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chenhao</forename><surname>Tan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems</title>
+		<meeting>the 2020 CHI Conference on Human Factors in Computing Systems</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="1" to="13" />
+		</imprint>
+	</monogr>
+	<note>Why is&apos; Chicago&apos;deceptive?</note>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">On human predictions with explanations and predictions of machine learning models: A case study on deception detection</title>
+		<author>
+			<persName><forename type="first">Vivian</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chenhao</forename><surname>Tan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the conference on fairness, accountability, and transparency</title>
+		<meeting>the conference on fairness, accountability, and transparency</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="29" to="38" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">The selective labels problem: Evaluating algorithmic predictions in the presence of unobservables</title>
+		<author>
+			<persName><forename type="first">Himabindu</forename><surname>Lakkaraju</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jon</forename><surname>Kleinberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jure</forename><surname>Leskovec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jens</forename><surname>Ludwig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sendhil</forename><surname>Mullainathan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</title>
+		<meeting>the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="275" to="284" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Understanding the effect of outof-distribution examples and interactive explanations on human-ai decision making</title>
+		<author>
+			<persName><forename type="first">Han</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vivian</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chenhao</forename><surname>Tan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1" to="45" />
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note>CSCW</note>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Predict responsibly: improving fairness and accuracy by learning to defer</title>
+		<author>
+			<persName><forename type="first">David</forename><surname>Madras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Toni</forename><surname>Pitassi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Zemel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="page">31</biblScope>
+			<date type="published" when="2018">2018. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<monogr>
+		<title level="m" type="main">Latent class analysis</title>
+		<author>
+			<persName><surname>Allan L Mccutcheon</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1987">1987</date>
+			<biblScope unit="volume">64</biblScope>
+			<pubPlace>Sage</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Learning from corrupted binary labels via class-probability estimation</title>
+		<author>
+			<persName><forename type="first">Aditya</forename><surname>Menon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brendan</forename><surname>Van Rooyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cheng</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Soon</forename><surname>Ong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bob</forename><surname>Williamson</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International conference on machine learning</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="125" to="134" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">From optimizing engagement to measuring value</title>
+		<author>
+			<persName><forename type="first">Smitha</forename><surname>Milli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luca</forename><surname>Belli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Moritz</forename><surname>Hardt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency</title>
+		<meeting>the 2021 ACM Conference on Fairness, Accountability, and Transparency</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="714" to="722" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Teaching humans when to defer to a classifier via exemplars</title>
+		<author>
+			<persName><forename type="first">Hussein</forename><surname>Mozannar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arvind</forename><surname>Satyanarayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Sontag</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the AAAI Conference on Artificial Intelligence</title>
+		<meeting>the AAAI Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="5323" to="5331" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Does machine learning automate moral hazard and error?</title>
+		<author>
+			<persName><forename type="first">Sendhil</forename><surname>Mullainathan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ziad</forename><surname>Obermeyer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">107</biblScope>
+			<biblScope unit="page" from="476" to="480" />
+			<date type="published" when="2017">2017. 2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<monogr>
+		<title level="m" type="main">A machine learning approach to low-value health care: wasted tests, missed heart attacks and mis-predictions</title>
+		<author>
+			<persName><forename type="first">Sendhil</forename><surname>Mullainathan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ziad</forename><surname>Obermeyer</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<publisher>National Bureau of Economic Research</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">Learning with noisy labels</title>
+		<author>
+			<persName><forename type="first">Nagarajan</forename><surname>Natarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pradeep</forename><forename type="middle">K</forename><surname>Inderjit S Dhillon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ambuj</forename><surname>Ravikumar</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Tewari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in neural information processing systems</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<date type="published" when="2013">2013. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">Confident learning: Estimating uncertainty in dataset labels</title>
+		<author>
+			<persName><forename type="first">Curtis</forename><surname>Northcutt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lu</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Isaac</forename><surname>Chuang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Artificial Intelligence Research</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page" from="1373" to="1411" />
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title level="a" type="main">Dissecting racial bias in an algorithm used to manage the health of populations</title>
+		<author>
+			<persName><forename type="first">Ziad</forename><surname>Obermeyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brian</forename><surname>Powers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christine</forename><surname>Vogeli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sendhil</forename><surname>Mullainathan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">366</biblScope>
+			<biblScope unit="page" from="447" to="453" />
+			<date type="published" when="2019">2019. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">Bias attenuation results for nondifferentially mismeasured ordinal and coarsened confounders</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Elizabeth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tyler</forename><forename type="middle">J</forename><surname>Ogburn</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vanderweele</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biometrika</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="241" to="248" />
+			<date type="published" when="2013">2013. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">A slow algorithm improves users&apos; assessments of the algorithm&apos;s accuracy</title>
+		<author>
+			<persName><forename type="first">Sung</forename><surname>Joon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rick</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Barber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karrie</forename><surname>Kirlik</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Karahalios</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1" to="15" />
+			<date type="published" when="2019">2019. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title level="a" type="main">Nithum Thain, and Ion Androutsopoulos</title>
+		<author>
+			<persName><forename type="first">John</forename><surname>Pavlopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Sorensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lucas</forename><surname>Dixon</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2006.00998</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Toxicity detection: Does context really matter? arXiv preprint</title>
+		<imprint>
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title level="a" type="main">Causal diagrams for empirical research</title>
+		<author>
+			<persName><forename type="first">Judea</forename><surname>Pearl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biometrika</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page" from="669" to="688" />
+			<date type="published" when="1995">1995. 1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<analytic>
+		<title level="a" type="main">Causal inference in statistics: An overview</title>
+		<author>
+			<persName><forename type="first">Judea</forename><surname>Pearl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Statistics surveys</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="96" to="146" />
+			<date type="published" when="2009">2009. 2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title level="a" type="main">What you see is what you get? the impact of representation criteria on human bias in hiring</title>
+		<author>
+			<persName><forename type="first">Andi</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Besmira</forename><surname>Nushi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Emre</forename><surname>Kıcıman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kori</forename><surname>Inkpen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Siddharth</forename><surname>Suri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ece</forename><surname>Kamar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the AAAI Conference on Human Computation and Crowdsourcing</title>
+		<meeting>the AAAI Conference on Human Computation and Crowdsourcing</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="125" to="134" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title level="a" type="main">Lecture notes on measurement error</title>
+		<author>
+			<persName><forename type="first">Steve</forename><surname>Pischke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">London School of Economics</title>
+		<imprint>
+			<date type="published" when="2007">2007. 2007</date>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<analytic>
+		<title level="a" type="main">Resources and benchmark corpora for hate speech detection: a systematic review</title>
+		<author>
+			<persName><forename type="first">Fabio</forename><surname>Poletto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Valerio</forename><surname>Basile</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Manuela</forename><surname>Sanguinetti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cristina</forename><surname>Bosco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Viviana</forename><surname>Patti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Language Resources and Evaluation</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="477" to="523" />
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title level="a" type="main">Manipulating and measuring model interpretability</title>
+		<author>
+			<persName><forename type="first">Forough</forename><surname>Poursabzi-Sangdeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jake</forename><forename type="middle">M</forename><surname>Daniel G Goldstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jennifer</forename><surname>Hofman</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wortman Wortman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hanna</forename><surname>Vaughan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wallach</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 CHI conference on human factors in computing systems</title>
+		<meeting>the 2021 CHI conference on human factors in computing systems</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="1" to="52" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<monogr>
+		<title level="m" type="main">Toward Improving Student Model Estimates through Assistance Scores in Principle and in Practice</title>
+		<author>
+			<persName><forename type="first">Napol</forename><surname>Rachatasumrit</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kenneth R Koedinger</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2021">2021. 2021</date>
+			<publisher>International Educational Data Mining Society</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b84">
+	<monogr>
+		<author>
+			<persName><forename type="first">Ashesh</forename><surname>Rambachan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Roth</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1909.08518</idno>
+		<title level="m">Bias in, bias out? Evaluating the folk wisdom</title>
+		<imprint>
+			<date type="published" when="2019">2019. 2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b85">
+	<monogr>
+		<author>
+			<persName><forename type="first">Fred</forename><forename type="middle">S</forename><surname>Roberts</surname></persName>
+		</author>
+		<title level="m">Measurement theory</title>
+		<imprint>
+			<date type="published" when="1985">1985. 1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b86">
+	<monogr>
+		<title level="m" type="main">Sensitivity analysis in observational studies. Encyclopedia of statistics in behavioral science</title>
+		<author>
+			<persName><surname>Paul R Rosenbaum</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2005">2005. 2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b87">
+	<analytic>
+		<title level="a" type="main">Classification with asymmetric label noise: Consistency and maximal denoising</title>
+		<author>
+			<persName><forename type="first">Clayton</forename><surname>Scott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gilles</forename><surname>Blanchard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gregory</forename><surname>Handy</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Conference on learning theory</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="489" to="511" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b88">
+	<analytic>
+		<title level="a" type="main">Fairness violations and mitigation under covariate shift</title>
+		<author>
+			<persName><forename type="first">Harvineet</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rina</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vishwali</forename><surname>Mhasawade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rumi</forename><surname>Chunara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency</title>
+		<meeting>the 2021 ACM Conference on Fairness, Accountability, and Transparency</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="3" to="13" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b89">
+	<analytic>
+		<title level="a" type="main">Predictive modeling to forecast student outcomes and drive effective interventions in online community college courses</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Vernon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Lange</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Daniel R Huston</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of asynchronous learning networks</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="51" to="61" />
+			<date type="published" when="2012">2012. 2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b90">
+	<analytic>
+		<title level="a" type="main">Algorithmic risk assessment in the hands of humans</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Megan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jennifer</forename><forename type="middle">L</forename><surname>Stevenson</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Doleac</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Available at SSRN</title>
+		<imprint>
+			<biblScope unit="volume">3489440</biblScope>
+			<date type="published" when="2022">2022. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b91">
+	<monogr>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Stray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alon</forename><surname>Halevy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Parisa</forename><surname>Assar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dylan</forename><surname>Hadfield-Menell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Craig</forename><surname>Boutilier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amar</forename><surname>Ashar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lex</forename><surname>Beattie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Ekstrand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Claire</forename><surname>Leibowicz</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2207.10192</idno>
+		<title level="m">Connie Moon Sehat, et al. 2022. Building Human Values into Recommender Systems: An Interdisciplinary Synthesis</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b92">
+	<monogr>
+		<title level="m" type="main">Investigating human+ machine complementarity for recidivism predictions</title>
+		<author>
+			<persName><forename type="first">Sarah</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Julius</forename><surname>Adebayo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kori</forename><surname>Inkpen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ece</forename><surname>Kamar</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1808.09123</idno>
+		<imprint>
+			<date type="published" when="2018">2018. 2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b93">
+	<monogr>
+		<title level="m" type="main">Allegheny family screening tool: Methodology, version 2</title>
+		<author>
+			<persName><forename type="first">Rhema</forename><surname>Vaithianathan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Emily</forename><surname>Kulick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Emily</forename><surname>Putnam-Hornstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Benavides-Prado</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019. 2019</date>
+			<publisher>Center for Social Data Analytics</publisher>
+			<biblScope unit="page" from="1" to="22" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b94">
+	<analytic>
+		<title level="a" type="main">Latent class modeling with covariates: Two improved three-step approaches</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Jeroen</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vermunt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Political analysis</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="450" to="469" />
+			<date type="published" when="2010">2010. 2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b95">
+	<analytic>
+		<title level="a" type="main">Against Predictive Optimization: On the Legitimacy of Decision-Making Algorithms that Optimize Predictive Accuracy</title>
+		<author>
+			<persName><forename type="first">Angelina</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sayash</forename><surname>Kapoor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Solon</forename><surname>Barocas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arvind</forename><surname>Narayanan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Available at SSRN</title>
+		<imprint>
+			<date type="published" when="2022">2022. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b96">
+	<analytic>
+		<title level="a" type="main">Fair classification with groupdependent label noise</title>
+		<author>
+			<persName><forename type="first">Jialu</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caleb</forename><surname>Levy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 ACM conference on fairness, accountability, and transparency</title>
+		<meeting>the 2021 ACM conference on fairness, accountability, and transparency</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="526" to="536" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b97">
+	<analytic>
+		<title level="a" type="main">Are explanations helpful? a comparative study of the effects of explanations in ai-assisted decision-making</title>
+		<author>
+			<persName><forename type="first">Xinru</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming</forename><surname>Yin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">26th International Conference on Intelligent User Interfaces</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="318" to="328" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b98">
+	<analytic>
+		<title level="a" type="main">Latent class analysis: a guide to best practice</title>
+		<author>
+			<persName><forename type="first">Bridget</forename><forename type="middle">E</forename><surname>Weller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Natasha</forename><forename type="middle">K</forename><surname>Bowen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sarah</forename><forename type="middle">J</forename><surname>Faubert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Black Psychology</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="287" to="311" />
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b99">
+	<monogr>
+		<author>
+			<persName><forename type="first">Bryan</forename><surname>Wilder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Horvitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ece</forename><surname>Kamar</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2005.00582</idno>
+		<title level="m">Learning to complement humans</title>
+		<imprint>
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b100">
+	<analytic>
+		<title level="a" type="main">You Complete Me: Human-AI Teams and Complementary Expertise</title>
+		<author>
+			<persName><forename type="first">Qiaoning</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><forename type="middle">L</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Scott</forename><surname>Carter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">CHI Conference on Human Factors in Computing Systems</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="1" to="28" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b101">
+	<analytic>
+		<title level="a" type="main">Effect of confidence and explanation on accuracy and trust calibration in AI-assisted decision making</title>
+		<author>
+			<persName><forename type="first">Yunfeng</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Vera Liao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rachel Ke</forename><surname>Bellamy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2020 conference on fairness, accountability, and transparency</title>
+		<meeting>the 2020 conference on fairness, accountability, and transparency</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="295" to="305" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,863 @@
+<?xml version="1.0" ?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader>
+		<fileDesc xml:id="f_2"/>
+	</teiHeader>
+	<text>
+		<front/>
+		<body/>
+		<back>
+			<listBibl>
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Predicting learner knowledge of individual words using machine learning</title>
+		<author>
+			<persName><forename type="first">Drilon</forename><surname>Avdiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vanessa</forename><surname>Bui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Klára</forename><surname>Ptačinová</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Klimčíková</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 8th Workshop on NLP for Computer Assisted Language Learning</title>
+		<meeting>the 8th Workshop on NLP for Computer Assisted Language Learning<address><addrLine>Turku</addrLine></address></meeting>
+		<imprint>
+			<publisher>LiU Electronic Press</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="1" to="9" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">On the Gradience of the Dative Alternation</title>
+		<author>
+			<persName><forename type="first">Joan</forename><surname>Bresnan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tatiana</forename><surname>Nikitina</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Reality Exploration and Discovery: Pattern Interaction in Language &amp; Life</title>
+		<editor>
+			<persName><forename type="first">Karuvannur</forename><surname>Puthanveettil Mohanan</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Linda</forename><surname>Uyechi</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Lian-Hee</forename><surname>Wee</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Stanford, CA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Center for the Study of Language and Information</publisher>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="161" to="184" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Verification of forecasts expressed in terms of probability</title>
+		<author>
+			<persName><forename type="first">Glenn</forename><forename type="middle">W</forename><surname>Brier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Monthly weather review</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="3" />
+			<date type="published" when="1950">1950</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Language model based grammatical error correction without annotated training data</title>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Bryant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ted</forename><surname>Briscoe</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/W18-0529</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Thirteenth Workshop on Innovative Use of NLP for Building Educational Applications</title>
+		<meeting>the Thirteenth Workshop on Innovative Use of NLP for Building Educational Applications</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="247" to="253" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The BEA-2019 shared task on grammatical error correction</title>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Bryant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mariano</forename><surname>Felice</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Øistein</forename><forename type="middle">E</forename><surname>Andersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ted</forename><surname>Briscoe</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/W19-4406</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Fourteenth Workshop on Innovative Use of NLP for Building Educational Applications</title>
+		<meeting>the Fourteenth Workshop on Innovative Use of NLP for Building Educational Applications<address><addrLine>Florence, Italy</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="52" to="75" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Automatic annotation and evaluation of error types for grammatical error correction</title>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Bryant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mariano</forename><surname>Felice</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ted</forename><surname>Briscoe</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/P17-1074</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 55th Annual Meeting of the Association for Computational Linguistics<address><addrLine>Vancouver, Canada</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="793" to="805" />
+		</imprint>
+	</monogr>
+	<note>Long Papers)</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">Lihu</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandre</forename><surname>Perez-Lebel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fabian</forename><forename type="middle">M</forename><surname>Suchanek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gaël</forename><surname>Varoquaux</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2402.04957</idno>
+		<title level="m">Reconfidencing LLMs from the Grouping Loss Perspective</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Common European Framework of Reference for Languages: Learning, Teaching, Assessment: Companion Volume with New Descriptors</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<publisher>Council of Europe</publisher>
+		</imprint>
+		<respStmt>
+			<orgName>Council of Europe</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The comparison and evaluation of forecasters</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Morris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stephen</forename><forename type="middle">E</forename><surname>Degroot</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Fienberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Royal Statistical Society: Series D (The Statistician)</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">1-2</biblScope>
+			<biblScope unit="page" from="12" to="22" />
+			<date type="published" when="1983">1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">BERT: Pre-training of deep bidirectional transformers for language understanding</title>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Devlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming-Wei</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenton</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kristina</forename><surname>Toutanova</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/N19-1423</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</title>
+		<title level="s">Long and Short Papers</title>
+		<meeting>the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies<address><addrLine>Minneapolis, Minnesota</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="4171" to="4186" />
+		</imprint>
+	</monogr>
+	<note>Association for Computational Linguistics</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">Varun</forename><surname>Steven Y Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Gangal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sarath</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Soroush</forename><surname>Chandar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Teruko</forename><surname>Vosoughi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eduard</forename><surname>Mitamura</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hovy</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2105.03075</idno>
+		<title level="m">A survey of data augmentation approaches for NLP</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">There&apos;s more to alternations than the main diagonal of a 2× 2 confusion matrix: Improvements of MuPDAR and other classificatory alternation studies</title>
+		<author>
+			<persName><forename type="first">Stefan</forename><surname>Th</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gries</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Justus</forename><surname>Liebig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sandra</forename><forename type="middle">C</forename><surname>Deshors</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICAME Journal</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="69" to="96" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">On calibration of modern neural networks</title>
+		<author>
+			<persName><forename type="first">Chuan</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoff</forename><surname>Pleiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kilian</forename><forename type="middle">Q</forename><surname>Weinberger</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International conference on machine learning</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="1321" to="1330" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">2020a. Don&apos;t stop pretraining: Adapt language models to domains and tasks</title>
+		<author>
+			<persName><forename type="first">Suchin</forename><surname>Gururangan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ana</forename><surname>Marasović</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Swabha</forename><surname>Swayamdipta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyle</forename><surname>Lo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Iz</forename><surname>Beltagy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Doug</forename><surname>Downey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Noah</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2020.acl-main.740</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 58th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<publisher>Online. Association for Computational Linguistics</publisher>
+			<biblScope unit="page" from="8342" to="8360" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">Suchin</forename><surname>Gururangan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ana</forename><surname>Marasović</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Swabha</forename><surname>Swayamdipta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyle</forename><surname>Lo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Iz</forename><surname>Beltagy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Doug</forename><surname>Downey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Noah</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2004.10964</idno>
+		<title level="m">Don&apos;t stop pretraining: Adapt language models to domains and tasks</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The ICNALE and sophisticated contrastive interlanguage analysis of Asian learners of English</title>
+		<author>
+			<persName><forename type="first">Shin'ichiro</forename><surname>Ishikawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Learner corpus studies in Asia and the world</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="91" to="118" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Let&apos;s make an artificial learner to analyze learners&apos; language! (Language Sciences)</title>
+		<author>
+			<persName><forename type="first">Wonbin</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.17002/sil..70.20241.167</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="page" from="167" to="193" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Analyzing learner understanding of novel L2 vocabulary</title>
+		<author>
+			<persName><forename type="first">Rebecca</forename><surname>Knowles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adithya</forename><surname>Renduchintala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Philipp</forename><surname>Koehn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Eisner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of The 20th SIGNLL Conference on Computational Natural Language Learning</title>
+		<meeting>The 20th SIGNLL Conference on Computational Natural Language Learning</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="126" to="135" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Still no lie detector for language models: Probing empirical and conceptual roadblocks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Benjamin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><forename type="middle">A</forename><surname>Levinstein</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Herrmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Philosophical Studies</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="27" />
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">A new learner language data set for the study of English for Specific Purposes at university level</title>
+		<author>
+			<persName><forename type="first">Cyriel</forename><surname>Mallart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Simpkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rémi</forename><surname>Venant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicolas</forename><surname>Ballier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bernardo</forename><surname>Stearns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jen</forename><forename type="middle">Yu</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Gaillat</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 4th Conference on Language, Data and Knowledge -LDK 2023</title>
+		<meeting>the 4th Conference on Language, Data and Knowledge -LDK 2023<address><addrLine>Vienna, Austria</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="281" to="287" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Revisiting the calibration of modern neural networks</title>
+		<author>
+			<persName><forename type="first">Matthias</forename><surname>Minderer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Josip</forename><surname>Djolonga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rob</forename><surname>Romijnders</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Frances</forename><surname>Hubis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaohua</forename><surname>Zhai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Neil</forename><surname>Houlsby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dustin</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mario</forename><surname>Lucic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="15682" to="15694" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Universal Dependencies v1: A multilingual treebank collection</title>
+		<author>
+			<persName><forename type="first">Joakim</forename><surname>Nivre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marie-Catherine</forename><surname>De Marneffe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Filip</forename><surname>Ginter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoav</forename><surname>Goldberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jan</forename><surname>Hajic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Mcdonald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Slav</forename><surname>Petrov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sampo</forename><surname>Pyysalo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Natalia</forename><surname>Silveira</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC&apos;16)</title>
+		<meeting>the Tenth International Conference on Language Resources and Evaluation (LREC&apos;16)</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="1659" to="1666" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">GECToR -grammatical error correction: Tag, not rewrite</title>
+		<author>
+			<persName><forename type="first">Kostiantyn</forename><surname>Omelianchuk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vitaliy</forename><surname>Atrasevych</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Artem</forename><surname>Chernodub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oleksandr</forename><surname>Skurzhanskyi</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2020.bea-1.16</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Fifteenth Workshop on Innovative Use of NLP for Building Educational Applications</title>
+		<meeting>the Fifteenth Workshop on Innovative Use of NLP for Building Educational Applications<address><addrLine>Seattle, WA, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="163" to="170" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Modeling second language acquisition with pre-trained neural language models</title>
+		<author>
+			<persName><forename type="first">Jiménez</forename><surname>Álvaro</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Palenzuela</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Expert Systems with Applications</title>
+		<imprint>
+			<biblScope unit="volume">207</biblScope>
+			<biblScope unit="page">117871</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note>Flavius Frasincar, and Maria Mihaela Trus ¸cǎ</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">User modeling in language learning with macaronic texts</title>
+		<author>
+			<persName><forename type="first">Adithya</forename><surname>Renduchintala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rebecca</forename><surname>Knowles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Philipp</forename><surname>Koehn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Eisner</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/P16-1175</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 54th Annual Meeting of the Association for Computational Linguistics<address><addrLine>Berlin, Germany</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1859" to="1869" />
+		</imprint>
+	</monogr>
+	<note>Long Papers)</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Second language acquisition modeling</title>
+		<author>
+			<persName><forename type="first">Burr</forename><surname>Settles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Brust</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Erin</forename><surname>Gustafson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Masato</forename><surname>Hagiwara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nitin</forename><surname>Madnani</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/W18-0506</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Thirteenth Workshop on Innovative Use of NLP for Building Educational Applications</title>
+		<meeting>the Thirteenth Workshop on Innovative Use of NLP for Building Educational Applications<address><addrLine>New Orleans, Louisiana</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="56" to="65" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">A trainable spaced repetition model for language learning</title>
+		<author>
+			<persName><forename type="first">Burr</forename><surname>Settles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brendan</forename><surname>Meeder</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/P16-1174</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 54th Annual Meeting of the Association for Computational Linguistics<address><addrLine>Berlin, Germany</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1848" to="1858" />
+		</imprint>
+	</monogr>
+	<note>Long Papers)</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Refining and modifying the efcamdat: Lessons from creating a new corpus from an existing large-scale English learner language database</title>
+		<author>
+			<persName><forename type="first">Itamar</forename><surname>Shatz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Learner Corpus Research</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="220" to="236" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Synthetic data generation for grammatical error correction with tagged corruption models</title>
+		<author>
+			<persName><forename type="first">Felix</forename><surname>Stahlberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shankar</forename><surname>Kumar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 16th Workshop on Innovative Use of NLP for Building Educational Applications</title>
+		<meeting>the 16th Workshop on Innovative Use of NLP for Building Educational Applications</meeting>
+		<imprint>
+			<publisher>Online. Association for Computational Linguistics</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="37" to="47" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">UDPipe 2.0 prototype at CoNLL 2018 UD shared task</title>
+		<author>
+			<persName><forename type="first">Milan</forename><surname>Straka</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/K18-2020</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the CoNLL 2018 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies</title>
+		<meeting>the CoNLL 2018 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies<address><addrLine>Brussels, Belgium</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="197" to="207" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Claudia Leacock, and Helen Yannakoudakis</title>
+		<author>
+			<persName><forename type="first">Joel</forename><surname>Tetreault</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jill</forename><surname>Burstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ekaterina</forename><surname>Kochmar</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/W18-05</idno>
+	</analytic>
+	<monogr>
+		<title level="m">2018. Proceedings of the Thirteenth Workshop on Innovative Use of NLP for Building Educational Applications</title>
+		<imprint/>
+	</monogr>
+	<note>Association for Computational Linguistics</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Approximately optimal teaching of approximately optimal learners</title>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Whitehill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Javier</forename><surname>Movellan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Learning Technologies</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="152" to="164" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Linguistic skill modeling for second language acquisition</title>
+		<author>
+			<persName><forename type="first">Brian</forename><surname>Zylich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Lan</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3448139.3448153</idno>
+	</analytic>
+	<monogr>
+		<title level="m">LAK21: 11th International Learning Analytics and Knowledge Conference</title>
+		<meeting><address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="141" to="150" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+			</listBibl>
+		</back>
+	</text>
+</TEI>

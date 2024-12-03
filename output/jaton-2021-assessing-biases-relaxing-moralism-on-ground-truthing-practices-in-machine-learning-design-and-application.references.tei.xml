@@ -1,0 +1,1621 @@
+<?xml version="1.0" ?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader>
+		<fileDesc xml:id="f_0"/>
+	</teiHeader>
+	<text>
+		<front/>
+		<body/>
+		<back>
+			<listBibl>
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Ethics guidelines for trustworthy AI</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>High-Level</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Expert</forename><surname>Group -Aihleg</surname></persName>
+		</author>
+		<ptr target="https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai" />
+	</analytic>
+	<monogr>
+		<title level="j">Text</title>
+		<imprint>
+			<date type="published" when="2019-04-08">2019. 8 April. May 2019</date>
+			<pubPlace>Brussels</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">E</forename><surname>Alpaydin</surname></persName>
+		</author>
+		<title level="m">Machine Learning: The New AI</title>
+		<meeting><address><addrLine>Cambridge</addrLine></address></meeting>
+		<imprint>
+			<publisher>MIT Press</publisher>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Angwin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Larson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mattu</surname></persName>
+		</author>
+		<ptr target="www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing" />
+		<title level="m">Machine bias. ProPublica, 23 May</title>
+		<imprint>
+			<date type="published" when="2016-06-10">2016. 10 June 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Fairness in machine learning</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Barocas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Narayanan</surname></persName>
+		</author>
+		<ptr target="https://fairmlbook.org/tutorial1.html" />
+	</analytic>
+	<monogr>
+		<title level="m">Conference on Neural Information Processing Systems</title>
+		<meeting><address><addrLine>Long Beach, CA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2017-05">2017. 2017. May 2019</date>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="4" to="9" />
+		</imprint>
+	</monogr>
+	<note>December. Video available at</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Big data&apos;s disparate impact</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Barocas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Selbst</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">California Law Review</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="671" to="732" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Unsupervised by any other name: Hidden layers of knowledge production in artificial intelligence on social media</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bechmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Bowker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Big Data &amp; Society</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">205395171881956</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Bowker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Star</forename><surname>Sl</surname></persName>
+		</author>
+		<title level="m">Sorting Things Out: Classification and Its Consequences</title>
+		<meeting><address><addrLine>Cambridge</addrLine></address></meeting>
+		<imprint>
+			<publisher>MIT Press</publisher>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">A naturalistic open source movie for optical flow evaluation</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Butler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wulff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stanley</forename><surname>Gb</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Computer Vision-ECCV 2012</title>
+		<title level="s">Lecture Notes in Computer Science</title>
+		<editor>
+			<persName><forename type="first">A</forename><surname>Fitzgibbon</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">S</forename><surname>Lazebnik</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">P</forename><surname>Perona</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Berlin</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="page" from="611" to="625" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Google&apos;s algorithm shows prestigious job ads to men, but not to women</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Carpenter</surname></persName>
+		</author>
+		<ptr target="www.independent.co.uk/life-style/gadgets-and-tech/news/googles-algorithm-shows-prestigious-job-ads-to-men-but-not-to-women-10372166.html" />
+	</analytic>
+	<monogr>
+		<title level="m">The Independent, 7 July</title>
+		<imprint>
+			<date type="published" when="2015-06-10">2015. 10 June 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">En Attendant Les Robots</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Casilli</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<publisher>Le Seuil</publisher>
+			<pubPlace>Paris</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Domain adaptation for upper body pose tracking in signed TV broadcasts</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Charles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Pfister</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Magee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the British machine vision conference</title>
+		<meeting>the British machine vision conference<address><addrLine>Bristol, UK; Norwich, UK</addrLine></address></meeting>
+		<imprint>
+			<publisher>BMVA Press</publisher>
+			<date type="published" when="2013-09">2013. September</date>
+			<biblScope unit="page" from="1" to="11" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">How surveillance cameras could be weaponized with A.I. The New York Times</title>
+		<author>
+			<persName><surname>Chokshi</surname></persName>
+		</author>
+		<ptr target="www.nytimes.com/2019/06/13/us/aclu-surveillance-artificial-intelligence.html" />
+		<imprint>
+			<date type="published" when="2019-06">2019. June. July 2019</date>
+			<biblScope unit="page">12</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">To automate bigger stores than Amazon, standard cognition buys Explorer</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Constine</surname></persName>
+		</author>
+		<ptr target="http://social.techcrunch.com/2019/01/07/autonomous-checkout/" />
+		<imprint>
+			<date type="published" when="2019-01">2019. January. July 2019</date>
+			<biblScope unit="page">12</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The cityscapes dataset for semantic urban scene understanding</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cordts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Omran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ramos</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2016 IEEE conference on computer vision and pattern recognition</title>
+		<meeting><address><addrLine>Las Vegas, NV; New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEEE Press</publisher>
+			<date type="published" when="2016-06-26">2016. 26 June-1 July</date>
+			<biblScope unit="page" from="3212" to="3223" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Bias detectives: The researchers striving to make algorithms fair</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Courtland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">558</biblScope>
+			<biblScope unit="issue">7710</biblScope>
+			<biblScope unit="page" from="357" to="360" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Crawford</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<publisher>Yale University Press</publisher>
+			<pubPlace>New Haven</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Discrimination and Privacy in the Information Society: Data Mining and Profiling in Large Databases</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Custers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Calders</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Schermer</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<publisher>Springer</publisher>
+			<pubPlace>Berlin</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Dismantling boundaries in science and technology studies</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Dear</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jasanoff</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Isis; An International Review Devoted to the History of Science and Its Cultural Influences</title>
+		<imprint>
+			<biblScope unit="volume">101</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="759" to="774" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">The MNIST database of handwritten digit images for machine learning research</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Deng</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>best of the web</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Signal Processing Magazine</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="141" to="142" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Domingos</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<publisher>Basic Books</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Geometry-consistent generative adversarial networks for one-sided unsupervised domain mapping</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE</title>
+		<imprint>
+			<biblScope unit="page" from="2422" to="2431" />
+			<date type="published" when="2019-06">2019. 2019. June</date>
+			<publisher>IEEE Press</publisher>
+			<pubPlace>Long Beach, CA; New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Are We ready for autonomous driving? The KITTI vision benchmark suite</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Geiger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lenz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Urtasun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2012 IEEE conference on computer vision and pattern recognition</title>
+		<meeting><address><addrLine>Providence, RI; New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEEE Press</publisher>
+			<date type="published" when="2012-06">2012. June</date>
+			<biblScope unit="page" from="3354" to="3361" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Garbage in, garbage out? Do machine learning application papers in social computing report where human-labeled training data comes from?</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Geiger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2020 conference on fairness, accountability, and transparency</title>
+		<meeting>the 2020 conference on fairness, accountability, and transparency<address><addrLine>Barcelona, Spain; New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>ACM Press</publisher>
+			<date type="published" when="2020">2020. 27-30 January</date>
+			<biblScope unit="page" from="325" to="336" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">The Data That Transformed AI Research-and Possibly the World. Quartz</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gershgorn</surname></persName>
+		</author>
+		<ptr target="https://qz.com/1034972/the-data-that-changed-the-direction-of-ai-research-and-possibly-the-world/" />
+		<imprint>
+			<date type="published" when="2017-07-26">2017. July 26. 10 July 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The battle for ethical AI at the world&apos;s biggest machine-learning conference</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Gibney</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">577</biblScope>
+			<biblScope unit="issue">7792</biblScope>
+			<biblScope unit="page" from="609" to="609" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Raw Data&apos; Is an Oxymoron</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gitelman</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<publisher>MIT Press</publisher>
+			<pubPlace>Cambridge</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Ghost Work: How to Stop Silicon Valley from Building a New Global Underclass</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Gray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Suri</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<publisher>Houghton</publisher>
+			<pubPlace>Boston; Mifflin Harcourt</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Perspectives on algorithmic normativities: Engineers, objects, activities</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Grosman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Reigeluth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Big Data &amp; Society</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">2053951719858742</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hache</surname></persName>
+		</author>
+		<title level="m">Ce a`Quoi Nous Tenons. Propositions Pour Une E ´cologie Pragmatique</title>
+		<meeting><address><addrLine>Paris</addrLine></address></meeting>
+		<imprint>
+			<publisher>La D ecouverte</publisher>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">La vuln erabilit e comme ouverture a`la contingence</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Haeringer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pecqueux</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note>Deux enqueˆtes situ ees. SociologieS [Online</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Du pragmatisme au m eliorisme radical</title>
+		<author>
+			<persName><surname>Dossiers</surname></persName>
+		</author>
+		<ptr target="http://journals.openedition.org/sociologies/14011" />
+		<imprint>
+			<date type="published" when="2019-05">May 2, 2020. May 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">YouTube is experimenting with ways to make its algorithm even more addictive</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hao</surname></persName>
+		</author>
+		<ptr target="www.technologyreview.com/2019/09/27/132829/youtube-algorithm-gets-more-addictive/" />
+	</analytic>
+	<monogr>
+		<title level="j">MIT Technology Review</title>
+		<imprint>
+			<date type="published" when="2019-09-27">2019. 27 September. 10 June 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Applied machine learning at Facebook: A datacenter infrastructure perspective</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hazelwood</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bird</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Brooks</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE international symposium on high performance computer architecture</title>
+		<meeting><address><addrLine>Vienna, Austria; New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEEE Press</publisher>
+			<date type="published" when="2018">2018. 2018. 24-28 February</date>
+			<biblScope unit="page" from="620" to="629" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Du pragmatisme au m eliorisme radical : enqueˆter dans un monde ouvert, prendre acte de ses fragilit es, consid erer la possibilit e des catastrophes</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hennion</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Monnin</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note>Introduction au Dossier. SociologieS [Online</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Du pragmatisme au m eliorisme radical</title>
+		<author>
+			<persName><surname>Dossiers</surname></persName>
+		</author>
+		<ptr target="http://journals.open-edition.org/sociologies/13931" />
+		<imprint>
+			<date type="published" when="2019-05">May 2, 2020. May 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Building truths in AI: Making predictive algorithms doable in healthcare</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Henriksen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bechmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Information, Communication &amp; Society</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="802" to="816" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Cognition in the Wild</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hutchins</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1995">1995</date>
+			<publisher>MIT Press</publisher>
+			<pubPlace>Cambridge</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Human3.6M: Large scale datasets and predictive methods for 3D human sensing in natural environments</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ionescu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Papava</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Olaru</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Pattern Analysis and Machine Intelligence</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1325" to="1339" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">;</forename><surname>Isscc Videos</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Yann Lecun</surname></persName>
+		</author>
+		<ptr target="https://www.youtube.com/watch?v=YzD7Z2yRL7" />
+		<title level="m">International Solid-State Circuits Conference 2019: Deep Learning Hardware: Past, Present, and Future</title>
+		<meeting><address><addrLine>San Francisco</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019-05-19">2019. 19 May 2020</date>
+			<biblScope unit="page" from="17" to="21" />
+		</imprint>
+	</monogr>
+	<note>February. Video available at</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">The Will to Believe</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>James</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1912">1912</date>
+			<publisher>Longmans, Green, and Co</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">We get the algorithms of our ground truths: Designing referential databases in digital image processing</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Jaton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Social Studies of Science</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="811" to="840" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Pardonnez cette platitude&quot; : de l&apos;int ereˆt des ethnographies de laboratoire pour l&apos; etude des processus algorithmiques</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Jaton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Zilsel</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="315" to="339" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">The Constitution of Algorithms: Ground-Truthing, Programming, Formulating</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Jaton</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<publisher>MIT Press</publisher>
+			<pubPlace>Cambridge</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Processus frictionnels de mises en bases de donn ees</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Jaton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Vinck</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Revue d&apos;anthropologie des connaissances</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="489" to="504" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Politicizing algorithms by other means: Toward inquiries for affective dissensions</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Jaton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Vinck</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note>submitted. Manuscript submitted in January 2021 to Perspectives on Science</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The global landscape of AI ethics guidelines</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jobin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ienca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Vayena</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Machine Intelligence</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="389" to="399" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">I</forename><surname>Kant</surname></persName>
+		</author>
+		<title level="m">Groundwork of the Metaphysics of Morals</title>
+		<meeting><address><addrLine>Cambridge</addrLine></address></meeting>
+		<imprint>
+			<publisher>Cambridge University Press</publisher>
+			<date type="published" when="1785">1998. 1785</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Latour</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science in Action -How to Follow Scientists &amp; Engineers through Society</title>
+		<imprint>
+			<date type="published" when="1987">1987</date>
+			<publisher>Harvard University Press</publisher>
+			<pubPlace>Cambridge</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Politics of Nature</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Latour</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2004">2004</date>
+			<publisher>Harvard University Press</publisher>
+			<pubPlace>Cambridge</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Enqueˆte Sur Les Modes D&apos;existence : Une Anthropologie Des Modernes</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Latour</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<publisher>La D ecouverte</publisher>
+			<pubPlace>Paris</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Latour</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<publisher>La D ecouverte</publisher>
+			<pubPlace>Paris</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">A note on socio-technical graphs</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Latour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mauguin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Teil</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Social Studies of Science</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="33" to="57" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Predictive Learning</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lecun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NIPS 2016 | Yann LeCun, Facebook Research. Available at: www.youtube. com/watch?v=Ount2Y4qxQo&amp;t=1072s</title>
+		<imprint>
+			<date type="published" when="2016-05-19">2016. 19 May 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Playing with the data: What legal scholars should learn about machine learning</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lehr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ohm</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">UCDL Rev</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="653" to="717" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">SelFlow: Self-supervised learning of optical flow</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lyu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>King</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE</title>
+		<imprint>
+			<biblScope unit="page" from="4566" to="4575" />
+			<date type="published" when="2019-06">2019. 2019. June</date>
+			<publisher>IEEE Press</publisher>
+			<pubPlace>Long Beach, CA; New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">DeepFashion: Powering robust clothes recognition and retrieval with rich annotations</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Qiu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2016 IEEE conference on computer vision and pattern recognition</title>
+		<meeting><address><addrLine>Las Vegas, NV; New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEEE Press</publisher>
+			<date type="published" when="2016-06-26">2016. 26 June-1 July</date>
+			<biblScope unit="page" from="1096" to="1104" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Deep learning face attributes in the wild</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE international conference on computer vision</title>
+		<meeting><address><addrLine>Araucuno Park, Chili; New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEEE Press</publisher>
+			<date type="published" when="2015-12-18">2015. 2015. 18 December</date>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="3730" to="3738" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Unsupervised part-based disentangling of object shape and appearance</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lorenz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bereska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Milbich</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019-06">2019. 2019. June</date>
+			<publisher>IEEE Press</publisher>
+			<biblScope unit="page" from="10947" to="10956" />
+			<pubPlace>Long Beach, CA; New York</pubPlace>
+		</imprint>
+	</monogr>
+	<note>IEEE/CVF conference on computer vision and pattern recognition</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Values and pragmatic action: the challenges of introducing ethical intelligence in technical design communities</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Manders-Huits</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zimmer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Review of Information Ethics</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="37" to="45" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">For Web Images, Creating New Technology to Seek and Find</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Markoff</surname></persName>
+		</author>
+		<ptr target="https://www.nytimes.com/2012/11/20/science/for-web-images-creating-new-technol-ogy-to-seek-and-find.html" />
+	</analytic>
+	<monogr>
+		<title level="j">New York Times</title>
+		<imprint>
+			<date type="published" when="2012-11-19">2012. November 19. 10 July 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mcdade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Testman</surname></persName>
+		</author>
+		<ptr target="www.ibm.com/blogs/systems/tackling-bias-in-ai/" />
+		<title level="m">Tackling bias in AI</title>
+		<imprint>
+			<date type="published" when="2019-09-27">2019. 27 September 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Object scene flow for autonomous vehicles</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Menze</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Geiger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2015 IEEE conference on computer vision and pattern recognition</title>
+		<meeting><address><addrLine>Boston, MA; New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEEE Press</publisher>
+			<date type="published" when="2015-06">2015. June</date>
+			<biblScope unit="page" from="3061" to="3070" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Science-Mart -Privatizing American Science</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mirowski</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<publisher>Harvard University Press</publisher>
+			<pubPlace>Cambridge, MA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">The Need for Biases in Learning Generalizations</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Mitchell</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1980">1980</date>
+			<publisher>Rutgers University</publisher>
+			<pubPlace>New Brunswick</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="report_type">CBM-TR-5-Ho</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Principles alone cannot guarantee ethical AI</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mittelstadt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Machine Intelligence</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="501" to="507" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The ethics of algorithms: Mapping the debate</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mittelstadt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Allo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Taddeo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Big Data &amp; Society</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">2053951716679679</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Reading digits in natural images with unsupervised feature learning</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Netzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Coates</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="s">Advances in Neural Information Processing Systems</title>
+		<editor>
+			<persName><forename type="first">J</forename><surname>Shawe-Taylor</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Zemel</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Bartlett</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">F</forename><surname>Pereira</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">K</forename><forename type="middle">Q</forename><surname>Weinberger</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="567" to="575" />
+			<date type="published" when="2011">2011</date>
+			<publisher>Curran Associates</publisher>
+			<pubPlace>Red Hook, NY</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">The Everyday Life of an Algorithm</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Neyland</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<publisher>Palgrave Pivot</publisher>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Algorithms of Oppression: How Search Engines Reinforce Racism</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">U</forename><surname>Noble</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<publisher>New York University Press</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Dissecting racial bias in an algorithm used to manage the health of populations</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Obermeyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Powers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Vogeli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">366</biblScope>
+			<biblScope unit="issue">6464</biblScope>
+			<biblScope unit="page" from="447" to="453" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">The Black Box Society: The Secret Algorithms That Control Money and Information</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Pasquale</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<publisher>Harvard University Press</publisher>
+			<pubPlace>Cambridge</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The use of machine learning algorithms in recommender systems: a systematic review</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Portugal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Alencar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Cowan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Expert Systems with Applications</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="205" to="227" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Bias in AI: A problem recognized but still unresolved</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Radfar</surname></persName>
+		</author>
+		<ptr target="http://social.techcrunch.com/2019/07/25/bias-in-ai-a-problem-recognized-but-still-unresolved/" />
+		<imprint>
+			<date type="published" when="2019-06-26">2019. June. 26 September 2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">TechCrunch</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Beyond Pagerank: Machine learning for static ranking</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Richardson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Prakash</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Brill</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 15th international conference on World Wide Web</title>
+		<meeting>the 15th international conference on World Wide Web<address><addrLine>Edinburgh, Scotland; New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>ACM Press</publisher>
+			<date type="published" when="2006-05">2006. May</date>
+			<biblScope unit="page" from="707" to="715" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">A crucial step for averting AI disasters</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shellenbarger</surname></persName>
+		</author>
+		<ptr target="www.wsj.com/articles/a-crucial-step-for-avoiding-ai-disasters-11550069865" />
+	</analytic>
+	<monogr>
+		<title level="j">Wall Street Journal</title>
+		<imprint>
+			<date type="published" when="2019-02-13">2019. 13 February. 26 September 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Silberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Manyika</surname></persName>
+		</author>
+		<title level="m">Notes From the AI Frontier: Tackling Bias in AI (and in Humans)</title>
+		<meeting><address><addrLine>Chicago</addrLine></address></meeting>
+		<imprint>
+			<publisher>McKinsey Global Institute</publisher>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Real-time continuous pose recovery of human hands using convolutional networks</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tompson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Stein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lecun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the international workshop on software fairness</title>
+		<editor>
+			<persName><forename type="first">Rubin</forename><forename type="middle">J</forename><surname>Verma</surname></persName>
+		</editor>
+		<meeting>the international workshop on software fairness<address><addrLine>Gothenburg, Sweden; New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>ACM Press</publisher>
+			<date type="published" when="2014">2014. 2018. May</date>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="1" to="7" />
+		</imprint>
+	</monogr>
+	<note>Fairness definitions explained</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Ethics as an escape from regulation: From &apos;ethics-washing&apos; to ethics-shopping?</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Wagner</surname></persName>
+		</author>
+		<editor>Bayamlio glu E, Baraliuc I, Janssens L, et al.</editor>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<publisher>Amsterdam University Press</publisher>
+			<biblScope unit="page" from="84" to="89" />
+			<pubPlace>Amsterdam</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Being Profiled</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Branson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Welinder</surname></persName>
+		</author>
+		<title level="m">The Caltech-Ucsd Birds-200-2011 Dataset</title>
+		<meeting><address><addrLine>Pasadena</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+		<respStmt>
+			<orgName>California Institute of Technology</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Report</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Self-supervised 3D hand pose estimation through training by fitting</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Probst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Van Gool</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE/CVF conference on computer vision and pattern recognition</title>
+		<meeting><address><addrLine>Long Beach, CA; New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEEE Press</publisher>
+			<date type="published" when="2019-06">2019. 2019. June</date>
+			<biblScope unit="page" from="10845" to="10954" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">WIDER FACE: A face detection benchmark</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Loy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2016 IEEE conference on computer vision and pattern recognition</title>
+		<meeting><address><addrLine>Las Vegas, NV; New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEEE Press</publisher>
+			<date type="published" when="2016-06-26">2016. 26 June-1 July</date>
+			<biblScope unit="page" from="5525" to="5533" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Cat head detection -How to effectively exploit shape and texture features</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Tang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Computer Vision-ECCV 2008</title>
+		<title level="s">Lecture Notes in Computer Science</title>
+		<editor>
+			<persName><forename type="first">D</forename><surname>Forsyth</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Torr</forename><forename type="middle">P</forename><surname>Zisserman</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">A</forename></persName>
+		</editor>
+		<meeting><address><addrLine>Berlin</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="page" from="802" to="816" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">From actemes to action: A strongly-supervised representation for detailed action understanding</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">G</forename><surname>Derpanis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE international conference on computer vision</title>
+		<meeting><address><addrLine>Sydney, Australia; New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEEE Press</publisher>
+			<date type="published" when="2013-04">2013. 2013. April</date>
+			<biblScope unit="page" from="2248" to="2255" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+			</listBibl>
+		</back>
+	</text>
+</TEI>

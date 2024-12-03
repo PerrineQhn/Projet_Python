@@ -1,0 +1,2530 @@
+<?xml version="1.0" ?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader>
+		<fileDesc xml:id="f_3"/>
+	</teiHeader>
+	<text>
+		<front/>
+		<body/>
+		<back>
+			<listBibl>
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The effect of differential victim crime reporting on predictive policing systems</title>
+		<author>
+			<persName><forename type="first">Nil-Jana</forename><surname>Akpinar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>De-Arteaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency</title>
+		<meeting>the 2021 ACM Conference on Fairness, Accountability, and Transparency</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="838" to="849" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Cardiovascular disease risk profiles</title>
+		<author>
+			<persName><forename type="first">Patricia</forename><forename type="middle">M</forename><surname>Keaven M Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><forename type="middle">Wf</forename><surname>Odell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">William</forename><forename type="middle">B</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kannel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American heart journal</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page" from="293" to="298" />
+			<date type="published" when="1991">1991. 1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Machine bias</title>
+		<author>
+			<persName><forename type="first">Julia</forename><surname>Angwin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeff</forename><surname>Larson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Surya</forename><surname>Mattu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lauren</forename><surname>Kirchner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Ethics of Data and Analytics</title>
+		<imprint>
+			<publisher>Auerbach Publications</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="254" to="264" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Does the whole exceed its parts? the effect of ai explanations on complementary team performance</title>
+		<author>
+			<persName><forename type="first">Gagan</forename><surname>Bansal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tongshuang</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joyce</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raymond</forename><surname>Fok</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Besmira</forename><surname>Nushi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ece</forename><surname>Kamar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Tulio Ribeiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Weld</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems</title>
+		<meeting>the 2021 CHI Conference on Human Factors in Computing Systems</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="1" to="16" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">It&apos;s COMPASlicated: The Messy Relationship between RAI Datasets and Algorithmic Fairness Benchmarks</title>
+		<author>
+			<persName><forename type="first">Michelle</forename><surname>Bao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Angela</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samantha</forename><surname>Zottola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brian</forename><surname>Brubach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sarah</forename><surname>Desmarais</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aaron</forename><surname>Horowitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kristian</forename><surname>Lum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Suresh</forename><surname>Venkatasubramanian</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2106.05498</idno>
+		<imprint>
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Interventions over predictions: Reframing the ethical debate for actuarial risk assessment</title>
+		<author>
+			<persName><forename type="first">Chelsea</forename><surname>Barabas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Madars</forename><surname>Virza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karthik</forename><surname>Dinakar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joichi</forename><surname>Ito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Zittrain</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Conference on fairness, accountability and transparency</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="62" to="76" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">Solon</forename><surname>Barocas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Moritz</forename><surname>Hardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arvind</forename><surname>Narayanan</surname></persName>
+		</author>
+		<ptr target="http://www.fairmlbook.org" />
+		<title level="m">Fairness and Machine Learning: Limitations and Opportunities. fairmlbook.org</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">An introduction to sample selection bias in sociological data</title>
+		<author>
+			<persName><forename type="first">Berk</forename><surname>Richard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American sociological review</title>
+		<imprint>
+			<biblScope unit="page" from="386" to="398" />
+			<date type="published" when="1983">1983. 1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Proxy tasks and subjective measures can be misleading in evaluating explainable ai systems</title>
+		<author>
+			<persName><forename type="first">Zana</forename><surname>Buçinca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Phoebe</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Krzysztof</forename><forename type="middle">Z</forename><surname>Gajos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Elena</forename><forename type="middle">L</forename><surname>Glassman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 25th international conference on intelligent user interfaces</title>
+		<meeting>the 25th international conference on intelligent user interfaces</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="454" to="464" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">To trust or to think: cognitive forcing functions can reduce overreliance on AI in AI-assisted decision-making</title>
+		<author>
+			<persName><forename type="first">Zana</forename><surname>Buçinca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maja</forename><surname>Barbara Malaya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Krzysztof</forename><forename type="middle">Z</forename><surname>Gajos</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1" to="21" />
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note>CSCW</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The role of explanations on trust and reliance in clinical decision support systems</title>
+		<author>
+			<persName><forename type="first">Adrian</forename><surname>Bussone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Simone</forename><surname>Stumpf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O'</forename><surname>Dympna</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sullivan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2015 international conference on healthcare informatics</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="160" to="169" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Racial Disparities in the Enforcement of Marijuana Violations in the US</title>
+		<author>
+			<persName><forename type="first">Bradley</forename><surname>Butcher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Miri</forename><surname>Zilka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Riccardo</forename><surname>Fogliato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carolyn</forename><surname>Ashurst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adrian</forename><surname>Weller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2022 AAAI/ACM Conference on AI, Ethics, and Society</title>
+		<meeting>the 2022 AAAI/ACM Conference on AI, Ethics, and Society</meeting>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="130" to="143" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Hello AI&quot;: uncovering the onboarding needs of medical practitioners for human-AI collaborative decision-making</title>
+		<author>
+			<persName><forename type="first">Carrie</forename><forename type="middle">J</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samantha</forename><surname>Winter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Steiner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lauren</forename><surname>Wilcox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Terry</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Humancomputer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1" to="24" />
+			<date type="published" when="2019">2019. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Onboarding Materials as Cross-functional Boundary Objects for Developing AI Assistants</title>
+		<author>
+			<persName><forename type="first">Carrie</forename><forename type="middle">J</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samantha</forename><surname>Winter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Steiner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lauren</forename><surname>Wilcox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Terry</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="1" to="7" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Feature-based explanations don&apos;t help people detect misclassifications of online toxicity</title>
+		<author>
+			<persName><forename type="first">Qiaozhu</forename><surname>Samuel Carton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><surname>Mei</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Resnick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the international AAAI conference on web and social media</title>
+		<meeting>the international AAAI conference on web and social media</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="95" to="106" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Productivity and selection of human capital with machine learning</title>
+		<author>
+			<persName><forename type="first">Aaron</forename><surname>Chalfin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oren</forename><surname>Danieli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Hillis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zubin</forename><surname>Jelveh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Luca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jens</forename><surname>Ludwig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sendhil</forename><surname>Mullainathan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="page" from="124" to="127" />
+			<date type="published" when="2016">2016. 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Sample Efficient Learning of Predictors that Complement Humans</title>
+		<author>
+			<persName><forename type="first">Mohammad-Amin</forename><surname>Charusaie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hussein</forename><surname>Mozannar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Sontag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samira</forename><surname>Samadi</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="2972" to="3005" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">How Child Welfare Workers Reduce Racial Disparities in Algorithmic Decisions</title>
+		<author>
+			<persName><forename type="first">Hao-Fei</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Logan</forename><surname>Stapleton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anna</forename><surname>Kawakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Venkat</forename><surname>Sivaraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanghuidi</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Diana</forename><surname>Qing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Perer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenneth</forename><surname>Holstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhiwei</forename><surname>Steven Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haiyi</forename><surname>Zhu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems (forthcoming)</title>
+		<meeting>the 2022 CHI Conference on Human Factors in Computing Systems (forthcoming)</meeting>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">A case study of algorithm-assisted decision making in child maltreatment hotline screening decisions</title>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Diana</forename><surname>Benavides-Prado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oleksandr</forename><surname>Fialko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rhema</forename><surname>Vaithianathan</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Conference on Fairness, Accountability and Transparency</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="134" to="148" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Counterfactual predictions under runtime confounding</title>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Coston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edward</forename><surname>Kennedy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="4150" to="4162" />
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Counterfactual predictions under runtime confounding</title>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Coston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edward</forename><surname>Kennedy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="4150" to="4162" />
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Counterfactual risk assessments, evaluation, and fairness</title>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Coston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alan</forename><surname>Mishler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edward</forename><forename type="middle">H</forename><surname>Kennedy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency</title>
+		<meeting>the 2020 Conference on Fairness, Accountability, and Transparency</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="582" to="593" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">SoK: A Validity Perspective on Evaluating the Justified Use of Data-driven Decision-making Algorithms</title>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Lee Coston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anna</forename><surname>Kawakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haiyi</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ken</forename><surname>Holstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hoda</forename><surname>Heidari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">First IEEE Conference on Secure and Trustworthy Machine Learning</title>
+		<imprint>
+			<date type="published" when="2023">2023. 2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Clinical versus actuarial judgment</title>
+		<author>
+			<persName><forename type="first">Robyn</forename><forename type="middle">M</forename><surname>Dawes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Faust</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><forename type="middle">E</forename><surname>Meehl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">243</biblScope>
+			<biblScope unit="page" from="1668" to="1674" />
+			<date type="published" when="1989">1989. 1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Learning under selective labels in the presence of expert consistency</title>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>De-Arteaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Artur</forename><surname>Dubrawski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1807.00905</idno>
+		<imprint>
+			<date type="published" when="2018">2018. 2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Leveraging expert consistency to improve algorithmic decision support</title>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>De-Arteaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Artur</forename><surname>Dubrawski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2101.09648</idno>
+		<imprint>
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Bias in bios: A case study of semantic representation bias in a high-stakes setting</title>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>De-Arteaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexey</forename><surname>Romanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hanna</forename><surname>Wallach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jennifer</forename><surname>Chayes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christian</forename><surname>Borgs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sahin</forename><surname>Geyik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Krishnaram</forename><surname>Kenthapadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Tauman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kalai</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">proceedings of the Conference on Fairness, Accountability, and Transparency</title>
+		<meeting>the Conference on Fairness, Accountability, and Transparency</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="120" to="128" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">Emily</forename><surname>Denton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Díaz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ian</forename><surname>Kivlichan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rachel</forename><surname>Vinodkumar Prabhakaran</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Rosen</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2112.04554</idno>
+		<title level="m">Whose ground truth? accounting for individual and collective identities underlying dataset annotation</title>
+		<imprint>
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Multiaccurate proxies for downstream fairness</title>
+		<author>
+			<persName><forename type="first">Emily</forename><surname>Diana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wesley</forename><surname>Gill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Kearns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Krishnaram</forename><surname>Kenthapadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aaron</forename><surname>Roth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Saeed</forename><surname>Sharifi-Malvajerdi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2022 ACM Conference on Fairness, Accountability, and Transparency</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="1207" to="1239" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Sensitivity analysis for causal inference under unmeasured confounding and measurement error problems</title>
+		<author>
+			<persName><forename type="first">Iván</forename><surname>Díaz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mark</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Van Der Laan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The international journal of biostatistics</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="149" to="160" />
+			<date type="published" when="2013">2013. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">COMPAS risk scales: Demonstrating accuracy equity and predictive parity</title>
+		<author>
+			<persName><forename type="first">William</forename><surname>Dieterich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christina</forename><surname>Mendoza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tim</forename><surname>Brennan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Northpointe Inc</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">4</biblScope>
+			<date type="published" when="2016">2016. 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Algorithm aversion: people erroneously avoid algorithms after seeing them err</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Berkeley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joseph</forename><forename type="middle">P</forename><surname>Dietvorst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cade</forename><surname>Simmons</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Massey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Experimental Psychology: General</title>
+		<imprint>
+			<biblScope unit="volume">144</biblScope>
+			<biblScope unit="page">114</biblScope>
+			<date type="published" when="2015">2015. 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">Kate</forename><surname>Donahue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Krishnaram</forename><surname>Kenthapadi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2202.08821</idno>
+		<title level="m">Human-Algorithm Collaboration: Achieving Complementarity and Avoiding Unfairness</title>
+		<imprint>
+			<date type="published" when="2022">2022. 2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Runaway feedback loops in predictive policing</title>
+		<author>
+			<persName><forename type="first">Danielle</forename><surname>Ensign</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sorelle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Scott</forename><surname>Friedler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carlos</forename><surname>Neville</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Suresh</forename><surname>Scheidegger</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Venkatasubramanian</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Conference on Fairness, Accountability and Transparency</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="160" to="171" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Fairness evaluation in presence of biased noisy labels</title>
+		<author>
+			<persName><forename type="first">Riccardo</forename><surname>Fogliato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max G'</forename><surname>Sell</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Artificial Intelligence and Statistics</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="2325" to="2336" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The impact of algorithmic risk assessments on human predictions and its analysis via crowdsourcing studies</title>
+		<author>
+			<persName><forename type="first">Riccardo</forename><surname>Fogliato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zachary</forename><surname>Lipton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1" to="24" />
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note>CSCW</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">On the Validity of Arrest as a Proxy for Offense: Race and the Likelihood of Arrest for Violent Crimes</title>
+		<author>
+			<persName><forename type="first">Riccardo</forename><surname>Fogliato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alice</forename><surname>Xiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zachary</forename><surname>Lipton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Nagin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><surname>Chouldechova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 AAAI/ACM Conference on AI, Ethics, and Society</title>
+		<meeting>the 2021 AAAI/ACM Conference on AI, Ethics, and Society</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="100" to="111" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Classification in the presence of label noise: a survey</title>
+		<author>
+			<persName><forename type="first">Benoît</forename><surname>Frénay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michel</forename><surname>Verleysen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE transactions on neural networks and learning systems</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="845" to="869" />
+			<date type="published" when="2013">2013. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Do People Engage Cognitively with AI? Impact of AI Assistance on Incidental Learning</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Krzysztof</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lena</forename><surname>Gajos</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mamykina</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">27th International Conference on Intelligent User Interfaces</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="794" to="806" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">Ruijiang</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maytal</forename><surname>Saar-Tsechansky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>De-Arteaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ligong</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Min</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyung</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><surname>Lease</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2105.10614</idno>
+		<title level="m">Human-AI collaboration with bandit feedback</title>
+		<imprint>
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Jury learning: Integrating dissenting voices into machine learning models</title>
+		<author>
+			<persName><forename type="first">Michelle</forename><forename type="middle">S</forename><surname>Mitchell L Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joon</forename><surname>Lam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sung</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kayur</forename><surname>Patel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeff</forename><surname>Hancock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tatsunori</forename><surname>Hashimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><forename type="middle">S</forename><surname>Bernstein</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">CHI Conference on Human Factors in Computing Systems</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="1" to="19" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The principles and limits of algorithm-in-theloop decision making</title>
+		<author>
+			<persName><forename type="first">Ben</forename><surname>Green</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yiling</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1" to="24" />
+			<date type="published" when="2019">2019. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Algorithmic risk assessments can alter human decision-making processes in high-stakes government contexts</title>
+		<author>
+			<persName><forename type="first">Ben</forename><surname>Green</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yiling</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1" to="33" />
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note>CSCW</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Clinical versus mechanical prediction: a meta-analysis</title>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">H</forename><surname>William M Grove</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Boyd</forename><forename type="middle">S</forename><surname>Zald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Beth</forename><forename type="middle">E</forename><surname>Lebow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chad</forename><surname>Snitz</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Nelson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychological assessment</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">19</biblScope>
+			<date type="published" when="2000">2000. 2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Ores: Lowering barriers with participatory machine learning in wikipedia</title>
+		<author>
+			<persName><forename type="first">Aaron</forename><surname>Halfaker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stuart</forename><surname>Geiger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="1" to="37" />
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+	<note>CSCW</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Measurement theory and practice</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>David</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hand</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2004">2004. 2004</date>
+			<publisher>Arnold</publisher>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">Moritz</forename><surname>Hardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Michael</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kim</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2206.11673</idno>
+		<title level="m">Backward baselines: Is your model predicting the past? arXiv preprint</title>
+		<imprint>
+			<date type="published" when="2022">2022. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Modern factor analysis</title>
+		<author>
+			<persName><surname>Harry H Harman</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1976">1976</date>
+			<publisher>University of Chicago press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Sample selection bias as a specification error. Econometrica</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>James</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Heckman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the econometric society</title>
+		<imprint>
+			<biblScope unit="page" from="153" to="161" />
+			<date type="published" when="1979">1979. 1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">Patrick</forename><surname>Hemmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max</forename><surname>Schemmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Niklas</forename><surname>Kühl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Vössing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gerhard</forename><surname>Satzger</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2205.01467</idno>
+		<title level="m">On the Effect of Information Asymmetry in Human-AI Teams</title>
+		<imprint>
+			<date type="published" when="2022">2022. 2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Learning representations by humans, for humans</title>
+		<author>
+			<persName><forename type="first">Sophie</forename><surname>Hilgard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nir</forename><surname>Rosenfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mahzarin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jack</forename><surname>Banaji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Parkes</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="4227" to="4238" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Toward supporting perceptual complementarity in human-AI collaboration via reflection on unobservables</title>
+		<author>
+			<persName><forename type="first">Kenneth</forename><surname>Holstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>De-Arteaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lakshmi</forename><surname>Tumati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanghuidi</forename><surname>Cheng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1" to="20" />
+			<date type="published" when="2023">2023. 2023</date>
+		</imprint>
+	</monogr>
+	<note>CSCW</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Estimating the error rates of diagnostic tests</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Sui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steven</forename><forename type="middle">D</forename><surname>Hui</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Walter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biometrics</title>
+		<imprint>
+			<biblScope unit="page" from="167" to="171" />
+			<date type="published" when="1980">1980. 1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Measurement and fairness</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Abigail</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hanna</forename><surname>Jacobs</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wallach</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 ACM conference on fairness, accountability, and transparency</title>
+		<meeting>the 2021 ACM conference on fairness, accountability, and transparency</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="375" to="385" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Residual unfairness in fair machine learning from prejudiced data</title>
+		<author>
+			<persName><forename type="first">Nathan</forename><surname>Kallus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Angela</forename><surname>Zhou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<publisher>PMLR</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="2439" to="2448" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Improving Human-AI Partnerships in Child Welfare: Understanding Worker Practices, Challenges, and Desires for Algorithmic Decision Support</title>
+		<author>
+			<persName><forename type="first">Anna</forename><surname>Kawakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Venkatesh</forename><surname>Sivaraman</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hao-Fei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Logan</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanghuidi</forename><surname>Stapleton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Diana</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Qing</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Perer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steven</forename><surname>Zhiwei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haiyi</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenneth</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Holstein</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">CHI Conference on Human Factors in Computing Systems</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="1" to="18" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Human decisions and machine predictions</title>
+		<author>
+			<persName><forename type="first">Jon</forename><surname>Kleinberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Himabindu</forename><surname>Lakkaraju</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jure</forename><surname>Leskovec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jens</forename><surname>Ludwig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sendhil</forename><surname>Mullainathan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The quarterly journal of economics</title>
+		<imprint>
+			<biblScope unit="volume">133</biblScope>
+			<biblScope unit="page" from="237" to="293" />
+			<date type="published" when="2018">2018. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Prediction policy problems</title>
+		<author>
+			<persName><forename type="first">Jon</forename><surname>Kleinberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jens</forename><surname>Ludwig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sendhil</forename><surname>Mullainathan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ziad</forename><surname>Obermeyer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="491" to="495" />
+			<date type="published" when="2015">2015. 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Allocating interventions based on predicted outcomes: A case study on homelessness services</title>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Kube</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sanmay</forename><surname>Das</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Patrick</forename><forename type="middle">J</forename><surname>Fowler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the AAAI Conference on Artificial Intelligence</title>
+		<meeting>the AAAI Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="622" to="629" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">Vivian</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chacha</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Vera Liao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alison</forename><surname>Smith-Renner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chenhao</forename><surname>Tan</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2112.11471</idno>
+		<title level="m">Towards a Science of Human-AI Decision Making: A Survey of Empirical Studies</title>
+		<imprint>
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Towards Building Model-Driven Tutorials for Humans</title>
+		<author>
+			<persName><forename type="first">Vivian</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Han</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chenhao</forename><surname>Tan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems</title>
+		<meeting>the 2020 CHI Conference on Human Factors in Computing Systems</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="1" to="13" />
+		</imprint>
+	</monogr>
+	<note>Why is&apos; Chicago&apos;deceptive?</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">On human predictions with explanations and predictions of machine learning models: A case study on deception detection</title>
+		<author>
+			<persName><forename type="first">Vivian</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chenhao</forename><surname>Tan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the conference on fairness, accountability, and transparency</title>
+		<meeting>the conference on fairness, accountability, and transparency</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="29" to="38" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The selective labels problem: Evaluating algorithmic predictions in the presence of unobservables</title>
+		<author>
+			<persName><forename type="first">Himabindu</forename><surname>Lakkaraju</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jon</forename><surname>Kleinberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jure</forename><surname>Leskovec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jens</forename><surname>Ludwig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sendhil</forename><surname>Mullainathan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</title>
+		<meeting>the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="275" to="284" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Understanding the effect of outof-distribution examples and interactive explanations on human-ai decision making</title>
+		<author>
+			<persName><forename type="first">Han</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vivian</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chenhao</forename><surname>Tan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1" to="45" />
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+	<note>CSCW</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Predict responsibly: improving fairness and accuracy by learning to defer</title>
+		<author>
+			<persName><forename type="first">David</forename><surname>Madras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Toni</forename><surname>Pitassi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Zemel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="page">31</biblScope>
+			<date type="published" when="2018">2018. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Latent class analysis</title>
+		<author>
+			<persName><surname>Allan L Mccutcheon</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1987">1987</date>
+			<biblScope unit="volume">64</biblScope>
+			<pubPlace>Sage</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Learning from corrupted binary labels via class-probability estimation</title>
+		<author>
+			<persName><forename type="first">Aditya</forename><surname>Menon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brendan</forename><surname>Van Rooyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cheng</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Soon</forename><surname>Ong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bob</forename><surname>Williamson</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International conference on machine learning</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="125" to="134" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">From optimizing engagement to measuring value</title>
+		<author>
+			<persName><forename type="first">Smitha</forename><surname>Milli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luca</forename><surname>Belli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Moritz</forename><surname>Hardt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency</title>
+		<meeting>the 2021 ACM Conference on Fairness, Accountability, and Transparency</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="714" to="722" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Teaching humans when to defer to a classifier via exemplars</title>
+		<author>
+			<persName><forename type="first">Hussein</forename><surname>Mozannar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arvind</forename><surname>Satyanarayan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Sontag</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the AAAI Conference on Artificial Intelligence</title>
+		<meeting>the AAAI Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="5323" to="5331" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Does machine learning automate moral hazard and error?</title>
+		<author>
+			<persName><forename type="first">Sendhil</forename><surname>Mullainathan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ziad</forename><surname>Obermeyer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Economic Review</title>
+		<imprint>
+			<biblScope unit="volume">107</biblScope>
+			<biblScope unit="page" from="476" to="480" />
+			<date type="published" when="2017">2017. 2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">A machine learning approach to low-value health care: wasted tests, missed heart attacks and mis-predictions</title>
+		<author>
+			<persName><forename type="first">Sendhil</forename><surname>Mullainathan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ziad</forename><surname>Obermeyer</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<publisher>National Bureau of Economic Research</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Learning with noisy labels</title>
+		<author>
+			<persName><forename type="first">Nagarajan</forename><surname>Natarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pradeep</forename><forename type="middle">K</forename><surname>Inderjit S Dhillon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ambuj</forename><surname>Ravikumar</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Tewari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in neural information processing systems</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<date type="published" when="2013">2013. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Confident learning: Estimating uncertainty in dataset labels</title>
+		<author>
+			<persName><forename type="first">Curtis</forename><surname>Northcutt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lu</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Isaac</forename><surname>Chuang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Artificial Intelligence Research</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page" from="1373" to="1411" />
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Dissecting racial bias in an algorithm used to manage the health of populations</title>
+		<author>
+			<persName><forename type="first">Ziad</forename><surname>Obermeyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brian</forename><surname>Powers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christine</forename><surname>Vogeli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sendhil</forename><surname>Mullainathan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">366</biblScope>
+			<biblScope unit="page" from="447" to="453" />
+			<date type="published" when="2019">2019. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Bias attenuation results for nondifferentially mismeasured ordinal and coarsened confounders</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Elizabeth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tyler</forename><forename type="middle">J</forename><surname>Ogburn</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vanderweele</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biometrika</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="241" to="248" />
+			<date type="published" when="2013">2013. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">A slow algorithm improves users&apos; assessments of the algorithm&apos;s accuracy</title>
+		<author>
+			<persName><forename type="first">Sung</forename><surname>Joon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rick</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Barber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karrie</forename><surname>Kirlik</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Karahalios</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human-Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1" to="15" />
+			<date type="published" when="2019">2019. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Nithum Thain, and Ion Androutsopoulos</title>
+		<author>
+			<persName><forename type="first">John</forename><surname>Pavlopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Sorensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lucas</forename><surname>Dixon</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2006.00998</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Toxicity detection: Does context really matter? arXiv preprint</title>
+		<imprint>
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Causal diagrams for empirical research</title>
+		<author>
+			<persName><forename type="first">Judea</forename><surname>Pearl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biometrika</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page" from="669" to="688" />
+			<date type="published" when="1995">1995. 1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Causal inference in statistics: An overview</title>
+		<author>
+			<persName><forename type="first">Judea</forename><surname>Pearl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Statistics surveys</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="96" to="146" />
+			<date type="published" when="2009">2009. 2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">What you see is what you get? the impact of representation criteria on human bias in hiring</title>
+		<author>
+			<persName><forename type="first">Andi</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Besmira</forename><surname>Nushi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Emre</forename><surname>Kıcıman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kori</forename><surname>Inkpen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Siddharth</forename><surname>Suri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ece</forename><surname>Kamar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the AAAI Conference on Human Computation and Crowdsourcing</title>
+		<meeting>the AAAI Conference on Human Computation and Crowdsourcing</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="125" to="134" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Lecture notes on measurement error</title>
+		<author>
+			<persName><forename type="first">Steve</forename><surname>Pischke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">London School of Economics</title>
+		<imprint>
+			<date type="published" when="2007">2007. 2007</date>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Resources and benchmark corpora for hate speech detection: a systematic review</title>
+		<author>
+			<persName><forename type="first">Fabio</forename><surname>Poletto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Valerio</forename><surname>Basile</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Manuela</forename><surname>Sanguinetti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cristina</forename><surname>Bosco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Viviana</forename><surname>Patti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Language Resources and Evaluation</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="477" to="523" />
+			<date type="published" when="2021">2021. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Manipulating and measuring model interpretability</title>
+		<author>
+			<persName><forename type="first">Forough</forename><surname>Poursabzi-Sangdeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jake</forename><forename type="middle">M</forename><surname>Daniel G Goldstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jennifer</forename><surname>Hofman</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wortman Wortman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hanna</forename><surname>Vaughan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wallach</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 CHI conference on human factors in computing systems</title>
+		<meeting>the 2021 CHI conference on human factors in computing systems</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="1" to="52" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Toward Improving Student Model Estimates through Assistance Scores in Principle and in Practice</title>
+		<author>
+			<persName><forename type="first">Napol</forename><surname>Rachatasumrit</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kenneth R Koedinger</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2021">2021. 2021</date>
+			<publisher>International Educational Data Mining Society</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">Ashesh</forename><surname>Rambachan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Roth</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1909.08518</idno>
+		<title level="m">Bias in, bias out? Evaluating the folk wisdom</title>
+		<imprint>
+			<date type="published" when="2019">2019. 2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">Fred</forename><forename type="middle">S</forename><surname>Roberts</surname></persName>
+		</author>
+		<title level="m">Measurement theory</title>
+		<imprint>
+			<date type="published" when="1985">1985. 1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Sensitivity analysis in observational studies. Encyclopedia of statistics in behavioral science</title>
+		<author>
+			<persName><surname>Paul R Rosenbaum</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2005">2005. 2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Classification with asymmetric label noise: Consistency and maximal denoising</title>
+		<author>
+			<persName><forename type="first">Clayton</forename><surname>Scott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gilles</forename><surname>Blanchard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gregory</forename><surname>Handy</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Conference on learning theory</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="489" to="511" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Fairness violations and mitigation under covariate shift</title>
+		<author>
+			<persName><forename type="first">Harvineet</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rina</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vishwali</forename><surname>Mhasawade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rumi</forename><surname>Chunara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency</title>
+		<meeting>the 2021 ACM Conference on Fairness, Accountability, and Transparency</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="3" to="13" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Predictive modeling to forecast student outcomes and drive effective interventions in online community college courses</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Vernon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Lange</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Daniel R Huston</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of asynchronous learning networks</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="51" to="61" />
+			<date type="published" when="2012">2012. 2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Algorithmic risk assessment in the hands of humans</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Megan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jennifer</forename><forename type="middle">L</forename><surname>Stevenson</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Doleac</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Available at SSRN</title>
+		<imprint>
+			<biblScope unit="volume">3489440</biblScope>
+			<date type="published" when="2022">2022. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Stray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alon</forename><surname>Halevy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Parisa</forename><surname>Assar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dylan</forename><surname>Hadfield-Menell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Craig</forename><surname>Boutilier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amar</forename><surname>Ashar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lex</forename><surname>Beattie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Ekstrand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Claire</forename><surname>Leibowicz</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2207.10192</idno>
+		<title level="m">Connie Moon Sehat, et al. 2022. Building Human Values into Recommender Systems: An Interdisciplinary Synthesis</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Investigating human+ machine complementarity for recidivism predictions</title>
+		<author>
+			<persName><forename type="first">Sarah</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Julius</forename><surname>Adebayo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kori</forename><surname>Inkpen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ece</forename><surname>Kamar</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1808.09123</idno>
+		<imprint>
+			<date type="published" when="2018">2018. 2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Allegheny family screening tool: Methodology, version 2</title>
+		<author>
+			<persName><forename type="first">Rhema</forename><surname>Vaithianathan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Emily</forename><surname>Kulick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Emily</forename><surname>Putnam-Hornstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Benavides-Prado</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019. 2019</date>
+			<publisher>Center for Social Data Analytics</publisher>
+			<biblScope unit="page" from="1" to="22" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Latent class modeling with covariates: Two improved three-step approaches</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Jeroen</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vermunt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Political analysis</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="450" to="469" />
+			<date type="published" when="2010">2010. 2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Against Predictive Optimization: On the Legitimacy of Decision-Making Algorithms that Optimize Predictive Accuracy</title>
+		<author>
+			<persName><forename type="first">Angelina</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sayash</forename><surname>Kapoor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Solon</forename><surname>Barocas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arvind</forename><surname>Narayanan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Available at SSRN</title>
+		<imprint>
+			<date type="published" when="2022">2022. 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Fair classification with groupdependent label noise</title>
+		<author>
+			<persName><forename type="first">Jialu</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caleb</forename><surname>Levy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 ACM conference on fairness, accountability, and transparency</title>
+		<meeting>the 2021 ACM conference on fairness, accountability, and transparency</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="526" to="536" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Are explanations helpful? a comparative study of the effects of explanations in ai-assisted decision-making</title>
+		<author>
+			<persName><forename type="first">Xinru</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming</forename><surname>Yin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">26th International Conference on Intelligent User Interfaces</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="318" to="328" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Latent class analysis: a guide to best practice</title>
+		<author>
+			<persName><forename type="first">Bridget</forename><forename type="middle">E</forename><surname>Weller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Natasha</forename><forename type="middle">K</forename><surname>Bowen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sarah</forename><forename type="middle">J</forename><surname>Faubert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Black Psychology</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="287" to="311" />
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">Bryan</forename><surname>Wilder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Horvitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ece</forename><surname>Kamar</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2005.00582</idno>
+		<title level="m">Learning to complement humans</title>
+		<imprint>
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">You Complete Me: Human-AI Teams and Complementary Expertise</title>
+		<author>
+			<persName><forename type="first">Qiaoning</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><forename type="middle">L</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Scott</forename><surname>Carter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">CHI Conference on Human Factors in Computing Systems</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="1" to="28" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Effect of confidence and explanation on accuracy and trust calibration in AI-assisted decision making</title>
+		<author>
+			<persName><forename type="first">Yunfeng</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Vera Liao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rachel Ke</forename><surname>Bellamy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2020 conference on fairness, accountability, and transparency</title>
+		<meeting>the 2020 conference on fairness, accountability, and transparency</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="295" to="305" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+			</listBibl>
+		</back>
+	</text>
+</TEI>

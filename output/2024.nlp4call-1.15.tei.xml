@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Evaluating the Generalisation of an Artificial Learner</title>
+				<funder ref="#_pu7cdZd">
+					<orgName type="full">Science Foundation Ireland</orgName>
+				</funder>
+				<funder ref="#_GPnqaPx">
+					<orgName type="full">Agence Nationale de la Recherche</orgName>
+					<orgName type="abbreviated">ANR</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Bernardo</forename><surname>Stearns</surname></persName>
+							<email>bernardo.stearns@insight-centre.org</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Insight Centre for Data Analytics</orgName>
+								<orgName type="department" key="dep2">Data Science Institute</orgName>
+								<orgName type="institution">University of Galway</orgName>
+								<address>
+									<country key="IE">Ireland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nicolas</forename><surname>Ballier</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">LLF &amp; CLILLAC-ARP</orgName>
+								<orgName type="institution">Université Paris Cité</orgName>
+								<address>
+									<addrLine>rue Thomas Mann</addrLine>
+									<postCode>75013</postCode>
+									<settlement>PARIS</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Thomas</forename><surname>Gaillat</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="laboratory">LIDILE</orgName>
+								<orgName type="institution">Université de Rennes 2</orgName>
+								<address>
+									<postCode>35000</postCode>
+									<settlement>Rennes</settlement>
+									<country key="FR">FRANCE</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Andrew</forename><surname>Simpkin</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">School of Mathematical and Statistical Sciences</orgName>
+								<orgName type="institution">University of Galway</orgName>
+								<address>
+									<addrLine>University Road</addrLine>
+									<settlement>Galway</settlement>
+									<country key="IE">Ireland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">John</forename><forename type="middle">P</forename><surname>Mccrae</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Insight Centre for Data Analytics</orgName>
+								<orgName type="department" key="dep2">Data Science Institute</orgName>
+								<orgName type="institution">University of Galway</orgName>
+								<address>
+									<country key="IE">Ireland</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Evaluating the Generalisation of an Artificial Learner</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2024-12-03T20:41+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>This paper focused on the creation of LLMbased artificial learners. Motivated by the capability of language models to encode language representation, we evaluated such models for predicting masked tokens in learner corpora.</p><p>We domain-adapted the BERT model, pretrained on native English, by further pretraining two learner models on learner corpora: a natural learner model on the EFCAM-DAT dataset and a synthetic learner model on the C4200m dataset. We evaluated the two artificial learner models alongside the baseline native model using an external English-forspecific-purposes corpus from French undergraduates.</p><p>We evaluated metrics related to accuracy, consistency, and divergence. While the native model performed reasonably well, the natural learner pre-trained model showed improvements in recall-at-k. We analysed error patterns, showing that the native model made "overconfident" errors by assigning high probabilities to incorrect predictions, while the artificial learners distributed probabilities more evenly when wrong. Finally, we showed that the general token choices from the native model diverged from the natural learner model and this divergence was higher at lower proficiency levels.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p>Over the last 20 years, learner corpora have significantly benefited research in applied linguistics and NLP by providing insights into how sec-ond language (L2) learners improve their proficiency. This understanding has led to enhanced course material design, improved teacher training, and greater awareness of students' linguistic abilities. Additionally, when combined with NLP technologies, learner corpora have proven valuable for CALL applications like grammar error detection and proficiency classification <ref type="bibr" target="#b3">(Bryant and Briscoe, 2018;</ref><ref type="bibr">Tetreault et al., 2018)</ref>. This paper explores the potential of leveraging Large Language Models (LLMs) with learner corpora, which have traditionally been used to test specific research hypotheses. Instead of relying on diverse corpora with relevant metadata for testing various hypotheses, we explore the possibility of a single model that simulates learner behavior across different contexts. Such artificial learners could respond to new stimuli, providing a testbed for linguistic hypotheses, with outputs from a generic English learner model compared to those from a native model. By training an LLM on learner data, it may be possible to create an artificial English learner that captures the idiosyncrasies of actual learners.</p><p>This research explored the creation of an Artificial L2 Learner (ALL) model by pre-training it on second language learner corpora, leveraging domain-adaptive pre-training. We also believe that modelling learners' knowledge and their use of words and linguistic skills is crucial for Intelligent Tutoring Systems (ITS) and digital learning platforms in second language teaching and learning. For an ITS focused on language learning, modelling word usage and language skills of learners is essential. This is why any simulation of learner behavior, as a key goal for an ITS, should be accurate and reliable. Motivated by the capability of language models to represent linguistic concepts, this research explored the domain-adaptive pretraining of large language models (LLMs) to simulate the behavior of English learners, which we call Artificial Learner models. Creating an artificial learner raises at least three questions:</p><p>1. How accurate is the artificial learner in predicting what learners would actually say?</p><p>2. How confident is the learner in its predictions?</p><p>3. How divergent is the AL compared with a generic native model?</p><p>The rest of the paper is structured as follows: Section 2 presents related research. Section 3 explains the training data and the procedures used to create our artificial learners. Section 4 delves into our results, and Section 5 provides a discussion of these results.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Background Research</head><p>Research in second language acquisition has been explored from many different perspectives, resulting in different models for each aspect of the learning process. For example, <ref type="bibr" target="#b31">Whitehill and Movellan (2017)</ref> models learners taking into account how a learner infers and updates vocabulary knowledge after doing exercises in a specific ITS for foreign language learning. The SLAM shared task <ref type="bibr" target="#b25">(Settles et al., 2018)</ref> models the history of a learner's mistakes in Duolingo, predicting if a learner is likely to make a mistake given their past history of mistakes. There are also models that are complementary to modelling the second language acquisition process, such as spaced repetition practice models <ref type="bibr" target="#b26">(Settles and Meeder, 2016)</ref> and efficient grammatical error correction <ref type="bibr" target="#b22">(Omelianchuk et al., 2020)</ref>. Despite the success of such diverse tasks in their specific modelling objectives, the usage of their models is tied to the specific case of their system or language learning task. This restricts the capability of such models to simulate the general behavior of language learners. There is another set of language-learning tasks that explicitly model learners' behavior and knowledge however, they are still tied to a single task depending on handcrafted features. Examples include <ref type="bibr" target="#b31">Whitehill and Movellan (2017)</ref>, which models vocabulary learning from concepts; <ref type="bibr" target="#b17">Knowles et al. (2016)</ref>, which models noun understanding from the context of the native language; and Zylich and Lan (2021), which models retrieval practice performance for SLA based on linguistic and memory-based features. Other similar modeling tasks include <ref type="bibr" target="#b0">Avdiu et al. (2019)</ref>; <ref type="bibr" target="#b24">Renduchintala et al. (2016)</ref>. In a similar fashion, corpus linguists have also developed single tasks aimed at predicting specific outcomes in the form of linguistic constructions. <ref type="bibr" target="#b1">Bresnan and Nikitina (2009)</ref> modelled the dative alternation, where learners hesitate between the prepositional dative structure or the double object structure. <ref type="bibr" target="#b11">Gries et al. (2020)</ref> approaches in corpus linguistics also reflect this method by modeling the genitive vs. noun of noun construction. Modelling construction outcomes in learner texts helps understand the contexts, triggering constructions. Nevertheless, these models cannot handle different sets of constructions, which appears to be a limitation if one wants to analyze many different linguistic systems at the same time. In contrast, large language models (LLMs) are capable of accommodating diverse constructions and analyzing multiple linguistic systems simultaneously, offering a more flexible approach to understanding language patterns.</p><p>In the broader field of Natural Language Processing, language models have been effectively adapted to multiple domains and tasks using a single generic model, in a similar scenario we see in the Second Language Acquisition domain. <ref type="bibr">Gururangan et al. (2020a)</ref> examines the effectiveness of adapting pre-trained language models to multiple domains and tasks with a single model. They test how well a task-specific fine-tuned model transfers to different types of other tasks, showing a large gain in task performance using an overall multi-phase domain and a task-adaptive pre-trained model. Though we see an underutilization of language models in learner modelling tasks, many other diverse areas have successfully adapted language models to their tasks.</p><p>To the best of our knowledge, two tasks analysed the potential of language models in SLA. <ref type="bibr" target="#b23">Palenzuela et al. (2022)</ref> explored native pretrained language models to predict language mistakes in the SLAM shared task. <ref type="bibr" target="#b16">Kim (2024)</ref> investigated the use of language models as "artificial English learners" with a model called Bidirectional Encoder Representations from Transform-ers (BERT). They specifically tested BERT's ability to simulate English learners' usage of prepositions. Notably, BERT was domain-adaptively pretrained on the International Corpus Network of Asian Learners of English (ICNALE) <ref type="bibr" target="#b15">(Ishikawa, 2013)</ref>. The study focused on how this artificial learner utilized four English prepositions: at, for, in, and on.</p><p>Our work proposes a generalized analysis of artificial English learners, which expands the scope of previous analysis by introducing a broader range of metrics, including accuracy, consistency, and behavior validation. The goal is to establish trust in the trained models before exploring their capabilities in specific tasks.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">Material and Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Data</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.1">Training data</head><p>EFCAMDAT corpus -We trained two artificial learner models. The first model was trained on the EFCAMDAT. We used the refined version of the EFCAMDAT corpus texts <ref type="bibr" target="#b27">(Shatz, 2020)</ref>. It includes 723,282 writings from Englishtown language schools <ref type="bibr" target="#b27">(Shatz, 2020)</ref>.</p><p>The learners wrote texts following prompts such as "introducing yourself by email". Students gradually moved from one level to the next based on language teachers' grades. The writings span across 16 proficiency levels, which were mapped to the first five CEFR levels. The CEFR levels of the texts correspond to the successful completion of the coursework levels at Englishtown.</p><p>C4200M corpus -The second model was trained on the C4200M corpus <ref type="bibr" target="#b28">(Stahlberg and Kumar, 2021)</ref>. It is a corpus of synthetically generated ungrammatical sentences used in neural grammatical error correction. This model produces an ungrammatical sentence given a clean sentence and an error type tag following the tags defined in the ERRANT automatic annotation tool <ref type="bibr" target="#b5">(Bryant et al., 2017)</ref>. The generated ungrammatical sentences follow the distribution of error tags in the BEA-dev dataset <ref type="bibr" target="#b4">(Bryant et al., 2019)</ref>. They argue for the utility of the generated ungrammatical data by pre-training grammar error correction models with it, outperforming genuine parallel data on the CONLL-2014 and JFLEG-test.</p><p>We chose the C4200m with the goal of analysing a common trade-off in the training process of large language models: balancing the qual-ity of authentic texts versus the quantity of augmented texts, similar to works surveyed in <ref type="bibr" target="#b10">Feng et al. (2021)</ref>. We aimed to understand how this trade-off affects the performance of artificial English learners. By using the C4200m dataset, we wanted to see how different amounts of highquality and lower-quality texts impact the learning results of our models. This would help us understand the best balance between text quality and quantity for training large language models. Our approach aligns with other NLP research, providing a comparative view that adds to the relevance and usefulness of our findings.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.2">Testing data</head><p>The external test set (see Table <ref type="table" target="#tab_1">1</ref>) is made up of learner writings from the CELVA-SP <ref type="bibr" target="#b19">(Mallart et al., 2023)</ref> a corpus of French undergraduates using English for specific purposes (ESP). Learners answered one of three question prompts as part of a 45-minute in-class writing task. For instance, they had to describe and share their opinion on the most important invention in their field. All their writings were subsequently annotated with the writing competence scale of the CEFR (Council of Europe, 2018, Appendix 4, p .187-189) by four expert raters. Pairwise inter-rater agreement was computed on the basis of 60 writings, yielding Cohen's kappa values ranging from .52 to .72. The rest of the writings were then annotated independently. Table <ref type="table" target="#tab_1">1</ref> presents the distribution of the levels in CELVA-SP data.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Data processing</head><p>Processing the learner texts for our analysis involved two types of data processing. First, for the model training, we simply passed the raw texts as input to a masked language modelling collator, following the standard masking strategy used in the training process of BERT <ref type="bibr" target="#b9">(Devlin et al., 2019)</ref>. The collator dynamically generates batches of masked sentences, which the BERT tokenizer processes into WordPiece tokens for use in the training loop.</p><p>Second, for prediction analysis, we used a Univeral Dependency (UD) tokenizer <ref type="bibr" target="#b21">(Nivre et al., 2016)</ref> to represent "human" learner tokens. We masked each token in the text one at a time, creating a unique masked sentence for every UD token. These sentences with a single masked token were then fed to our artificial learners and the baseline native model to predict token usage. We annotated </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.1">Domain-Adaptive Pre-training</head><p>The main step in developing the two proposed artificial learner models was the domain-adaptive pretraining of an already pre-trained baseline BERT model. We used the EFCAMDAT as a training set for the natural learner model, and the C4200m as a training set for the synthetic learner model. We trained both artificial learners on a masked language modelling task. In <ref type="bibr" target="#b9">Devlin et al. (2019)</ref> they refer to pre-training as training a model on unlabeled data across various tasks, such as masked language modelling, where fine-tuning involves initializing a pre-trained model's weights and updating them using labeled data. We initialized a baseline BERT model weights and further pretrained them in learner corpus in an unsupervised masked language modelling task. This is referred in <ref type="bibr">(Gururangan et al., 2020b)</ref> as domain-adaptive pre-training. We used the same masked language modelling pre-training task described in <ref type="bibr" target="#b9">Devlin et al. (2019)</ref>. Specifically, we masked 15% of WordPiece tokens in each sentence of the training set, allowing the model to learn contextual representations by predicting the masked tokens.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3">Evaluation</head><p>To evaluate the predictions of the two artificial learner models and the native baseline model, we used three types of metrics: recall-at-k, KL divergence, and calibration. We calculated the metrics on the CELVA-SP dataset.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.1">Accuracy with recall-at-k</head><p>We used the recall-at-k metric as our accuracy measure. It naturally extends the concept of accuracy by taking into account the model's top-k potential responses and explicitly consider a criteria for relevant responses that could be easily extended. In essence, we measured on average how many of the top-k token predictions recommended by a given model were relevant for the target masked token used by the learner.</p><p>The recall-at-k metric evaluates the top-k responses of a model that generates a list of potential responses ŷ to a given query q, ranked by their likelihood of being correct according to the model. In our experiment, for a given masked token sentence the query q is the actual masked token used by the learner, and the list of potential responses ŷ is the list of tokens predicted by a model ranked by probability in the softmax layer of BERT vocabulary.</p><p>For a target masked token q i and a top-k token t j predicted by the model, t j is considered relevant to q i simply if t j is in the set of relevant items for q i . In our experiment, the only relevant item was the target masked token itself, so this is equivalent to verifying if q i is in the top-k predictions but this would not be the case in more complex scenarios.</p><p>We report the average recall@k over all masked tokens in the CELVA-SP for each of the three evaluated models.</p><p>AVG Recall@k =</p><formula xml:id="formula_0">q i ∈masked tokens 1[q i ∈ top-k(ŷ)]</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head># of masked tokens</head><p>We report recall for k = [1, 5, 10].</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.2">Kullback-Leibler metric</head><p>The Kullback-Leibler divergence is rooted in information theory and provides a general approach for quantifying how two probability distributions differ. We framed each of our models' output probabilities for a given masked token as a discrete probability distribution over BERT's vocabulary tokens. Within that frame, we interpreted the KL metric for two given models as if their token choices generally diverged. We implemented the element-wise KL metric with a small epsilon value perturbation, ϵ = 10 -6 , to avoid the scenario where probabilities are zero. We calculated the KL element-wise metric for each masked token, and we grouped them by their text CEFR level with the intuition to find differences between CEFR levels. KL(p t , q t ) = p t log p t + ϵ q t + ϵ</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.3">Calibration Curves</head><p>To foster trustworthiness in our models, high accuracy is the immediate desired property of our models, assigning high probabilities to correct tokens.</p><p>A second desirable property is that our models do not overconfidently make mistakes, assigning high probabilities to incorrect predictions.</p><p>One approach for such analysis is through the "calibration curve" method. Initially employed in analysing weather forecasts <ref type="bibr" target="#b2">(Brier, 1950;</ref><ref type="bibr" target="#b8">DeGroot and Fienberg, 1983)</ref>, this technique has since been applied to neural networks <ref type="bibr" target="#b12">(Guo et al., 2017;</ref><ref type="bibr" target="#b20">Minderer et al., 2021)</ref> and recently to evaluate Large Language Models (LLMs) from a semantic perspective <ref type="bibr" target="#b18">Levinstein and Herrmann (2024)</ref>. For example, (Levinstein and Herrmann, 2024) utilizes calibration curves to assess the veracity of LLM statements on specific datasets and asserts that "calibration offers another metric for evaluating the quality of probes' forecasts." Calibration analyses have been utilized in neural networks and language models <ref type="bibr" target="#b20">(Minderer et al., 2021;</ref><ref type="bibr" target="#b6">Chen et al., 2024)</ref>, allowing researchers to assess the relationship between a model's prediction confidence and success rate.</p><p>Calibration curves help us analyze how well a model performs when it is confident or unconfident about it's prediction. In our experiment, our calibration curves correspond to how many successful predictions (event rate) we observe across different probability scores of the top-1 prediction of each model. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1">Recall-at-k</head><p>We evaluated the accuracy of our models with recall-at-k metrics. We found a slight difference in accuracy between the Learner Models and the native model in the external CELVA-SP test set. We noticed a slow increase in recall as k increases.</p><p>A slow increase in the values of top-k recall may indicate that the token vocabulary of the language model is not adequate for the task. We believe it is unlikely that the model is confused when choosing among 10 or more tokens; instead, the correct token is likely represented by multiple word-piece tokens in the model's vocabulary.</p><p>model recall@1 recall@5 recall@10 bert-native (baseline) 0.600 0.622 0.635 bert-efcamdat 0.648 0.670 0.684 bert-c4200m 0.586 0.610 0.623</p><p>Table <ref type="table">2</ref>: Average recall-at-k in the CELVA-SP for each evaluated model as described in section 3.3.1</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2">KL Distance</head><p>The KL metric interquantile plot in Figure <ref type="figure" target="#fig_0">1</ref> presents the KL metric between native BERT and the natural learner model. It allowed us to analyse the intuition that a learner model will generally differ from a native model in terms of token usage and that this difference is higher in beginner texts.</p><p>The figure indicates that the learner model exhibits greater disagreement in token choice for masked sentences at lower proficiency levels, with a monotonic decrease in disagreement as proficiency increases.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3">Calibration Curves</head><p>The calibration curve in Figure <ref type="figure">2</ref> illustrates the relationship between the predicted probabilities of the top candidate token and the success rate at which these tokens correctly predict the true token.</p><p>The three models follow a linear trend, showing that all of them classify more accurately as their top-1 token probability increases, suggesting that they are well-calibrated overall. However, the EF-CAMDAT curve shows a discrepancy for probabilities around 0.6. Specifically, the natural artificial learner demonstrates underperformance in this range, as candidates predicted with a 60% probability only successfully predict the true token 40% of the time but increase and become slightly higher for probabilities close to 1. In general, the natural learner model outperforms the native model in the range of higher top-1 probabilities. This analysis can be further supported by Figure <ref type="figure">3</ref> where we noticed that the native model (on the right side of the figure) very frequently assign high probabilities to its top-1 prediction where the two artificial learners assign lower probabilities. Even though the native model assigns higher top-1 probabilities more frequently, it has a lower success rate than the natural learner model. One possible explanation for the learner model's underperformance in the 60% probability range is that the masked tokens in this range likely come from advanced learners' texts, whereas the EFCAMDAT dataset primarily consists of beginner learners. This motivates a detailed analysis of the performance of such models across CEFR levels as future work.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">Discussion</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1">Role of Part of Speech</head><p>Parts of speech (POS) provide a way to filter out the prediction distribution. It is possible to analyse the behaviour and success rate of the artificial learners according to linguistic properties related to not only the lexicon but also grammar. For instance, filtering out probabilities per auxiliary gives an insight into a closed class. This helps characterize the impact of universal part-ofspeech (UPOS) on the probability distributions of the probability scores for the first three predictions (rank) across the three models. For example, Table <ref type="table" target="#tab_2">3</ref> shows the average probability score assigned by a given model to its top-3 predictions, as well as the respective success rate for masked prepositions. We observe a similar pattern, where the na- tive model, on average, assigns higher probability scores to its top-1 prediction, yet, has a lower success rate compared to the natural learner model. Figure <ref type="figure" target="#fig_2">4</ref> displays the probability density distribution of words across different Universal Part-of-Speech (UPOS) for the first prediction (rank = 1). The x-axis represents the probability assigned by the natural learner model for each UPOS, while the y-axis shows the probability density. This visualization allows for a quick comparison of the relative frequencies of different UPOS across the dataset. It indicates how the model makes use of tokens of a certain type across levels.</p><p>Open-class categories such as adjectives (ADJ), nouns (NOUN), and verbs (VERB) have bimodal distributions, but the prominent mode reflects the uncertainty of the prediction (probability around 0.2 for ADJ). However, a closed class like prepositions (ADP) also has a bimodal distribution, but the prominent mode is around 0.9. This suggests that the model is more confident with some closed classes than open classes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2">Domain Effects for ESP</head><p>We conducted a chi-squared test, which demonstrated that the difference between the domains was significant (X 2 = 45.04, df = 6, p &lt; 0.001). Our data indicated that masked tokens were easier to predict in essays written for Communication Studies compared to those for Pharmacy, as illustrated in Table <ref type="table" target="#tab_3">4</ref>. This is some indication to further take into consideration domain and tasks effects.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3">Training Limitations</head><p>A significant limitation in our training process is the imbalance in the distribution of proficiency levels within the EFCAMDAT dataset. Specifically, there is a disproportionately higher number of beginner-level texts (A1, A2) compared to advanced-level texts (C1, C2). This imbalance may affect our KL plot 1. While the result aligns with expectations for lower proficiency levels, it may exhibit a training artifact effect where the model's contextual representation seems to be coherent towards the characteristics of beginnerlevel texts since it was exposed to a large amount of such texts, whereas for higher proficiency levels, the model's token choices simply follow the native BERT distribution .</p><p>This artifact impacts the model's ability to generalize across proficiency levels. For higher proficiency levels, the model's token choices tend to align more closely with the original pre-training distribution, primarily because the advanced-level data is underrepresented. This limitation suggests that the model might not be equally effective across all proficiency levels, potentially underperforming for more advanced learners.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.4">Perspectives for Future ITS Implementations</head><p>If our artificial learners manage to be sufficiently trustworthy for the emulation of what a learner would say, one can compare the prediction or the use of a given learner with each model pre-trained with a given CEFR level. Our experiment is only a prototype of our global undertaking. We will extend the pre-training to other areas, such as pretraining on different sub-levels of the CEFR scale.</p><p>We have seen the reliability of the results, and we have also suggested that the models created were not too data-dependent in the sense that they could be generalized to other types of data.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6">Conclusion</head><p>In this paper, we have compared two artificial learners against a native language model in predicting tokens produced by learners. Our primary goal was to propose a masked language modelling task in learner corpora and analyse the accuracy, consistency, and divergence of such artificial learners. We explicitly chose a large synthetic ungrammatical dataset and an authen- tic learner corpus to analyse the trade-off between the quality of authentic texts and the quantity of augmented texts. Even compared to the native BERT model, pre-training BERT in the synthetic C4200m dataset decreased accuracy, while training BERT on authentic texts increased accuracy. Accuracy is greater for closed classes, and the previous study on artificial learners rightly focused on a subset of a closed class, prepositions. Through analysing predicted probabilities against success rates, we investigated indications of calibrations and overconfident mistakes of our models, where native BERT showed a wider gap between its success rate and predicted probability. We finally compared native BERT with our natural artificial learner in relation to their choice of tokens, where the KL metric exhibit to be a coherent metric to generally measure the choice of tokens between language models. Since we pre-trained our artificial learner on a dataset containing more texts from beginner learners than those from advanced learners, we expect that it will simulate better beginner learners. Future work could address multiple aspects of the training process to enhance performance. We believe that merely increasing computational power and training time could still improve our artificial learners. Additionally, we believe that more specific masking strategies, such as masking incorrect tokens, and architectures that can personalize the artificial learner to a specific individual, could further enhance performance. In the direction of personalization, there are opportunities for training more specific artificial learners, such as nationality or proficiency based artificial learners.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Limitations</head><p>There are several limitations to our work that need to be acknowledged. One significant limitation is the high training cost associated with using deep learning models for natural language processing tasks. Training these models requires substantial computational resources, which can be expensive and time-consuming. In our study, although we aimed to mitigate these costs by using "small" encoder models such as BERT, the training costs were still considerably higher compared to traditional language modelling methods. Furthermore, we expect to make our model available in accordance with the EFCAMDAT corpus curators, which provides a significant advantage in terms of cost-effectiveness and collaborative potential. Researchers and practitioners can leverage our pre-trained models and fine-tune them for their specific applications without incurring the high costs associated with training a model from scratch. This open-source approach promotes transparency and encourages further innovation and experimentation within the community.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Ethics Statement</head><p>In accordance with the curators of the EFCAM-DAT corpus, we have planned to make our models pre-trained on the EFCAMDAT accessible on the</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 :</head><label>1</label><figDesc>Figure 1: Interquatile range plot of KL metric between natural learner and native model per masked token sentence grouped by CEFR level in the CELVA-SP dataset as described in 3.3.2</figDesc><graphic url="image-1.png" coords="5,306,14,70,85,241,57,108,51" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 :Figure 3 :</head><label>23</label><figDesc>Figure 2: Sucess event rate across top-1 token model probabilities for all 3 models across all masked tokens in the CELVA-SP data</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 4 :</head><label>4</label><figDesc>Figure 4: Probability Density Distribution of top-1 prediction of natural learner model per UPOS</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 1 :</head><label>1</label><figDesc>Distribution of levels and essays in the CELVA-SP data<ref type="bibr" target="#b19">(Mallart et al., 2023)</ref> </figDesc><table><row><cell cols="5">Writings # of writings % of writings av # of words SD</cell></row><row><cell>A1</cell><cell>85</cell><cell>8.70</cell><cell>126.78</cell><cell>76.67</cell></row><row><cell>A2</cell><cell>311</cell><cell>31.83</cell><cell>182.02</cell><cell>87.21</cell></row><row><cell>B1</cell><cell>335</cell><cell>34.28</cell><cell>231.34</cell><cell>111.70</cell></row><row><cell>B2</cell><cell>198</cell><cell>20.26</cell><cell>285.84</cell><cell>126.75</cell></row><row><cell>C1</cell><cell>48</cell><cell>4.91</cell><cell>347.93</cell><cell>144.69</cell></row><row><cell>Total</cell><cell>977</cell><cell>100</cell><cell>224.11</cell><cell>120.64</cell></row><row><cell cols="3">the part of speech for each UD token using UD-Pipe (Straka, 2018) implementation in spaCy 1 . It</cell><cell></cell><cell></cell></row><row><cell cols="3">allowed us to visualize the distribution of proba-</cell><cell></cell><cell></cell></row><row><cell cols="3">bility scores across different parts of speech for</cell><cell></cell><cell></cell></row><row><cell cols="3">the natural learner model. Since our experiment</cell><cell></cell><cell></cell></row><row><cell cols="3">focused on the BERT base model and its limita-</cell><cell></cell><cell></cell></row><row><cell cols="3">tion of 512 WordPiece tokens, we filtered out texts</cell><cell></cell><cell></cell></row><row><cell cols="2">with more than 512 such tokens.</cell><cell></cell><cell></cell><cell></cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3 :</head><label>3</label><figDesc>Model success rate and average probability score per rank (top-k position) for prepositions</figDesc><table><row><cell></cell><cell>model</cell><cell></cell><cell cols="3">success rate score mean rank</cell><cell></cell><cell></cell></row><row><cell></cell><cell>bert-c4200m</cell><cell></cell><cell>0.53</cell><cell>0.60</cell><cell>1</cell><cell></cell><cell></cell></row><row><cell></cell><cell>bert-c4200m</cell><cell></cell><cell>0.08</cell><cell>0.10</cell><cell>2</cell><cell></cell><cell></cell></row><row><cell></cell><cell>bert-c4200m</cell><cell></cell><cell>0.04</cell><cell>0.04</cell><cell>3</cell><cell></cell><cell></cell></row><row><cell></cell><cell cols="2">bert-fullefcamdat</cell><cell>0.58</cell><cell>0.64</cell><cell>1</cell><cell></cell><cell></cell></row><row><cell></cell><cell cols="2">bert-fullefcamdat</cell><cell>0.09</cell><cell>0.09</cell><cell>2</cell><cell></cell><cell></cell></row><row><cell></cell><cell cols="2">bert-fullefcamdat</cell><cell>0.02</cell><cell>0.04</cell><cell>3</cell><cell></cell><cell></cell></row><row><cell></cell><cell cols="2">bert-base-uncased</cell><cell>0.55</cell><cell>0.71</cell><cell>1</cell><cell></cell><cell></cell></row><row><cell></cell><cell cols="2">bert-base-uncased</cell><cell>0.08</cell><cell>0.09</cell><cell>2</cell><cell></cell><cell></cell></row><row><cell></cell><cell cols="2">bert-base-uncased</cell><cell>0.03</cell><cell>0.04</cell><cell>3</cell><cell></cell><cell></cell></row><row><cell></cell><cell cols="7">Communication Electronics Medicine Pharmacy Education Environment Physics</cell></row><row><cell>Success</cell><cell>1278</cell><cell>219</cell><cell>249</cell><cell>85</cell><cell>265</cell><cell>1139</cell><cell>749</cell></row><row><cell>Total</cell><cell>4284</cell><cell>933</cell><cell>1002</cell><cell>401</cell><cell>1157</cell><cell>4873</cell><cell>3301</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 4 :</head><label>4</label><figDesc>Contingency table of correct predictions per ESP domain (all models)</figDesc><table /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Proceedings of the 13th Workshop on Natural Language Processing for Computer Assisted Language Learning (NLP4CALL 2024)</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_1"><p>You can find the repository at https://github.c om/TakeLab/spacy-udpipe.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>This work has been supported by <rs type="funder">Science Foundation Ireland</rs> under Grant Number <rs type="grantNumber">SFI12RC2289 P2 Insight 2</rs>, <rs type="institution">Insight SFI Centre for Data Analytics</rs> and by the <rs type="projectName">French ANR</rs> under <rs type="funder">ANR</rs> grant <rs type="grantNumber">ANR-22-CE38-0015</rs> for the <rs type="projectName">A4LL</rs> project.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funded-project" xml:id="_pu7cdZd">
+					<idno type="grant-number">SFI12RC2289 P2 Insight 2</idno>
+					<orgName type="project" subtype="full">French ANR</orgName>
+				</org>
+				<org type="funded-project" xml:id="_GPnqaPx">
+					<idno type="grant-number">ANR-22-CE38-0015</idno>
+					<orgName type="project" subtype="full">A4LL</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>web server hosting the EFCAMDAT data.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Predicting learner knowledge of individual words using machine learning</title>
+		<author>
+			<persName><forename type="first">Drilon</forename><surname>Avdiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vanessa</forename><surname>Bui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Klára</forename><surname>Ptačinová</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Klimčíková</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 8th Workshop on NLP for Computer Assisted Language Learning</title>
+		<meeting>the 8th Workshop on NLP for Computer Assisted Language Learning<address><addrLine>Turku</addrLine></address></meeting>
+		<imprint>
+			<publisher>LiU Electronic Press</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="1" to="9" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">On the Gradience of the Dative Alternation</title>
+		<author>
+			<persName><forename type="first">Joan</forename><surname>Bresnan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tatiana</forename><surname>Nikitina</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Reality Exploration and Discovery: Pattern Interaction in Language &amp; Life</title>
+		<editor>
+			<persName><forename type="first">Karuvannur</forename><surname>Puthanveettil Mohanan</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Linda</forename><surname>Uyechi</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Lian-Hee</forename><surname>Wee</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Stanford, CA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Center for the Study of Language and Information</publisher>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="161" to="184" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Verification of forecasts expressed in terms of probability</title>
+		<author>
+			<persName><forename type="first">Glenn</forename><forename type="middle">W</forename><surname>Brier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Monthly weather review</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="3" />
+			<date type="published" when="1950">1950</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Language model based grammatical error correction without annotated training data</title>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Bryant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ted</forename><surname>Briscoe</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/W18-0529</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Thirteenth Workshop on Innovative Use of NLP for Building Educational Applications</title>
+		<meeting>the Thirteenth Workshop on Innovative Use of NLP for Building Educational Applications</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="247" to="253" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">The BEA-2019 shared task on grammatical error correction</title>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Bryant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mariano</forename><surname>Felice</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Øistein</forename><forename type="middle">E</forename><surname>Andersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ted</forename><surname>Briscoe</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/W19-4406</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Fourteenth Workshop on Innovative Use of NLP for Building Educational Applications</title>
+		<meeting>the Fourteenth Workshop on Innovative Use of NLP for Building Educational Applications<address><addrLine>Florence, Italy</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="52" to="75" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Automatic annotation and evaluation of error types for grammatical error correction</title>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Bryant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mariano</forename><surname>Felice</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ted</forename><surname>Briscoe</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/P17-1074</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 55th Annual Meeting of the Association for Computational Linguistics<address><addrLine>Vancouver, Canada</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="793" to="805" />
+		</imprint>
+	</monogr>
+	<note>Long Papers)</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<author>
+			<persName><forename type="first">Lihu</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandre</forename><surname>Perez-Lebel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fabian</forename><forename type="middle">M</forename><surname>Suchanek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gaël</forename><surname>Varoquaux</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2402.04957</idno>
+		<title level="m">Reconfidencing LLMs from the Grouping Loss Perspective</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">Common European Framework of Reference for Languages: Learning, Teaching, Assessment: Companion Volume with New Descriptors</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<publisher>Council of Europe</publisher>
+		</imprint>
+		<respStmt>
+			<orgName>Council of Europe</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">The comparison and evaluation of forecasters</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Morris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stephen</forename><forename type="middle">E</forename><surname>Degroot</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Fienberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Royal Statistical Society: Series D (The Statistician)</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">1-2</biblScope>
+			<biblScope unit="page" from="12" to="22" />
+			<date type="published" when="1983">1983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">BERT: Pre-training of deep bidirectional transformers for language understanding</title>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Devlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming-Wei</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenton</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kristina</forename><surname>Toutanova</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/N19-1423</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</title>
+		<title level="s">Long and Short Papers</title>
+		<meeting>the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies<address><addrLine>Minneapolis, Minnesota</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="4171" to="4186" />
+		</imprint>
+	</monogr>
+	<note>Association for Computational Linguistics</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<author>
+			<persName><forename type="first">Varun</forename><surname>Steven Y Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Gangal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sarath</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Soroush</forename><surname>Chandar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Teruko</forename><surname>Vosoughi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eduard</forename><surname>Mitamura</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hovy</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2105.03075</idno>
+		<title level="m">A survey of data augmentation approaches for NLP</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">There&apos;s more to alternations than the main diagonal of a 2× 2 confusion matrix: Improvements of MuPDAR and other classificatory alternation studies</title>
+		<author>
+			<persName><forename type="first">Stefan</forename><surname>Th</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gries</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Justus</forename><surname>Liebig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sandra</forename><forename type="middle">C</forename><surname>Deshors</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICAME Journal</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="69" to="96" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">On calibration of modern neural networks</title>
+		<author>
+			<persName><forename type="first">Chuan</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoff</forename><surname>Pleiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kilian</forename><forename type="middle">Q</forename><surname>Weinberger</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International conference on machine learning</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="1321" to="1330" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">2020a. Don&apos;t stop pretraining: Adapt language models to domains and tasks</title>
+		<author>
+			<persName><forename type="first">Suchin</forename><surname>Gururangan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ana</forename><surname>Marasović</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Swabha</forename><surname>Swayamdipta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyle</forename><surname>Lo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Iz</forename><surname>Beltagy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Doug</forename><surname>Downey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Noah</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2020.acl-main.740</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 58th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<publisher>Online. Association for Computational Linguistics</publisher>
+			<biblScope unit="page" from="8342" to="8360" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<author>
+			<persName><forename type="first">Suchin</forename><surname>Gururangan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ana</forename><surname>Marasović</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Swabha</forename><surname>Swayamdipta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyle</forename><surname>Lo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Iz</forename><surname>Beltagy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Doug</forename><surname>Downey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Noah</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2004.10964</idno>
+		<title level="m">Don&apos;t stop pretraining: Adapt language models to domains and tasks</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">The ICNALE and sophisticated contrastive interlanguage analysis of Asian learners of English</title>
+		<author>
+			<persName><forename type="first">Shin'ichiro</forename><surname>Ishikawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Learner corpus studies in Asia and the world</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="91" to="118" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title level="m" type="main">Let&apos;s make an artificial learner to analyze learners&apos; language! (Language Sciences)</title>
+		<author>
+			<persName><forename type="first">Wonbin</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.17002/sil..70.20241.167</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="page" from="167" to="193" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Analyzing learner understanding of novel L2 vocabulary</title>
+		<author>
+			<persName><forename type="first">Rebecca</forename><surname>Knowles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adithya</forename><surname>Renduchintala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Philipp</forename><surname>Koehn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Eisner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of The 20th SIGNLL Conference on Computational Natural Language Learning</title>
+		<meeting>The 20th SIGNLL Conference on Computational Natural Language Learning</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="126" to="135" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Still no lie detector for language models: Probing empirical and conceptual roadblocks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Benjamin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><forename type="middle">A</forename><surname>Levinstein</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Herrmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Philosophical Studies</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="27" />
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">A new learner language data set for the study of English for Specific Purposes at university level</title>
+		<author>
+			<persName><forename type="first">Cyriel</forename><surname>Mallart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Simpkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rémi</forename><surname>Venant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicolas</forename><surname>Ballier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bernardo</forename><surname>Stearns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jen</forename><forename type="middle">Yu</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Gaillat</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 4th Conference on Language, Data and Knowledge -LDK 2023</title>
+		<meeting>the 4th Conference on Language, Data and Knowledge -LDK 2023<address><addrLine>Vienna, Austria</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="281" to="287" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Revisiting the calibration of modern neural networks</title>
+		<author>
+			<persName><forename type="first">Matthias</forename><surname>Minderer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Josip</forename><surname>Djolonga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rob</forename><surname>Romijnders</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Frances</forename><surname>Hubis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaohua</forename><surname>Zhai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Neil</forename><surname>Houlsby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dustin</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mario</forename><surname>Lucic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="15682" to="15694" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Universal Dependencies v1: A multilingual treebank collection</title>
+		<author>
+			<persName><forename type="first">Joakim</forename><surname>Nivre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marie-Catherine</forename><surname>De Marneffe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Filip</forename><surname>Ginter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoav</forename><surname>Goldberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jan</forename><surname>Hajic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Mcdonald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Slav</forename><surname>Petrov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sampo</forename><surname>Pyysalo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Natalia</forename><surname>Silveira</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC&apos;16)</title>
+		<meeting>the Tenth International Conference on Language Resources and Evaluation (LREC&apos;16)</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="1659" to="1666" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">GECToR -grammatical error correction: Tag, not rewrite</title>
+		<author>
+			<persName><forename type="first">Kostiantyn</forename><surname>Omelianchuk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vitaliy</forename><surname>Atrasevych</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Artem</forename><surname>Chernodub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oleksandr</forename><surname>Skurzhanskyi</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2020.bea-1.16</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Fifteenth Workshop on Innovative Use of NLP for Building Educational Applications</title>
+		<meeting>the Fifteenth Workshop on Innovative Use of NLP for Building Educational Applications<address><addrLine>Seattle, WA, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="163" to="170" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Modeling second language acquisition with pre-trained neural language models</title>
+		<author>
+			<persName><forename type="first">Jiménez</forename><surname>Álvaro</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Palenzuela</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Expert Systems with Applications</title>
+		<imprint>
+			<biblScope unit="volume">207</biblScope>
+			<biblScope unit="page">117871</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note>Flavius Frasincar, and Maria Mihaela Trus ¸cǎ</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">User modeling in language learning with macaronic texts</title>
+		<author>
+			<persName><forename type="first">Adithya</forename><surname>Renduchintala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rebecca</forename><surname>Knowles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Philipp</forename><surname>Koehn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Eisner</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/P16-1175</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 54th Annual Meeting of the Association for Computational Linguistics<address><addrLine>Berlin, Germany</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1859" to="1869" />
+		</imprint>
+	</monogr>
+	<note>Long Papers)</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Second language acquisition modeling</title>
+		<author>
+			<persName><forename type="first">Burr</forename><surname>Settles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Brust</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Erin</forename><surname>Gustafson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Masato</forename><surname>Hagiwara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nitin</forename><surname>Madnani</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/W18-0506</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Thirteenth Workshop on Innovative Use of NLP for Building Educational Applications</title>
+		<meeting>the Thirteenth Workshop on Innovative Use of NLP for Building Educational Applications<address><addrLine>New Orleans, Louisiana</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="56" to="65" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">A trainable spaced repetition model for language learning</title>
+		<author>
+			<persName><forename type="first">Burr</forename><surname>Settles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brendan</forename><surname>Meeder</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/P16-1174</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 54th Annual Meeting of the Association for Computational Linguistics<address><addrLine>Berlin, Germany</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1848" to="1858" />
+		</imprint>
+	</monogr>
+	<note>Long Papers)</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Refining and modifying the efcamdat: Lessons from creating a new corpus from an existing large-scale English learner language database</title>
+		<author>
+			<persName><forename type="first">Itamar</forename><surname>Shatz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Learner Corpus Research</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="220" to="236" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Synthetic data generation for grammatical error correction with tagged corruption models</title>
+		<author>
+			<persName><forename type="first">Felix</forename><surname>Stahlberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shankar</forename><surname>Kumar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 16th Workshop on Innovative Use of NLP for Building Educational Applications</title>
+		<meeting>the 16th Workshop on Innovative Use of NLP for Building Educational Applications</meeting>
+		<imprint>
+			<publisher>Online. Association for Computational Linguistics</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="37" to="47" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">UDPipe 2.0 prototype at CoNLL 2018 UD shared task</title>
+		<author>
+			<persName><forename type="first">Milan</forename><surname>Straka</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/K18-2020</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the CoNLL 2018 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies</title>
+		<meeting>the CoNLL 2018 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies<address><addrLine>Brussels, Belgium</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="197" to="207" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Claudia Leacock, and Helen Yannakoudakis</title>
+		<author>
+			<persName><forename type="first">Joel</forename><surname>Tetreault</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jill</forename><surname>Burstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ekaterina</forename><surname>Kochmar</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/W18-05</idno>
+	</analytic>
+	<monogr>
+		<title level="m">2018. Proceedings of the Thirteenth Workshop on Innovative Use of NLP for Building Educational Applications</title>
+		<imprint/>
+	</monogr>
+	<note>Association for Computational Linguistics</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Approximately optimal teaching of approximately optimal learners</title>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Whitehill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Javier</forename><surname>Movellan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Learning Technologies</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="152" to="164" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Linguistic skill modeling for second language acquisition</title>
+		<author>
+			<persName><forename type="first">Brian</forename><surname>Zylich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Lan</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3448139.3448153</idno>
+	</analytic>
+	<monogr>
+		<title level="m">LAK21: 11th International Learning Analytics and Knowledge Conference</title>
+		<meeting><address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="141" to="150" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

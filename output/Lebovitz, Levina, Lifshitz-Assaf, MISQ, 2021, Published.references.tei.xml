@@ -1,0 +1,2347 @@
+<?xml version="1.0" ?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader>
+		<fileDesc xml:id="f_1"/>
+	</teiHeader>
+	<text>
+		<front/>
+		<body/>
+		<back>
+			<listBibl>
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">The System of Professions: An Essay on the Division of Expert Labor</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Abbott</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1988">1988</date>
+			<publisher>University of Chicago Press</publisher>
+			<pubPlace>Chicago</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Machine Bias</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Angwin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Larson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mattu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Kirchner</surname></persName>
+		</author>
+		<ptr target="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing" />
+	</analytic>
+	<monogr>
+		<title level="j">ProPublica</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">To Question or Accept? How Status Differences Influence Responses to New Epistemic Technologies in Knowledge Work</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Anthony</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Academy of Management Review</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="661" to="679" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">End-to-End Lung Cancer Screening with Three-Dimensional Deep Learning on Low-Dose Chest Computed Tomography</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ardila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Kiraly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bharadwaj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Reicher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Tse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Etemadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Naidich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shetty</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Medicine</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="954" to="961" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Why Are There Still So Many Jobs? The History and Future of Workplace Automation</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Autor</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Economic Perspectives</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="3" to="30" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Explainable Artificial Intelligence (XAI): Concepts, Taxonomies, Opportunities and Challenges toward Responsible AI</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Barredo Arrieta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Díaz-Rodríguez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Del Ser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bennetot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tabik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Barbado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Garcia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gil-Lopez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Molina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Benjamins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Chatila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Herrera</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Information Fusion</title>
+		<imprint>
+			<biblScope unit="issue">58</biblScope>
+			<biblScope unit="page" from="82" to="115" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Expl(AI)n It to Me-Explainable AI and Information Systems Research</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Bauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Hinz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Van Der Aalst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Weinhardt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Business &amp; Information Systems Engineering</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="79" to="82" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Object Lessons: Workplace Artifacts as Representations of Occupational Jurisdiction</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Bechky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Journal of Sociology</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="720" to="752" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Blood, Powder, and Residue: How Crime Labs Translate Evidence into Proof</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Bechky</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<publisher>Princeton University Press</publisher>
+			<pubPlace>Princeton, NJ</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Unsupervised by Any Other Name: Hidden Layers of Knowledge Production in Artificial Intelligence on Social Media</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bechmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Bowker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Big Data &amp; Society</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">P</forename><surname>Berger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Luckmann</surname></persName>
+		</author>
+		<title level="m">The Social Construction of Reality: A Treatise in the Sociology of Knowledge</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Anchor Books</publisher>
+			<date type="published" when="1966">1966</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Overconfidence as a Cause of Diagnostic Error in Medicine</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Berner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Graber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The American Journal of Medicine</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page" from="S2" to="S23" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>Supplement</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Bowker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Star</surname></persName>
+		</author>
+		<title level="m">Sorting Things Out: Classification and Its Consequences</title>
+		<meeting><address><addrLine>Cambridge, MA</addrLine></address></meeting>
+		<imprint>
+			<publisher>MIT Press</publisher>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Organizational Learning and Communities-of-Practice: Toward a Unified View of Working, Learning, and Innovation</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Duguid</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Organization Science</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="40" to="57" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Knowledge and Organization: A Social-Practice Perspective</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Duguid</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Organization Science</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="198" to="213" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Understanding and Confronting Our Mistakes: The Epide-miology of Error in Radiology and Strategies for Error Reduction</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Bruno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Walker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Abujudeh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">RadioGraphics</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1668" to="1676" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">RADEX-Towards a Computer-Based Radiology Consultant</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Chandrasekaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mittal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Smith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Pattern Recognition in</title>
+		<editor>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Practice</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">L</forename><forename type="middle">N</forename><surname>Gelsema</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Amsterdam</addrLine></address></meeting>
+		<imprint>
+			<publisher>North Holland</publisher>
+			<date type="published" when="1980">1980</date>
+			<biblScope unit="page" from="463" to="474" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Constructing Grounded Theory</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Charmaz</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<publisher>SAGE Publications</publisher>
+			<pubPlace>Thousand Oaks, CA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">When it Comes to Chasing Clicks, Journalists Say One Thing but Feel Pressure to Do Another</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Christin</surname></persName>
+		</author>
+		<ptr target="http://www.niemanlab.org/2014/08/when-it-comes-to-chasing-clicks-journalists-say-one-thing-but-feel-pressure-to-do-another/" />
+		<imprint>
+			<date type="published" when="2014-10-18">2014. October 18, 2018</date>
+		</imprint>
+		<respStmt>
+			<orgName>Nieman Lab</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The Ethnographer and the Algorithm: Beyond the Black Box</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Christin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Theory and Society</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="897" to="918" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Improving Accuracy and Efficiency with Concurrent Use of Artificial Intelligence for Digital Breast Tomosynthesis</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">F</forename><surname>Conant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Toledano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Periaswamy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">V</forename><surname>Fotin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Go</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Boatsman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Hoffmeister</surname></persName>
+		</author>
+		<idno type="DOI">10.1148/ryai.2019180096</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Radiology Artificial Intelligence</title>
+		<imprint>
+			<biblScope unit="issue">1:4</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Broken &apos;Two-Way Windows&apos;? An Exploration of Professional Hybrids</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Croft</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Currie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lockett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Public Administration</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="380" to="394" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Hand X-Ray in Pediatric Endocrinology: Skeletal Age Assessment and Beyond</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>De Sanctis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Di Maio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Soliman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Raiola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Elalaily</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Millimaggi</surname></persName>
+		</author>
+		<idno>pp. S63-S71</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Indian Journal of Endocrinology and Metabolism</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">Suppl 1</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">ImageNet: A Large-Scale Hierarchical Image Database</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L.-J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">F</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2009 IEEE Conference on Computer Vision and Pattern Recognition</title>
+		<meeting>the 2009 IEEE Conference on Computer Vision and Pattern Recognition<address><addrLine>Los Alamitos, CA</addrLine></address></meeting>
+		<imprint>
+			<publisher>IEEE Computer Society Press</publisher>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="248" to="255" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">When to Trust Robots with Decisions, and When Not To</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Dhar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Harvard Business Review</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Digital Science and Knowledge Boundaries in Complex Innovation</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Dougherty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">D</forename><surname>Dunne</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Organization Science</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1467" to="1484" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Dreyfus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Dreyfus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Athanasiou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mind Over Machine</title>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<publisher>Simon and Schuster</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Inter-Observer Variability in Mammography Screening and Effect of Type and Number of Readers on Screening Outcome</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">E M</forename><surname>Duijm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W J</forename><surname>Louwman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Groenewoud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">V</forename><surname>Van De Poll-Franse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fracheboud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Coebergh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">British Journal of Cancer</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="901" to="907" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">A Sociology of Quantification</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">N</forename><surname>Espeland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Stevens</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">European Journal of Sociology/Archives Européennes de Sociologie</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="401" to="436" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Working and Organizing in the Age of the Learning Algorithm</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Faraj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pachidi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sayegh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Information and Organization</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="62" to="70" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The Culture of Objectivity: Quantification, Uncertainty, and the Evaluation of Risk at NASA</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Feldman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Human Relations</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="691" to="718" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">A Method to Link Advances in Artificial Intelligence to Occupational Abilities</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">W</forename><surname>Felten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Raj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Seamans</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">AEA Papers and Proceedings</title>
+		<imprint>
+			<biblScope unit="issue">108</biblScope>
+			<biblScope unit="page" from="54" to="57" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Explaining Data-Driven Decisions Made by AI Systems: The Counterfactual Approach</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Fernández-Loría</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Provost</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Han</surname></persName>
+		</author>
+		<idno>ArXiv:2001.07417</idno>
+		<ptr target="http://arxiv.org/abs/2001.07417" />
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Engineering Knowledge: The Construction of Knowledge in Artificial Intelligence</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Forsythe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Social Studies of Science</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="445" to="477" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The Future of Employment: How Susceptible Are Jobs to Computerisation?</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Frey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Osborne</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Technological Forecasting and Social Change</title>
+		<imprint>
+			<biblScope unit="issue">114</biblScope>
+			<biblScope unit="page" from="254" to="280" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">On the Distinction between Know-How, Know-What, and Know-Why</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Garud</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Strategic Management</title>
+		<imprint>
+			<biblScope unit="issue">14</biblScope>
+			<biblScope unit="page" from="81" to="102" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">The Data That Transformed AI Researchand Possibly the World</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gershgorn</surname></persName>
+		</author>
+		<ptr target="https://qz.com/1034972/the-data-that-changed-the-direction-of-ai-research-and-possibly-the-world/" />
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>Quartz</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gitelman</surname></persName>
+		</author>
+		<title level="m">Raw Data&quot; Is an Oxymoron</title>
+		<meeting><address><addrLine>Cambridge, MA</addrLine></address></meeting>
+		<imprint>
+			<publisher>MIT Press</publisher>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Crisis as Opportunity, Disruption and Exposure: Exploring Emergent Responses to Crisis through Digital Technology</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gkeredakis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lifshitz-Assaf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Barrett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Information and Organization</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Discovering Grounded Theory</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Glaser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Strauss</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1967">1967</date>
+			<publisher>Aldine Publishing Company</publisher>
+			<pubPlace>Chicago</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Golden-Biddle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Locke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Composing Qualitative Research</title>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<publisher>SAGE Publications</publisher>
+			<pubPlace>Thousand Oaks, CA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">A.I. Took a Test to Detect Lung Cancer. It Got an A</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Grady</surname></persName>
+		</author>
+		<ptr target="https://www.nytimes.com/2019/05/20/health/cancer-artificial-intelligence-ct-scans.html" />
+	</analytic>
+	<monogr>
+		<title level="j">The New York Times</title>
+		<imprint>
+			<date type="published" when="2019-05-20">2019. May 20</date>
+		</imprint>
+	</monogr>
+	<note>Health</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">A Survey of Methods for Explaining Black Box Models</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Guidotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Monreale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ruggieri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Turini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Giannotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pedreschi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACM Computing Surveys</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">93</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Cognition in the Wild</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hutchins</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1995">1995</date>
+			<publisher>MIT Press</publisher>
+			<pubPlace>Cambridge, MA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Epistemic Cultures. How the Sciences Make Knowledge</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Knorr Cetina</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+			<publisher>Harvard University Press</publisher>
+			<pubPlace>Cambridge, MA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">What If the Screens Went Black? The Coming of Software Agents</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Knorr Cetina</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Beyond Interpretivism? New Encounters with Technology and Organizations, L. Introna</title>
+		<editor>
+			<persName><forename type="first">D</forename><surname>Kavanah</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">S</forename><surname>Kelly</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">W</forename><surname>Orlikowski</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">S</forename><surname>Scott</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Berlin</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Knowledge of the Firm, Combinative Capabilities, and the Replication of Technology</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kogut</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Zander</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Organization Science</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="383" to="397" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Glossary of Terms</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kohavi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Provost</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Machine Learning</title>
+		<imprint>
+			<biblScope unit="issue">30</biblScope>
+			<biblScope unit="page" from="271" to="274" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Ground Truth Data, Content, Metrics, and Analysis</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Krig</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Computer Vision Metrics: Survey, Taxonomy, and Analysis</title>
+		<meeting><address><addrLine>Cham</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer International Publishing</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="247" to="271" />
+		</imprint>
+	</monogr>
+	<note>Chapter</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Will Artificial Intelligence Replace Radiologists?</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">P</forename><surname>Langlotz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Radiology: Artificial Intelligence</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<date type="published" when="2019">2019. 190058</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Latour</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science in Action: How to Follow Scientists and Engineers through Society</title>
+		<imprint>
+			<date type="published" when="1987">1987</date>
+			<publisher>Harvard University Press</publisher>
+			<pubPlace>Cambridge, MA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lave</surname></persName>
+		</author>
+		<title level="m">Cognition in Practice: Mind, Mathematics and Culture in Everyday Life</title>
+		<meeting><address><addrLine>Cambridge, UK</addrLine></address></meeting>
+		<imprint>
+			<publisher>Cambridge University Press</publisher>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">BI-RADS Lexicon for US and Mammography: Interobserver Variability and Positive Predictive Value</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Lazarus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Mainiero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Schepps</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Koelliker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Livingston</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Radiology</title>
+		<imprint>
+			<biblScope unit="volume">239</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="385" to="391" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Diagnostic Doubt and Artificial Intelligence: An Inductive Field Study of Radiology Work</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lebovitz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 40 th International Conference on Information Systems</title>
+		<meeting>the 40 th International Conference on Information Systems<address><addrLine>Munich</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">National Performance Benchmarks for Modern Screening Digital Mammography: Update from Breast Cancer Surveillance Consortium</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Lehman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Arao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Sprague</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S M</forename><surname>Buist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kerlikowske</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Henderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Onega</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">N A</forename><surname>Tosteson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">H</forename><surname>Rauscher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Miglioretti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Radiology</title>
+		<imprint>
+			<biblScope unit="volume">283</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="49" to="58" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Wellsprings of Knowledge: Building and Sustaining the Sources of Innovation</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Leonard-Barton</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1995">1995</date>
+			<publisher>Harvard Business School Press</publisher>
+			<pubPlace>Boston, MA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Minimal and Adaptive Coordination: How Hackathons&apos; Projects Accelerate Innovation Without Killing It</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lifshitz-Assaf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lebovitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zalmanson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Academy of Management Journal</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="684" to="715" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Hybrid Manager-Professionals&apos; Identity Work: The Maintenance and Hybridization of Medical Professionalism in Managerial Contexts</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Mcgivern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Currie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ferlie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Fitzgerald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Waring</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Public Administration</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="412" to="432" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Decisions about Knowledge in Medical Practice: The Effect of Temporal Features of a Task</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Menchik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">American Journal of Sociology</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="701" to="749" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Integrating Knowledge in the Face of Epistemic Uncertainty: Dialogically Drawing Distinctions</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mengis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Nicolini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Swan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Management Learning</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="595" to="612" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Challenges of Ground Truth Evaluation of Multi-Target Tracking</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Milan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Schindler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Roth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops</title>
+		<meeting>the IEEE Conference on Computer Vision and Pattern Recognition Workshops</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="735" to="742" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">LEAP: A Learning Apprentice for VLSI Design</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mabadevan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">I</forename><surname>Steinberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Machine Learning</title>
+		<editor>
+			<persName><forename type="first">Y</forename><surname>Kodratoff</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Michalski</surname></persName>
+		</editor>
+		<meeting><address><addrLine>San Francisco</addrLine></address></meeting>
+		<imprint>
+			<publisher>Morgan Kaufmann</publisher>
+			<date type="published" when="1990">1990</date>
+			<biblScope unit="page" from="271" to="289" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Acoustic Modeling Using Deep Belief Networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mohamed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Dahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hinton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Audio, Speech, and Language Processing</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="14" to="22" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Checklist for Artificial Intelligence in Medical Imaging (CLAIM): A Guide for Authors and Reviewers</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mongan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Moy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Kahn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Radiology: Artificial Intelligence</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">e200029</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">This Artificial Intelligence Won&apos;t Take Your Job, it Will Help You Do it Better</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Moran</surname></persName>
+			<affiliation>
+				<orgName type="collaboration">Fast Company</orgName>
+			</affiliation>
+		</author>
+		<ptr target="https://www.fastcompany.com/90253977/this-artificial-intelligence-wont-take-your-job-it-will-help-you-do-it-better" />
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The New Yorker</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Mukherjee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Versus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename></persName>
+		</author>
+		<ptr target="https://www.newyorker.com/magazine/2017/04/03/ai-versus-md" />
+	</analytic>
+	<monogr>
+		<title level="j">Annals of Medicine</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Zooming In and Out: Studying Practices by Switching Theoretical Lenses and Trailing Connections</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Nicolini</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="1391" to="1418" />
+		</imprint>
+	</monogr>
+	<note>Organization Studies</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Practice Theory, Work, and Organization: An Introduction</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Nicolini</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<publisher>Oxford University Press</publisher>
+			<pubPlace>Oxford, UK</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Tacit Knowledge and Knowledge Conversion: Controversy and Advancement in Organizational Knowledge Creation Theory</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Nonaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Krogh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Organization Science</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="635" to="652" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The Pharmaceutical Sector</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Northrup</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Business of Healthcare Innovation</title>
+		<meeting><address><addrLine>Cambridge, UK</addrLine></address></meeting>
+		<imprint>
+			<publisher>Cambridge University Press</publisher>
+			<date type="published" when="2005">2005</date>
+			<biblScope unit="page" from="27" to="102" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The Rebirth of CAD: How Is Modern AI Different from the CAD We Know?</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Oakden-Rayner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Radiology: Artificial Intelligence</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">3</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The Duality of Technology: Rethinking the Concept of Technology in Organizations</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Orlikowski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Organization Science</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="398" to="427" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Knowing in Practice: Enacting a Collective Capability in Distributed Organizing</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Orlikowski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Organization Science</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="249" to="273" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">What Happens When Evaluation Goes Online? Exploring Apparatuses of Valuation in the Travel Sector</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Orlikowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Scott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Organization Science</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="868" to="891" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Make Way for the Algorithms: Symbolic Actions and Change in a Regime of Knowing</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pachidi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Berends</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Faraj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Huysman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Organization Science</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="18" to="41" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">From 2016: Why Deep Learning Is Suddenly Changing Your Life</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Parloff</surname></persName>
+		</author>
+		<ptr target="https://fortune.com/longform/ai-artificial-intelligence-deep-machine-learning/" />
+	</analytic>
+	<monogr>
+		<title level="j">Fortune</title>
+		<imprint>
+			<date type="published" when="2016-09-28">2016. September 28</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">F</forename><surname>Pasquale</surname></persName>
+		</author>
+		<title level="m">The Black Box Society: The Secret Algorithms That Control Money and Information</title>
+		<meeting><address><addrLine>Cambridge, MA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Harvard University Press</publisher>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>Reprint ed.</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Getting Comfortable with the Numbers: Auditing and the Micro-Production of Macro-Order</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">T</forename><surname>Pentland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Accounting, Organizations and Society</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="605" to="620" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Information Systems and Organizational Learning: The Social Epistemology of Organizational Knowledge Systems</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">T</forename><surname>Pentland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Accounting, Management and Information Technologies</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="21" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The Social Construction of Facts and Artifacts: Or How the Sociology of Science and the Sociology of Technology Might Benefit Each Other</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Pinch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Bijker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Social Construction of Technological Systems: New Directions in the Sociology and History of Technology</title>
+		<editor>
+			<persName><forename type="first">T</forename><forename type="middle">P</forename><surname>Hughes</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">W</forename><surname>Bijker</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">T</forename><surname>Pinch</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Cambridge, MA</addrLine></address></meeting>
+		<imprint>
+			<publisher>MIT Press</publisher>
+			<date type="published" when="1987">1987</date>
+			<biblScope unit="page" from="17" to="50" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><surname>Polanyi</surname></persName>
+		</author>
+		<title level="m">Personal Knowledge: Towards a Post-Critical Philosophy</title>
+		<meeting><address><addrLine>Chicago</addrLine></address></meeting>
+		<imprint>
+			<publisher>University of Chicago Press</publisher>
+			<date type="published" when="1958">1958</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><surname>Polanyi</surname></persName>
+		</author>
+		<title level="m">The Tacit Dimension</title>
+		<meeting><address><addrLine>Chicago</addrLine></address></meeting>
+		<imprint>
+			<publisher>University of Chicago Press</publisher>
+			<date type="published" when="1966">1966</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Robust Classification for Imprecise Environments</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Provost</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Fawcett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Machine Learning</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="203" to="231" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Provost</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Fawcett</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<pubPlace>Sebastopol, CA: O&apos;Reilly Media</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Sizing the Prize: What&apos;s the Real Value of AI for Your Business and How Can You Capitalise?</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Rao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Verweij</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2017-09-08">2017. September 8</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Report</note>
+	<note>PricewaterhouseCoopers Australia</note>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Rise of Robot Radiologists</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Reardon</surname></persName>
+		</author>
+		<idno>pp. S54-S58</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">576</biblScope>
+			<biblScope unit="page">7787</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Artificial Intelligence: Threat or Boon to Radiologists?</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Recht</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">N</forename><surname>Bryan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American College of Radiology</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="1476" to="1480" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<author>
+			<persName><forename type="first">V</forename><surname>Rindova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Courtney</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">To Shape or Adapt: Knowledge Problems, Epistemologies, and Strategic Postures under Knightian Uncertainty</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="787" to="807" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Common Pitfalls and Recommendations for Using Machine Learning to Detect and Prognosticate for COVID-19 Using Chest Radiographs and CT Scans</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Roberts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Driggs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Thorpe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gilbey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yeung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ursprung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Aviles-Rivero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Etmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mccague</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Beer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Weir-Mccall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Teng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Gkrania-Klotsas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H F</forename><surname>Rudd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C.-B</forename><surname>Schönlieb</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Machine Intelligence</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="199" to="217" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">The Concept of Mind</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ryle</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1949">1949</date>
+			<publisher>Hutcheson</publisher>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">The Reflective Practitioner: How Professionals Think in Action</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Schön</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1983">1983</date>
+			<publisher>Basic Books</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">AI and the Economy</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Seamans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Furman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Innovation Policy and the Economy</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="161" to="191" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Get Another Label? Improving Data Quality and Data Mining Using Multiple, Noisy Labelers</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">S</forename><surname>Sheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Provost</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">G</forename><surname>Ipeirotis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 14 th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</title>
+		<meeting>the 14 th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining<address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="page" from="614" to="622" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shoham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Perrault</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Brynjolfsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Manyika</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Niebles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lyons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Etchemendy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Grosz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Bauer</surname></persName>
+		</author>
+		<title level="m">The AI Index 2018 Annual Report</title>
+		<meeting><address><addrLine>Stanford, CA; Stanford University</addrLine></address></meeting>
+		<imprint>
+			<publisher>AI Index Steering Committee, Human-Centered AI Initiative</publisher>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Making Management Decisions: The Role of Intuition and Emotion</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Simon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Academy of Management Executive</title>
+		<imprint>
+			<date type="published" when="1987">1987. 1987-1989</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="57" to="64" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Inferring Ground Truth from Subjective Labelling of Venus Images</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Smyth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Fayyad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Burl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Perona</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Baldi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="1994">1994</date>
+			<biblScope unit="page" from="1085" to="1092" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">The Ethnographic Interview</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Spradley</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1979">1979</date>
+			<publisher>Holt, Rinehart and Winston</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">The Structure of Ill-Structured Solutions: Boundary Objects and Heterogeneous Distributed Problem Solving</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Star</surname></persName>
+		</author>
+		<editor>L. Gasser and M. N. Huhns</editor>
+		<imprint>
+			<date type="published" when="1989">1989</date>
+			<publisher>Morgan Kaufmann</publisher>
+			<biblScope unit="page" from="37" to="54" />
+			<pubPlace>San Francisco</pubPlace>
+		</imprint>
+	</monogr>
+	<note>in Distributed Artificial Intelligence</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Star</surname></persName>
+		</author>
+		<title level="m">Ecologies of Knowledge: Work and Politics in Science and Technology</title>
+		<meeting><address><addrLine>Albany, NY</addrLine></address></meeting>
+		<imprint>
+			<publisher>SUNY Press</publisher>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">L</forename><surname>Suchman</surname></persName>
+		</author>
+		<title level="m">Plans and Situated Actions</title>
+		<meeting><address><addrLine>Cambridge, UK</addrLine></address></meeting>
+		<imprint>
+			<publisher>University of Cambridge Press</publisher>
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Exploring Internal Stickiness: Impediments to the Transfer of Best Practice within the Firm</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Szulanski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Strategic Management Journal</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="27" to="43" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">AI, Radiology and the Future of Work</title>
+		<ptr target="https://www.economist.com/leaders/2018/06/07/ai-radiology-and-the-future-of-work" />
+	</analytic>
+	<monogr>
+		<title level="j">The Economist</title>
+		<imprint>
+			<date type="published" when="2018-06-08">2018. June 8</date>
+		</imprint>
+	</monogr>
+	<note>The Economist</note>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">The Gold Standard: The Challenge of Evidence-Based Medicine</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Timmermans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Berg</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2003">2003</date>
+			<publisher>Temple University Press</publisher>
+			<pubPlace>Philadelphia</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Managing Data-Driven Development: An Ethnography of Developing Machine Learning for Recruitment</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Van Den Broek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sergeeva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Huysman</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2020">2020. 2020</date>
+			<publisher>Academy of Management Proceedings</publisher>
+			<biblScope unit="page">17689</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<title level="m" type="main">Qualitative Studies of Organizations</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Van Maanen</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1998">1998</date>
+			<publisher>SAGE Publications</publisher>
+			<pubPlace>Thousand Oaks, CA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<monogr>
+		<author>
+			<persName><forename type="first">E</forename><surname>Von Hippel</surname></persName>
+		</author>
+		<title level="m">The Sources of Innovation</title>
+		<meeting><address><addrLine>Oxford, UK</addrLine></address></meeting>
+		<imprint>
+			<publisher>Oxford University Press</publisher>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Hotspots and Blind Spots</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Waardenburg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sergeeva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Huysman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Living with Monsters? Social Implications of Algorithmic Phenomena, Hybrid Agency, and the Performativity of Technology</title>
+		<editor>
+			<persName><forename type="first">M</forename><surname>Aanestad</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">C</forename><surname>Mähring</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">K</forename><surname>Østerlund</surname></persName>
+		</editor>
+		<editor>
+			<persName><surname>Riemer</surname></persName>
+		</editor>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="96" to="109" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">The Growth of AI Adoption in Law Enforcement</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Walch</surname></persName>
+		</author>
+		<ptr target="https://www.forbes.com/sites/cognitiveworld/2019/07/26/the-growth-of-ai-adoption-in-law-enforcement/" />
+	</analytic>
+	<monogr>
+		<title level="j">Forbes</title>
+		<imprint>
+			<date type="published" when="2019-07-26">2019. July 26</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct >
+	<analytic>
+		<title level="a" type="main">Amazon Created a Hiring Tool Using A.I. It Immediately Started Discriminating Against Women</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Weissmann</surname></persName>
+		</author>
+		<ptr target="https://slate.com/business/2018/10/amazon-artificial-intelligence-hiring-discrimination-women.html" />
+	</analytic>
+	<monogr>
+		<title level="m">Slate, October 10</title>
+		<imprint>
+			<date type="published" when="2018-07-28">2018. July 28, 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+			</listBibl>
+		</back>
+	</text>
+</TEI>
