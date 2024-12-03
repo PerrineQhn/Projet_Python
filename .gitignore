@@ -1,0 +1,7 @@
+.DS_Store
+grobid/
+Python_Project/
+__pycache__/
+*/.DS_Store
+scripts/logs/
+*.zip*
