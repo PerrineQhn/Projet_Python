@@ -7,3 +7,4 @@ scripts/logs/
 *.zip*
 output/**/
 scripts/parsing_extraction.py
+logs/
